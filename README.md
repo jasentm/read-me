@@ -19,21 +19,21 @@ $ # the -L argument limits the depth at which we look into the directory structu
 .
 ├── CONTRIBUTING.md
 ├── LICENSE.md
+├── Pipfile
 ├── README.md
 ├── client
-│   ├── README.md
-│   ├── node_modules
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── public
-│   └── src
+│   ├── README.md
+│   ├── package.json
+│   ├── public
+│   └── src
 └── server
     ├── app.py
     ├── config.py
-    ├── migrations
     ├── models.py
     └── seed.py
 ```
+
+A `migrations` folder will be added to the `server` directory in a later step.
 
 The `client` folder contains a basic React application, while the `server`
 folder contains a basic Flask application. You will adapt both folders to
@@ -71,7 +71,11 @@ the permissions to edit our Canvas course, so it's not worth keeping around.
 
 First things first- rename this directory! Once you have an idea for a name,
 move one level up with `cd ..` and run
-`mv python-p4-project-template <new-directory-name>` to change its name.
+`mv python-p4-project-template <new-directory-name>` to change its name (replace
+<new-directory-name> with an appropriate project directory name).
+
+> **Note: If you typed the `mv` command in a terminal within VS Code, you should
+> close VS Code then reopen it.**
 
 > **Note: `mv` actually stands for "move", but your computer interprets this
 > rename as a move from a directory with the old name to a directory with a new
@@ -89,9 +93,11 @@ sure "Initialize this repository with a README" is unchecked (you already have
 one), then click "Create repository".
 
 Head back to the command line and enter
-`git remote add origin <project name> <github url>`. This will map the remote
-repository to your local repository. Finally, push your first commit with
-`git push -u origin main`.
+`git remote add origin git@github.com:github-username/new-repository-name.git`.
+NOTE: Replace `github-username` with your github username, and
+`new-repository-name` with the name of your new repository. This command will
+map the remote repository to your local repository. Finally, push your first
+commit with `git push -u origin main`.
 
 Your project is now version-controlled locally and online. This will allow you
 to create different versions of your project and pick up your work on a
@@ -146,7 +152,7 @@ To download the dependencies for the frontend client, run:
 npm install --prefix client
 ```
 
-You can run your React app on [`localhost:4000`](http://localhost:4000) by
+You can run your React app on [`localhost:3000`](http://localhost:3000) by
 running:
 
 ```sh
@@ -179,7 +185,6 @@ structure:
 
 ```console
 .
-├── __pycache__
 ├── app.py
 ├── config.py
 ├── instance
@@ -195,18 +200,22 @@ structure:
 └── seed.py
 ```
 
-Edit `models.py` and start creating your models. Remember to regularly run
-`flask db revision --autogenerate -m'<descriptive message>'` and
-`flask db upgrade head` to track your modifications to the database and create
-checkpoints in case you ever need to roll those modifications back.
+Edit `models.py` and start creating your models. Import your models as needed in
+other modules, i.e. `from models import ...`.
+
+Remember to regularly run
+`flask db revision --autogenerate -m'<descriptive message>'`, replacing
+`<descriptive message>` with an appropriate message, and `flask db upgrade head`
+to track your modifications to the database and create checkpoints in case you
+ever need to roll those modifications back.
 
 > **Tip: It's always a good idea to start with an empty revision! This allows
 > you to roll all the way back while still holding onto your database. You can
 > create this empty revision with `flask db revision -m'Create DB'`.**
 
 If you want to seed your database, now would be a great time to write out your
-`seed.py` script and run it to generate some test data. You may want to use
-Pipenv to install Faker to save you some time.
+`seed.py` script and run it to generate some test data. Faker has been included
+in the Pipfile if you'd like to use that library.
 
 ---
 
