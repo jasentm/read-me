@@ -136,7 +136,7 @@ python server/app.py
 ```
 
 Check that your server serves the default route `http://localhost:5555`. You
-should see a web page with the heading "Phase 4 Project Server".
+should see a web page with the heading "Project Server".
 
 ### `client/`
 
@@ -160,8 +160,8 @@ npm start --prefix client
 ```
 
 Check that your the React client displays a default page
-`http://localhost:3000`. You should see a web page with the heading "Phase 4
-Project Client".
+`http://localhost:3000`. You should see a web page with the heading "Project
+Client".
 
 ## Generating Your Database
 
