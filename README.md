@@ -29,7 +29,7 @@ https://www.figma.com/design/xISGYeKuyy1RUjIfNT2xQu/Untitled?node-id=0%3A1&t=IUQ
 
 ## React Component Tree
 
-
+<img src="planning/Component Tree.png" alt="components">
 
 ## Database Schema
 <img src="planning/Database Schema.png" alt="schema">
@@ -37,3 +37,6 @@ https://www.figma.com/design/xISGYeKuyy1RUjIfNT2xQu/Untitled?node-id=0%3A1&t=IUQ
 
 ## API Routes
 <img src="planning/API Routes.png" alt="api">
+
+## Kanban Board
+<img src="planning/Kanban Board.png" alt="kanban">
