@@ -43,7 +43,7 @@ function App() {
           <Route path='/lesson/:id' element={<Lesson/>}/>
           <Route path='/readings' element={<Readings/>}/>
           <Route path='/readings/:id' element={<SavedReading/>}/>
-          <Route path='/signin' element={<Signin/>}/>
+          <Route path='/signin' element={<Signin updateUser={updateUser}/>}/>
         </Routes>
       </div>
     </>
