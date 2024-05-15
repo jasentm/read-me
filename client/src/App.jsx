@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
@@ -12,25 +12,25 @@ import SavedReading from './pages/SavedReading';
 
 function App() {
   // State hook to manage user state
-  const [user, setUser] = useState(null)
+  // const [user, setUser] = useState(null)
 
-  // Effect hook to fetch user data on component mount
-  useEffect(() => {
-    fetch('http://localhost:8080//authenticate-session')
-    .then((res) => {
-      if (res.ok){
-        return res.json() // Parse JSON data if response is OK
-      }else{
-        console.error('user not found') // Log error if user not found
-      }
-    })
-    .then(data => setUser(data)) // Update user state with fetched data
-  }, [])
+  // // Effect hook to fetch user data on component mount
+  // useEffect(() => {
+  //   fetch('http://localhost:8080//authenticate-session')
+  //   .then((res) => {
+  //     if (res.ok){
+  //       return res.json() // Parse JSON data if response is OK
+  //     }else{
+  //       console.error('user not found') // Log error if user not found
+  //     }
+  //   })
+  //   .then(data => setUser(data)) // Update user state with fetched data
+  // }, [])
 
   // Function to update user state
-  const updateUser = (user) => {
-    setUser(user)
-  } 
+  // const updateUser = (user) => {
+  //   setUser(user)
+  // } 
 
   return (
     <>
@@ -43,7 +43,7 @@ function App() {
           <Route path='/lesson/:id' element={<Lesson/>}/>
           <Route path='/readings' element={<Readings/>}/>
           <Route path='/readings/:id' element={<SavedReading/>}/>
-          <Route path='/signin' element={<Signin updateUser={updateUser}/>}/>
+          <Route path='/signin' element={<Signin/>}/>
         </Routes>
       </div>
     </>

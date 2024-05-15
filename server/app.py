@@ -56,7 +56,7 @@ def login():
 
 @app.route('/tarot-cards')
 def get_tarot():
-     tarot_cards = [card.to_dict() for card in TarotCard.query.all()]
+     tarot_cards = [card.to_dict(rules=('-future_readings', '-lesson', '-lesson_id', '-past_readings', '-present_readings')) for card in TarotCard.query.all()]
      return make_response(tarot_cards)
 
 
@@ -64,7 +64,7 @@ def get_tarot():
 def get_individual_card(id):
     card = TarotCard.query.filter(TarotCard.id == id).first()
     if card:
-         return make_response(card.to_dict())
+         return make_response(card.to_dict(rules=('-future_readings', '-lesson', '-lesson_id', '-past_readings', '-present_readings')))
     else:
          return make_response({'error': 'Card does not exist.'}, 404)
     
@@ -130,7 +130,7 @@ class LessonStatsByUser(Resource):
         
 api.add_resource(LessonStatsByUser, '/lesson-statistics/<int:user_id>')
 
-@app.route('/completed/<int:user_id')
+@app.route('/completed/<int:user_id>')
 def get_completed_games(id):
     completed = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == id, LessonStatistics.completed == True).all()]
     if completed:

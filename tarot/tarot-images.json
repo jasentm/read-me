@@ -4,7 +4,7 @@
         "number": "0",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m00.jpg",
+        "img": "/cards/m00.jpg",
         "fortune_telling": [
                 "Watch for new projects and new beginnings", 
                 "Prepare to take something on faith", 
@@ -49,7 +49,7 @@
         "number": "1",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m01.jpg",
+        "img": "/cards/m01.jpg",
         "fortune_telling": [
                 "A powerful man may play a role in your day", 
                 "Your current situation must be seen as one element of a much larger plan"
@@ -88,7 +88,7 @@
         "number": "2",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m02.jpg",
+        "img": "/cards/m02.jpg",
         "fortune_telling": [
                 "A mysterious woman arrives", 
                 "A sexual secret may surface", 
@@ -131,7 +131,7 @@
         "number": "3",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m03.jpg",
+        "img": "/cards/m03.jpg",
         "fortune_telling": [
                 "Pregnancy is in the cards", 
                 "An opportunity to be involved in luxurious sexuality is coming", 
@@ -175,7 +175,7 @@
         "number": "4",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m04.jpg",
+        "img": "/cards/m04.jpg",
         "fortune_telling": [
                 "A father figure arrives", 
                 "A new employer or authority figure will give you orders", 
@@ -216,7 +216,7 @@
         "number": "5",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m05.jpg",
+        "img": "/cards/m05.jpg",
         "fortune_telling": [
                 "Expect to be caught in a misdeed and punished accordingly", 
                 "Pray for forgiveness and confess wrongdoings", 
@@ -259,7 +259,7 @@
         "number": "6",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m06.jpg",
+        "img": "/cards/m06.jpg",
         "fortune_telling": [
                 "A new personal or professional relationship blossoms", 
                 "Sexual opportunities abound", 
@@ -300,7 +300,7 @@
         "number": "7",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m07.jpg",
+        "img": "/cards/m07.jpg",
         "fortune_telling": [
                 "Victory is a certainty", 
                 "Move ahead with all plans", 
@@ -340,7 +340,7 @@
         "number": "8",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m08.jpg",
+        "img": "/cards/m08.jpg",
         "fortune_telling": [
                 "Your self-control will be tested", 
                 "A woman will seek to change her partner or lover", 
@@ -379,7 +379,7 @@
         "number": "9",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m09.jpg",
+        "img": "/cards/m09.jpg",
         "fortune_telling": [
                 "A period of loneliness begins", 
                 "One partner in a relationship departs", 
@@ -419,7 +419,7 @@
         "number": "10",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m10.jpg",
+        "img": "/cards/m10.jpg",
         "fortune_telling": [
                 "Some events are in the hands of heaven", 
                 "You've lived through this before", 
@@ -460,7 +460,7 @@
         "number": "11",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m11.jpg",
+        "img": "/cards/m11.jpg",
         "fortune_telling": [
                 "A legal verdict will be rendered soon", 
                 "Someone is making a decision", 
@@ -501,7 +501,7 @@
         "number": "12",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m12.jpg",
+        "img": "/cards/m12.jpg",
         "fortune_telling": [
                 "A traitor is revealed", 
                 "One of your friends is working against you", 
@@ -542,7 +542,7 @@
         "number": "13",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m13.jpg",
+        "img": "/cards/m13.jpg",
         "fortune_telling": [
                 "A relationship or illness ends suddenly", 
                 "Limit travel and risk-taking", 
@@ -583,7 +583,7 @@
         "number": "14",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m14.jpg",
+        "img": "/cards/m14.jpg",
         "fortune_telling": [
                 "Someone's using drugs or alcohol to excess", 
                 "It's time to get back on that diet"
@@ -626,7 +626,7 @@
         "number": "15",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m15.jpg",
+        "img": "/cards/m15.jpg",
         "fortune_telling": [
                 "Adultery and unfaithfulness", 
                 "A string of extremely bad luck is coming your way", 
@@ -668,7 +668,7 @@
         "number": "16",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m16.jpg",
+        "img": "/cards/m16.jpg",
         "fortune_telling": [
                 "Impending disaster", 
                 "Cancel plans and reverse decisions", 
@@ -711,7 +711,7 @@
         "number": "17",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m17.jpg",
+        "img": "/cards/m17.jpg",
         "fortune_telling": [
                 "Get an astrology chart drawn up", 
                 "Someone is a little too starstruck", 
@@ -755,7 +755,7 @@
         "number": "18",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m18.jpg",
+        "img": "/cards/m18.jpg",
         "fortune_telling": [
                 "Watch for problems at the end of the month", 
                 "Someone you know needs to howl at the moon more often", 
@@ -796,7 +796,7 @@
         "number": "19",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m19.jpg",
+        "img": "/cards/m19.jpg",
         "fortune_telling": [
                 "Everything's coming up roses (or sunflowers, whatever the case may be)", 
                 "Whatever's on your mind, go for it because you can't lose today"
@@ -836,7 +836,7 @@
         "number": "20",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m20.jpg",
+        "img": "/cards/m20.jpg",
         "fortune_telling": [
                 "An old issue you thought was over will come up again today", 
                 "Get ready for huge changes: break-ups, sudden calls from old friends, and unexpected setbacks", 
@@ -878,7 +878,7 @@
         "number": "21",
         "arcana": "Major Arcana",
         "suit": "Trump",
-        "img": "tarot/cards/m21.jpg",
+        "img": "/cards/m21.jpg",
         "fortune_telling": [
                 "Winning the lottery", 
                 "Getting your heart's desire", 
@@ -919,7 +919,7 @@
         "number": "1",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c01.jpg",
+        "img": "/cards/c01.jpg",
         "fortune_telling": [
                 "Romance is in the cards",
                 "A new relationship or marriage is just around the corner", 
@@ -959,7 +959,7 @@
         "number": "2",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c02.jpg",
+        "img": "/cards/c02.jpg",
         "fortune_telling": [
                 "Someone has a secret crush on you", 
                 "Relationships should be mutual; get rid of a leech"
@@ -1000,7 +1000,7 @@
         "number": "3",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c03.jpg",
+        "img": "/cards/c03.jpg",
         "fortune_telling": [
                 "Unconventional romance is coming your way: a love affair with someone you've always dismissed"
             ], 
@@ -1036,7 +1036,7 @@
         "number": "4",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c04.jpg",
+        "img": "/cards/c04.jpg",
         "fortune_telling": [
                 "A lover is getting restless", 
                 "Find out what he or she needs, or new opportunities may lure your partner away"
@@ -1075,7 +1075,7 @@
         "number": "5",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c05.jpg",
+        "img": "/cards/c05.jpg",
         "fortune_telling": [
                 "A breakup looms", 
                 "Don't cry over spilt milk", 
@@ -1118,7 +1118,7 @@
         "number": "6",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c06.jpg",
+        "img": "/cards/c06.jpg",
         "fortune_telling": [
                 "A stingy spirit is strangling your enjoyment of life", 
                 "Loosen up and think of others for once, why don't you?"
@@ -1157,7 +1157,7 @@
         "number": "7",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c07.jpg",
+        "img": "/cards/c07.jpg",
         "fortune_telling": [
                 "You're being fed a line", 
                 "Rather than be dazzled by fancy words and promises, demand something real"
@@ -1194,7 +1194,7 @@
         "number": "8",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c08.jpg",
+        "img": "/cards/c08.jpg",
         "fortune_telling": [
                 "Someone's \"stepping out\" on you, now or in the near future", 
                 "Maybe it's time to quit talking about the problem and just move on"
@@ -1237,7 +1237,7 @@
         "number": "9",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c09.jpg",
+        "img": "/cards/c09.jpg",
         "fortune_telling": [
                 "Whatever you want, you'll get it"
             ], 
@@ -1276,7 +1276,7 @@
         "number": "10",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c10.jpg",
+        "img": "/cards/c10.jpg",
         "fortune_telling": [
                 "Marriage and family are in the cards", 
                 "Expect a friendship to blossom into a romance"
@@ -1312,7 +1312,7 @@
         "number": "11",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c11.jpg",
+        "img": "/cards/c11.jpg",
         "fortune_telling": [
                 "This card represents a young man or woman with a watery, dreamy demeanor, likely born a Libra, Scorpio, or Sagittarius, who wants to start a new relationship with you"
             ], 
@@ -1350,7 +1350,7 @@
         "number": "12",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c12.jpg",
+        "img": "/cards/c12.jpg",
         "fortune_telling": [
                 "This card represents a man with an emotional, sensitive personality, likely born between October 13th and November 11th, who wants you to rally around his latest passionate cause"
             ], 
@@ -1386,7 +1386,7 @@
         "number": "13",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c13.jpg",
+        "img": "/cards/c13.jpg",
         "fortune_telling": [
                 "This card represents a woman with an emotional, deeply spiritual nature, likely born between June 11th and July 11th, who uses emotional and spiritual appeals to sway others to her point of view"
             ], 
@@ -1422,7 +1422,7 @@
         "number": "14",
         "arcana": "Minor Arcana",
         "suit": "Cups",
-        "img": "tarot/cards/c14.jpg",
+        "img": "/cards/c14.jpg",
         "fortune_telling": [
                 "This card represents an older man with a gentle, sensitive presence, likely born between February 9th and March 10th, who is known for his fairness and tolerance"
             ], 
@@ -1457,7 +1457,7 @@
         "number": "1",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s01.jpg",
+        "img": "/cards/s01.jpg",
         "fortune_telling": [
                 "The time to make a choice is now", 
                 "Stop wavering and do what you know is best"
@@ -1497,7 +1497,7 @@
         "number": "2",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s02.jpg",
+        "img": "/cards/s02.jpg",
         "fortune_telling": [
                 "Sometimes, the only way to win is to refuse to fight", 
                 "You're stuck for now; let time pass before taking action"
@@ -1535,7 +1535,7 @@
         "number": "3",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s03.jpg",
+        "img": "/cards/s03.jpg",
         "fortune_telling": [
                 "Breakups and infidelity abound", 
                 "What hurts now, though, will turn out to be good for you later on"
@@ -1573,7 +1573,7 @@
         "number": "4",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s04.jpg",
+        "img": "/cards/s04.jpg",
         "fortune_telling": [
                 "Don't make any decision now", 
                 "Wait, and you'll be glad you did"
@@ -1609,7 +1609,7 @@
         "number": "5",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s05.jpg",
+        "img": "/cards/s05.jpg",
         "fortune_telling": [
                 "Someone is stealing from you, financially or romantically", 
                 "Be wary of friends who talk behind your back"
@@ -1650,7 +1650,7 @@
         "number": "6",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s06.jpg",
+        "img": "/cards/s06.jpg",
         "fortune_telling": [
                 "You'll soon go on a long journey over water", 
                 "Actions have unexpected consequences, so be prepared"
@@ -1689,7 +1689,7 @@
         "number": "7",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s07.jpg",
+        "img": "/cards/s07.jpg",
         "fortune_telling": [
                 "Don't assume people around you are worthy of your trust", 
                 "Ask for an accounting of where people have been, and what they've been doing"
@@ -1726,7 +1726,7 @@
         "number": "8",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s08.jpg",
+        "img": "/cards/s08.jpg",
         "fortune_telling": [
                 "Get over playing the victim", 
                 "Once you realize you are your own biggest obstacle, nothing can hold you back"
@@ -1768,7 +1768,7 @@
         "number": "9",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s09.jpg",
+        "img": "/cards/s09.jpg",
         "fortune_telling": [
                 "If you take the action you're considering now, you'll be sorry in the future"
             ], 
@@ -1808,7 +1808,7 @@
         "number": "10",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s10.jpg",
+        "img": "/cards/s10.jpg",
         "fortune_telling": [
                 "Disaster", 
                 "Put off plans and do not take action until omens are better"
@@ -1849,7 +1849,7 @@
         "number": "11",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s11.jpg",
+        "img": "/cards/s11.jpg",
         "fortune_telling": [
                 "This card represents a young man or woman with an airy, intellectual demeanor, likely born a Capricorn, Aquarius, or Pisces, who wants to learn something new from you or have a discussion with you"
             ], 
@@ -1887,7 +1887,7 @@
         "number": "12",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s12.jpg",
+        "img": "/cards/s12.jpg",
         "fortune_telling": [
                 "A blunder leads someone to say something he or she regrets", 
                 "If this was you, be prepared to apologize and move on"
@@ -1930,7 +1930,7 @@
         "number": "13",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s13.jpg",
+        "img": "/cards/s13.jpg",
         "fortune_telling": [
                 "This card represents a woman with an artistic, intellectual nature, likely born between September 12th and October 12th, who uses clever, positive communication to sway others to her point of view"
             ], 
@@ -1972,7 +1972,7 @@
         "number": "14",
         "arcana": "Minor Arcana",
         "suit": "Swords",
-        "img": "tarot/cards/s14.jpg",
+        "img": "/cards/s14.jpg",
         "fortune_telling": [
                 "This card represents an older man with an insightful, deliberate spirit, likely born between May 11th and June 10th, who is known for his integrity and sharp decision-making ability"
             ], 
@@ -2010,7 +2010,7 @@
         "number": "1",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w01.jpg",
+        "img": "/cards/w01.jpg",
         "fortune_telling": [
                 "Someone has the \"hots\" for you", 
                 "A new job offer is coming your way", 
@@ -2052,7 +2052,7 @@
         "number": "2",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w02.jpg",
+        "img": "/cards/w02.jpg",
         "fortune_telling": [
                 "Beware false friends", 
                 "Don't be mealy-mouthed; say what you think and do what you want to do"
@@ -2090,7 +2090,7 @@
         "number": "3",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w03.jpg",
+        "img": "/cards/w03.jpg",
         "fortune_telling": [
                 "You'll be planning a trip soon", 
                 "Be on the lookout: your ship is coming in"
@@ -2128,7 +2128,7 @@
         "number": "4",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w04.jpg",
+        "img": "/cards/w04.jpg",
         "fortune_telling": [
                 "Someone is watching and evaluating your work", 
                 "You may get a wedding invitation soon"
@@ -2166,7 +2166,7 @@
         "number": "5",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w05.jpg",
+        "img": "/cards/w05.jpg",
         "fortune_telling": [
                 "Prepare for a fight with your best friend", 
                 "Remember: once you let words loose, you can't take them back"
@@ -2203,7 +2203,7 @@
         "number": "6",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w06.jpg",
+        "img": "/cards/w06.jpg",
         "fortune_telling": [
                 "Someone is planning a party for you, but not everyone feels so good about your recent success", 
                 "Watch out for envious friends"
@@ -2244,7 +2244,7 @@
         "number": "7",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w07.jpg",
+        "img": "/cards/w07.jpg",
         "fortune_telling": [
                 "Don't be surprised by a personal attack", 
                 "Prepare to defend yourself or someone you love"
@@ -2281,7 +2281,7 @@
         "number": "8",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w08.jpg",
+        "img": "/cards/w08.jpg",
         "fortune_telling": [
                 "Watch for a surprising letter in the mail", 
                 "Your whole world is about to be turned on its ear"
@@ -2321,7 +2321,7 @@
         "number": "9",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w09.jpg",
+        "img": "/cards/w09.jpg",
         "fortune_telling": [
                 "Don't relax yet; there's more to come", 
                 "The test you're facing now is happening for one reason: to show you who your real friends are"
@@ -2363,7 +2363,7 @@
         "number": "10",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w10.jpg",
+        "img": "/cards/w10.jpg",
         "fortune_telling": [
                 "You're worn out",
                 "Back off, take a time out, and let someone else handle things for a while"
@@ -2400,7 +2400,7 @@
         "number": "11",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w11.jpg",
+        "img": "/cards/w11.jpg",
         "fortune_telling": [
                 "This card represents a young man or woman with a fiery, enthusiastic demeanor, likely born a Cancer, Leo, or Virgo, who wants to start a new relationship with you"
             ], 
@@ -2436,7 +2436,7 @@
         "number": "12",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w12.jpg",
+        "img": "/cards/w12.jpg",
         "fortune_telling": [
                 "This card represents a man with a bold, passionate personality, likely born between July 12th and August 11th, who wants to sweep you off your feet"
             ], 
@@ -2474,7 +2474,7 @@
         "number": "13",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w13.jpg",
+        "img": "/cards/w13.jpg",
         "fortune_telling": [
                 "This card represents a woman with an attractive, appealing personality, likely born between March 11th and April 20th, who wants to charm you into doing things her way"
             ], 
@@ -2508,7 +2508,7 @@
         "number": "14",
         "arcana": "Minor Arcana",
         "suit": "Wands",
-        "img": "tarot/cards/w14.jpg",
+        "img": "/cards/w14.jpg",
         "fortune_telling": [
                 "This card represents an older man with a commanding, charismatic personality, likely born between November 13th and December 12th, who prefers to give directions and have them followed"
             ], 
@@ -2542,7 +2542,7 @@
         "number": "1",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p01.jpg",
+        "img": "/cards/p01.jpg",
         "fortune_telling": [
                 "Your health will improve", 
                 "The check you're looking for really is in the mail"
@@ -2580,7 +2580,7 @@
         "number": "2",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p02.jpg",
+        "img": "/cards/p02.jpg",
         "fortune_telling": [
                 "It's time to balance the budget", 
                 "Avoid the temptation to spend critical funds on frivolous goods"
@@ -2619,7 +2619,7 @@
         "number": "3",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p03.jpg",
+        "img": "/cards/p03.jpg",
         "fortune_telling": [
                 "A high-dollar contract is in your future", 
                 "If you work hard, you'll succeed"
@@ -2659,7 +2659,7 @@
         "number": "4",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p04.jpg",
+        "img": "/cards/p04.jpg",
         "fortune_telling": [
                 "A rainy day is coming\u2014it's time to save"
             ], 
@@ -2698,7 +2698,7 @@
         "number": "5",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p05.jpg",
+        "img": "/cards/p05.jpg",
         "fortune_telling": [
                 "Finances are getting tighter", 
                 "Prepare for a setback"
@@ -2738,7 +2738,7 @@
         "number": "6",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p06.jpg",
+        "img": "/cards/p06.jpg",
         "fortune_telling": [
                 "When you need help, ask for it", 
                 "Remember, though: what you receive may be limited by what you've given to others in the past"
@@ -2778,7 +2778,7 @@
         "number": "7",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p07.jpg",
+        "img": "/cards/p07.jpg",
         "fortune_telling": [
                 "Things won't work out as expected", 
                 "Pick up the pieces and prepare to move on"
@@ -2817,7 +2817,7 @@
         "number": "8",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p08.jpg",
+        "img": "/cards/p08.jpg",
         "fortune_telling": [
                 "Stop over-analyzing, researching, and outlining", 
                 "Buckle down and get the work done"
@@ -2858,7 +2858,7 @@
         "number": "9",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p09.jpg",
+        "img": "/cards/p09.jpg",
         "fortune_telling": [
                 "Until you appreciate what you have, you won't have any luck getting more"
             ], 
@@ -2895,7 +2895,7 @@
         "number": "10",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p10.jpg",
+        "img": "/cards/p10.jpg",
         "fortune_telling": [
                 "Big money is in the near future", 
                 "Expect a powerful blessing to come your way"
@@ -2933,7 +2933,7 @@
         "number": "11",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p11.jpg",
+        "img": "/cards/p11.jpg",
         "fortune_telling": [
                 "This card represents a young man or woman with an earthy, practical demeanor, likely born an Aries, Taurus, or Gemini, who playfully encourages you to take financial or sexual risks"
             ], 
@@ -2971,7 +2971,7 @@
         "number": "12",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p12.jpg",
+        "img": "/cards/p12.jpg",
         "fortune_telling": [
                 "A stingy person may chide you for spending money", 
                 "Be prepared to defend an economic or sexual decision"
@@ -3012,7 +3012,7 @@
         "number": "13",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p13.jpg",
+        "img": "/cards/p13.jpg",
         "fortune_telling": [
                 "This card represents a woman with an expansive, sensual nature, likely born between December 13th and 31st, who uses sensual appeal and the promise of reward to sway others to her point of view"
             ], 
@@ -3049,7 +3049,7 @@
         "number": "14",
         "arcana": "Minor Arcana",
         "suit": "Pentacles",
-        "img": "tarot/cards/p14.jpg",
+        "img": "/cards/p14.jpg",
         "fortune_telling": [
                 "This card represents an older man with a financially, socially, and politically conservative spirit, likely born between August 12th and September 11th, who is known for putting his money where his mouth is"
             ], 
