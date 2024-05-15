@@ -14,8 +14,10 @@ class User(db.Model, SerializerMixin):
     username = db.Column(db.String, nullable=False)
     _password_hash = db.Column(db.String, nullable=False)
 
-    #TODO finish relationships
-
+    #TODO look into cascade 
+    reading = db.relationship('Reading', back_populates='user')
+    lesson_statistics = db.relationship('LessonStatistics', back_populates='user')
+    lessons = association_proxy('lessonStatistics', 'lesson')
     #TODO finish validations
 
     @hybrid_property
@@ -44,9 +46,17 @@ class TarotCard(db.Model, SerializerMixin):
     suit = db.Column(db.String)
     image = db.Column(db.String)
 
-    #TODO finish relationships
+    lesson = db.relationship('Lesson', back_populates='tarot_card')
+    reading = db.relationship('Reading', back_populates='tarot_card')
 
+    fortunes = db.relationship('Fortune', back_populates='tarot_card')
+    keywords = db.relationship('Keyword', back_populates='tarot_card')
+    light_meanings = db.relationship('LightMeaning', back_populates='tarot_card')
+    shadow_meanings = db.relationship('ShadowMeaning', back_populates='tarot_card')
+    questions = db.relationship('Fortune', back_populates='tarot_card')
     #TODO finish validations
+
+    #TODO add serialize rules
 
 class Fortune(db.Model, SerializerMixin):
     __tablename__ = 'fortunes'
@@ -55,8 +65,7 @@ class Fortune(db.Model, SerializerMixin):
     card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
     fortune = db.Column(db.String)
 
-    #TODO finish relationships
-
+    tarot_card = db.relationship('TarotCard', back_populates='fortunes')
     #TODO finish validations
 
 class Keyword(db.Model, SerializerMixin):
@@ -65,9 +74,8 @@ class Keyword(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
     keyword = db.Column(db.String)
-
-    #TODO finish relationships
-
+   
+    tarot_card = db.relationship('TarotCard', back_populates='keywords')
     #TODO finish validations
 
 class LightMeaning(db.Model, SerializerMixin):
@@ -76,9 +84,8 @@ class LightMeaning(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
     light_meaning = db.Column(db.String)
-
-    #TODO finish relationships
-
+ 
+    tarot_card = db.relationship('TarotCard', back_populates='light_meanings')
     #TODO finish validations
 
 class ShadowMeaning(db.Model, SerializerMixin):
@@ -87,9 +94,8 @@ class ShadowMeaning(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
     shadow_meaning = db.Column(db.String)
-
-    #TODO finish relationships
-
+    
+    tarot_card = db.relationship('TarotCard', back_populates='shadow_meanings')
     #TODO finish validations
 
 class Question(db.Model, SerializerMixin):
@@ -99,8 +105,7 @@ class Question(db.Model, SerializerMixin):
     card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
     question = db.Column(db.String)
 
-    #TODO finish relationships
-
+    tarot_card = db.relationship('TarotCard', back_populates='questions')
     #TODO finish validations
 class Lesson(db.Model, SerializerMixin):
     __tablename__ = 'lessons'
@@ -108,8 +113,10 @@ class Lesson(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(db.String)
 
-    #TODO finish relationships 
+    lesson_statistics = db.relationship('LessonStatistics', back_populates='lesson')
+    tarot_card = db.relationship('TarotCard', back_populates='lesson')
 
+    users = association_proxy('lessonStatistics', 'user')
 
 class LessonStatistics(db.Model, SerializerMixin):
     __tablename__ = 'lessonStatistics'
@@ -120,8 +127,8 @@ class LessonStatistics(db.Model, SerializerMixin):
     completed = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
-    #TODO finish relationships
-
+    user = db.relationship('User', back_populates='lesson_statistics')
+    lesson = db.relationship('Lesson', back_populates='lesson_statistics')
     #TODO finish validations
 
 class Reading(db.Model, SerializerMixin):
@@ -135,8 +142,8 @@ class Reading(db.Model, SerializerMixin):
     meaning = db.Column(db.String)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
-    #TODO finish relationships
-
+    user = db.relationship('User', back_populates='reading')
+    tarot_card = db.relationship('TarotCard', back_populates='reading')
     #TODO finish validations
 
 
