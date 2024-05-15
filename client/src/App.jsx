@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
 import Deck from './pages/Deck'
 import LessonList from './pages/LessonList';
 import Lesson from './pages/Lesson';
@@ -9,6 +8,7 @@ import Profile from './pages/Profile';
 import Readings from './pages/Readings';
 import Signin from './pages/Signin';
 import SavedReading from './pages/SavedReading';
+import NavBar from './components/NavBar';
 
 function App() {
   // State hook to manage user state
@@ -35,11 +35,13 @@ function App() {
   return (
     <>
       <div className='app'>
+        {/* NavBar component that receives user state and updateUser function */}
+        <NavBar/>
+        {/* Router setup with routes for different pages */}
         <Routes>
-          <Route path='/' element={<Home />} />
           <Route path='/profile/:id' element={<Profile/>} />
           <Route path='/deck' element={<Deck/>}/>
-          <Route path='/lesson-list' element={<LessonList/>}/>
+          <Route path='/' element={<LessonList/>}/>
           <Route path='/lesson/:id' element={<Lesson/>}/>
           <Route path='/readings' element={<Readings/>}/>
           <Route path='/readings/:id' element={<SavedReading/>}/>
