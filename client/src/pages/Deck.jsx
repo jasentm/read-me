@@ -34,7 +34,7 @@ export default function Deck() {
 
   if (!tarotCards) {
     return <div>🔮Loading...🔮</div>;
-  }
+  } else{ 
 
   return (
     <div className='deck-page'>
@@ -58,4 +58,5 @@ export default function Deck() {
       )}
     </div>
   );
+}
 }

@@ -39,13 +39,13 @@ def authorize():
     if cookie_id:
         user = User.query.filter_by(id=cookie_id).first() #check to see if cookie matches current user id
         if user:
-            return make_response(user.to_dict(only=['id', 'username'])), 200
+            return make_response(user.to_dict(only=['id', 'username', 'email'])), 200
     return make_response({'message': 'failed to authenticate'}), 401
 
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
-    user = User.query.filter_by(username=data.get('username')).first() #check to see if username exists in db
+    user = User.query.filter_by(email=data.get('email')).first() #check to see if username exists in db
     password = data.get('password') 
     if user and user.authenticate(password): #check entered password against encrypted password in db 
         session['user_id'] = user.id 
