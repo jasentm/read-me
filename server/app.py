@@ -3,12 +3,11 @@ from flask import request, make_response, session
 from flask_restful import Resource
 from config import app, db, api
 from models import User, Lesson, LessonStatistics, Reading, TarotCard
+from flask_login import login_user, logout_user, login_required, current_user
 
-
-# Views go here!
 
 # routes for login and user authentication 
-#TODO - look into JWT and other Authentication Packages 
+
 @app.route('/users', methods=['POST']) #sign up route
 def signup():
         data = request.json
@@ -19,39 +18,30 @@ def signup():
         new_user.password_hash = data.get('password')  # Set the password_hash using the setter
         db.session.add(new_user)
         db.session.commit()
-        session['user_id'] = new_user.id #set session hash to user id to keep logged in
-        response = make_response(new_user.to_dict())
-        response.set_cookie('user_id', str(new_user.id))
+        login_user(new_user) 
 
         #TODO ADD INSTANTIATING LESSON STATS FOR USER FOR ALL LESSONS
-        return response, 201
+        return make_response(new_user.to_dict(only=['id', 'username', 'email']), 201)
 
 @app.route('/logout')
+@login_required
 def logout():
-    session['user_id'] = None #clear session hash
-    response = make_response({})
-    response.delete_cookie('user_id')
-    return response, 200
+    logout_user()  # Log out the current user
+    return make_response({}), 200
 
 @app.route('/authenticate-session') #route for authentication 
-def authorize():
-    cookie_id = request.cookies.get('user_id')  
-    if cookie_id:
-        user = User.query.filter_by(id=cookie_id).first() #check to see if cookie matches current user id
-        if user:
-            return make_response(user.to_dict(only=['id', 'username', 'email'])), 200
+def authenticate_session():
+    if current_user.is_authenticated:
+        return make_response(current_user.to_dict(only=['id', 'username', 'email'])), 200
     return make_response({'message': 'failed to authenticate'}), 401
 
 @app.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
-    user = User.query.filter_by(email=data.get('email')).first() #check to see if username exists in db
-    password = data.get('password') 
-    if user and user.authenticate(password): #check entered password against encrypted password in db 
-        session['user_id'] = user.id 
-        response = make_response(user.to_dict())
-        response.set_cookie('user_id', str(user.id))
-        return response, 200
+    user = User.query.filter_by(email=data.get('email')).first()
+    if user and user.authenticate(data.get('password')):
+        login_user(user)  # Log in the user
+        return make_response(user.to_dict(only=['id', 'username', 'email'])), 200
     return make_response({'message': 'Invalid username or password'}), 401
 
 @app.route('/tarot-cards')

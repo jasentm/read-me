@@ -1,8 +1,23 @@
 import React, { useState } from 'react'
-import { Link, NavLink} from 'react-router-dom'
+import { Link, NavLink, useNavigate} from 'react-router-dom'
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 
-const NavBar = () => {
+const NavBar = ({user, updateUser}) => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    fetch('http://localhost:5555/logout')
+    .then((res)=>{
+      if (res.ok){
+        return (res.json())
+      }else {
+        return console.error('Error with logout')
+      }
+    })
+    .then(res => updateUser(null))
+    navigate('/login', {relative: 'path'})
+  }
+  
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color=''>
@@ -22,6 +37,11 @@ const NavBar = () => {
           <Button color="inherit" component={NavLink} to="/readings">
             The Readings
           </Button>
+          {user && (
+            <Button color='inherit' onClick={handleLogout}>
+              Logout
+            </Button>
+          )}
         </Toolbar>
       </AppBar>
     </Box>

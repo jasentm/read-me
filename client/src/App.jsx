@@ -22,10 +22,11 @@ function App() {
       if (res.ok){
         return res.json() // Parse JSON data if response is OK
       }else{
-        console.error('user not found') // Log error if user not found
+        console.error('User cannot be authenticated') // Log error if user not found
       }
     })
     .then(data => setUser(data)) // Update user state with fetched data
+    .catch((error) => console.error('Error fetching user data:', error));
   }, [])
 
   // Function to update user state
@@ -33,20 +34,20 @@ function App() {
     setUser(user)
   } 
 
-  // if (!user) {
-  //   return (
-  //     <div className='app'>
-  //       <NavBar/>
-  //       <Login user={user} updateUser={updateUser}/>
-  //     </div>
-  //   )
-  // } else {
+  if (!user) {
+    return (
+      <div className='app'>
+        <NavBar/>
+        <Login user={user} updateUser={updateUser}/>
+      </div>
+    )
+  } else {
 
   return (
     <>
       <div className='app'>
         {/* NavBar component that receives user state and updateUser function */}
-        <NavBar/>
+        <NavBar user={user} updateUser={updateUser}/>
         {/* Router setup with routes for different pages */}
         <Routes>
           <Route path='/profile/:id' element={<Profile/>} />
@@ -61,7 +62,7 @@ function App() {
       </div>
     </>
   )
-// }
+}
 }
 
 export default App

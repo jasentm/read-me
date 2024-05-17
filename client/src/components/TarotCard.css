@@ -20,7 +20,7 @@
 
 .deck-container {
     display: grid;
-    grid-template-columns: repeat(14, 130px);
+    grid-template-columns: repeat(11, 130px);
     grid-auto-rows: 225px;
     gap: 0px;
     justify-content: center;

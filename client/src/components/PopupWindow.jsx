@@ -15,31 +15,31 @@ const PopupWindow = ({ card, onClose }) => {
           <p>{card.number}</p>
           <p>{card.arcana}</p>
           {card.suit !== "Trump" && <p>Suit: {card.suit}</p>}
-          <h3>Keywords:</h3>
+          <h3 style={{ textDecoration: 'underline' }}>Keywords:</h3>
           <ul>
             {card.keywords.map((keyword, index) => (
               <li key={index}>{keyword.keyword}</li>
             ))}
           </ul>
-          <h3>Meanings:</h3>
+          <h3 style={{ textDecoration: 'underline' }}>Meanings:</h3>
           <ul>
             {card.light_meanings.map((meaning, index) => (
               <li key={index}>{meaning.light_meaning}</li>
             ))}
           </ul>
-          <h3>Reversed Meanings:</h3>
+          <h3 style={{ textDecoration: 'underline' }}>Reversed Meanings:</h3>
           <ul>
             {card.shadow_meanings.map((meaning, index) => (
               <li key={index}>{meaning.shadow_meaning}</li>
             ))}
           </ul>
-          <h3>Fortunes:</h3>
+          <h3 style={{ textDecoration: 'underline' }}>Fortunes:</h3>
           <ul>
             {card.fortunes.map((fortune, index) => (
               <li key={index}>{fortune.fortune}</li>
             ))}
           </ul>
-          <h3>Questions:</h3>
+          <h3 style={{ textDecoration: 'underline' }}>Questions:</h3>
           <ul>
             {card.questions.map((question, index) => (
               <li key={index}>{question.question}</li>

@@ -2,11 +2,13 @@ from sqlalchemy_serializer import SerializerMixin
 from sqlalchemy.ext.associationproxy import association_proxy
 from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.orm import validates
+from flask_login import UserMixin
 
-from config import db, bcrypt
+from database import db
+from bcrypt_utils import bcrypt
 
 
-class User(db.Model, SerializerMixin):
+class User(db.Model, SerializerMixin, UserMixin):
     __tablename__ = 'users'
     serialize_rules = ('-_password_hash', '-reading.user', '-lesson_statistics.user')
 
