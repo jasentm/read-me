@@ -28,7 +28,6 @@ export default function SignUpForm({updateUser}) {
   };
 
   const navigate = useNavigate()
-  
   const handleSubmit = (values) => {
     // Determine the URL based on whether the user is signing up or logging in
     const url = 'http://localhost:5555/users';

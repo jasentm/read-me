@@ -17,7 +17,7 @@ const NavBar = ({user, updateUser}) => {
     .then(res => updateUser(null))
     navigate('/login', {relative: 'path'})
   }
-  
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color=''>
@@ -25,7 +25,7 @@ const NavBar = ({user, updateUser}) => {
           <Typography variant="h6" component={NavLink} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}>
             Read Me
           </Typography>
-          <Button color="inherit" component={NavLink} to="/profile/:id">
+          <Button color="inherit" component={NavLink} to="/profile/">
             My Grimoire
           </Button>
           <Button color="inherit" component={NavLink} to="/deck">

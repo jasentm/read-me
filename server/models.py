@@ -142,6 +142,7 @@ class LessonStatistics(db.Model, SerializerMixin):
     lesson_id = db.Column(db.Integer, db.ForeignKey('lessons.id'), nullable=False)
     completed = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
+    #TODO add updated at for profile GET
 
     user = db.relationship('User', back_populates='lesson_statistics')
     lesson = db.relationship('Lesson', back_populates='lesson_statistics')

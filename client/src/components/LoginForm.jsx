@@ -47,7 +47,7 @@ const LoginForm = ({updateUser}) => {
       if (response.ok){
         return response.json()
       }else{
-        console.error('Error')
+        console.error('Error') //TODO add in a page refresh and/or a popup that explains that the password/email is
       }
     })
     .then(data => {

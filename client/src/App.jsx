@@ -1,68 +1,52 @@
 import { useState, useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
-import Deck from './pages/Deck'
+import Deck from './pages/Deck';
 import LessonList from './pages/LessonList';
 import Lesson from './pages/Lesson';
 import Profile from './pages/Profile';
 import Readings from './pages/Readings';
-import Login from './pages/Login';
 import SavedReading from './pages/SavedReading';
 import NavBar from './components/NavBar';
 import SignUpForm from './components/SignUpForm';
+import LoginForm from './components/LoginForm';
 
 function App() {
-  // State hook to manage user state
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(null);
 
-  // Effect hook to fetch user data on component mount
   useEffect(() => {
-    fetch('http://localhost:5555//authenticate-session')
-    .then((res) => {
-      if (res.ok){
-        return res.json() // Parse JSON data if response is OK
-      }else{
-        console.error('User cannot be authenticated') // Log error if user not found
-      }
-    })
-    .then(data => setUser(data)) // Update user state with fetched data
-    .catch((error) => console.error('Error fetching user data:', error));
-  }, [])
+    // ... (fetch user data)
+  }, []);
 
-  // Function to update user state
   const updateUser = (user) => {
-    setUser(user)
-  } 
-
-  if (!user) {
-    return (
-      <div className='app'>
-        <NavBar/>
-        <Login user={user} updateUser={updateUser}/>
-      </div>
-    )
-  } else {
+    setUser(user);
+  };
 
   return (
-    <>
-      <div className='app'>
-        {/* NavBar component that receives user state and updateUser function */}
-        <NavBar user={user} updateUser={updateUser}/>
-        {/* Router setup with routes for different pages */}
-        <Routes>
-          <Route path='/profile/:id' element={<Profile/>} />
-          <Route path='/deck' element={<Deck/>}/>
-          <Route path='/' element={<LessonList/>}/>
-          <Route path='/lesson/:id' element={<Lesson/>}/>
-          <Route path='/readings' element={<Readings/>}/>
-          <Route path='/readings/:id' element={<SavedReading/>}/>
-          <Route path='/login' element={<Login updateUser={updateUser}/>}/>
-          <Route path='/signup' element={<SignUpForm updateUser={updateUser}/>}/>
-        </Routes>
-      </div>
-    </>
-  )
-}
+    <div className="app">
+      <NavBar user={user} updateUser={updateUser} />
+      <Routes>
+        {/* Render the login and signup forms outside the main Routes */}
+        <Route path="/login" element={<LoginForm updateUser={updateUser} />} />
+        <Route path="/signup" element={<SignUpForm updateUser={updateUser} />} />
+
+        {/* Render the main application routes only if the user is authenticated */}
+        {user ? (
+          <>
+            <Route path="/profile/" element={<Profile user={user}/>} />
+            <Route path="/deck" element={<Deck />} />
+            <Route path="/" element={<LessonList user={user} />} />
+            <Route path="/lesson/:id" element={<Lesson user={user}/>} />
+            <Route path="/readings" element={<Readings />} />
+            <Route path="/readings/:id" element={<SavedReading />} />
+          </>
+        ) : (
+          // Redirect to the login page if the user is not authenticated
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        )}
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;

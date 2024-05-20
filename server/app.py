@@ -95,8 +95,8 @@ class UsersById(Resource):
 api.add_resource(UsersById, '/users/<int:id>')
 
 class LessonStatsByUser(Resource):
-    def patch(self, id):
-        lessonstats = LessonStatistics.query.filter(LessonStatistics.user_id == id).first()
+    def patch(self, user_id):
+        lessonstats = LessonStatistics.query.filter(LessonStatistics.user_id == user_id).first()
         if not lessonstats:
             return make_response({'error': 'Statistics not found'}, 404)
         else:
@@ -111,10 +111,10 @@ class LessonStatsByUser(Resource):
             except:
                 return make_response({'errors': ['validation errors']}, 400)
             
-    def get(self, id):
-        lessonstats = LessonStatistics.query.filter(LessonStatistics.user_id == id).first()
+    def get(self, user_id):
+        lessonstats = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id).all()]
         if lessonstats:
-            return make_response(lessonstats.to_dict())
+            return make_response(lessonstats)
         else:
             return make_response({'error': 'Statistics not found'}, 404)
         

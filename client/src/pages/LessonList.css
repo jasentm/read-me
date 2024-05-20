@@ -1,0 +1,73 @@
+.lessons-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -100px;
+  }  
+  
+  .book {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    perspective: 1000px;
+  }
+  
+  .book::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 930px;
+    height: 560px;
+    background-color: #063b16;
+    z-index: 0;
+  }
+  
+  .book::before {
+    left: 0;
+    transform: translateX(-7%);
+  }
+  
+  .page {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    background-color: #f3f1d8;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 20px;
+    overflow: auto;
+    top: 10px;
+  }
+  
+  .page.left {
+    left: 0;
+    transform: translateX(-9%);
+  }
+  
+  .page.right {
+    right: 0;
+    transform: translateX(9%);
+    z-index: 2;
+  }
+  
+  .lesson-card {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f3f1d8;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }

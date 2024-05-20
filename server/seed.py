@@ -7,6 +7,33 @@ from models import db, User, TarotCard, Lesson, LessonStatistics, Reading, Fortu
 from os.path import join, dirname
 import json
 
+fake = Faker()
+
+def seed_lessons():
+    lesson_types = ['Introduction', 'Major Arcana', 'Minor Arcana', 'Spreads', 'Interpretation']
+    for lesson_type in lesson_types:
+        lesson = Lesson(type=lesson_type)
+        db.session.add(lesson)
+        lesson_stat = LessonStatistics(user_id=1, lesson=lesson)
+        db.session.add(lesson_stat)
+    db.session.commit()
+
+def seed_readings():
+    tarot_cards = TarotCard.query.all()
+    for _ in range(10):
+        past_card = rc(tarot_cards)
+        present_card = rc(tarot_cards)
+        future_card = rc(tarot_cards)
+        reading = Reading(
+            user_id=1,
+            past_card=past_card,
+            present_card=present_card,
+            future_card=future_card,
+            meaning=fake.sentence()
+        )
+        db.session.add(reading)
+    db.session.commit()
+
 def create_cards():
     file_path = join(dirname(__file__), '../tarot/tarot-images.json')
 
@@ -52,4 +79,6 @@ if __name__ == '__main__':
         db.create_all()
         
         create_cards()
+        seed_lessons()
+        seed_readings()
         
