@@ -19,10 +19,10 @@ const NavBar = ({user, updateUser}) => {
   }
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color=''>
+    <Box >
+      <AppBar position="absolute" color='' sx={{maxWidth: 750, right:330}}>
         <Toolbar>
-          <Typography variant="h6" component={NavLink} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit' }}>
+          <Typography variant="h6" component={NavLink} to="/" sx={{ flexGrow: 1, textDecoration: 'none', color: 'inherit', mr:11}}>
             Read Me
           </Typography>
           <Button color="inherit" component={NavLink} to="/profile/">

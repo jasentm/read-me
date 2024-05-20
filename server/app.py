@@ -4,6 +4,7 @@ from flask_restful import Resource
 from config import app, db, api
 from models import User, Lesson, LessonStatistics, Reading, TarotCard
 from flask_login import login_user, logout_user, login_required, current_user
+from sqlalchemy import desc
 
 
 # routes for login and user authentication 
@@ -121,20 +122,44 @@ class LessonStatsByUser(Resource):
 api.add_resource(LessonStatsByUser, '/lesson-statistics/<int:user_id>')
 
 @app.route('/completed/<int:user_id>')
-def get_completed_games(id):
-    completed = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == id, LessonStatistics.completed == True).all()]
+def get_completed_games(user_id):
+    completed = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id, LessonStatistics.completed == True).order_by(LessonStatistics.updated_at.desc()).all()]
     if completed:
         return make_response(completed)
     else:
         return make_response({'error': 'No lessons complete yet'})
     
 @app.route('/readings/<int:user_id>')
-def get_readings(id):
-    readings = [reading.to_dict() for reading in Reading.query.filter(Reading.user_id == id)]
+def get_readings(user_id):
+    readings = [reading.to_dict() for reading in Reading.query.filter(Reading.user_id == user_id).order_by(Reading.created_at.desc()).all()]
     if readings:
         return make_response(readings)
     else:
         return make_response({"error": "No readings yet"})
+    
+class Readings(Resource):
+    def post(self):
+        data = request.json
+        try:
+            new_reading = Reading(
+                user_id = data.get('user_id'),
+                past_card_id = data.get('past_card_id'),
+                present_card_id = data.get('present_card_id'),
+                future_card_id = data.get('future_card_id'),
+                meaning = data.get('meaning'),
+                created_at = data.get('created_at')
+            )
+            if new_reading:
+                db.session.add(new_reading)
+                db.session.commit()
+
+                return make_response(new_reading)
+            else:
+                return make_response({'error': 'Reading could not be made'}, 400)
+        except:
+            return make_response({'error': ['validation errors']}, 400)
+        
+api.add_resource(Readings, '/readings')
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
