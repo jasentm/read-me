@@ -46,16 +46,20 @@ export default function Readings() {
   };
 
   return (
-    <div className="lessons-page">
+    <div className="readings-page">
       <div className="content">
         {showDeck ? (
+          <>
+          <div className='title' style={{marginTop: 130}}>
+            <h1>Choose 3 Cards</h1>
+          </div>
           <div className='deck-container'>
             {shuffledCards.map((card, index) => (
               <TarotCard
                 key={index}
                 card={{
                   ...card,
-                  image: '/path/to/card-back.jpg', // TODO add card back image path
+                  image: '/Back.png', 
                 }}
                 handleCardClick={() => handleCardSelect(card)}
                 isReversed={card.isReversed}
@@ -63,9 +67,10 @@ export default function Readings() {
               />
             ))}
           </div>
+          </>
         ) : (
           <>
-            <div className='title' style={{ marginTop: -15 }}>
+            <div className='title' style={{ marginTop: 50 }}>
               <h1>The Readings</h1>
             </div>
             <div className='description-container'>

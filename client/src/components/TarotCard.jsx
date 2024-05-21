@@ -8,9 +8,8 @@ const TarotCard = ({ card, handleCardClick, isReversed, isSelected }) => {
 
   return (
     <div 
-      className={`tarot-card ${isSelected ? 'selected' : ''}`} 
+      className={`tarot-card ${isReversed ? 'reversed' : ''} ${isSelected ? 'selected' : ''}`} 
       onClick={onCardClick} 
-      style={{ transform: isReversed ? 'rotate(180deg)' : 'none' }}
     >
       <img src={card.image} alt={card.name} />
     </div>
