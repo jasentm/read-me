@@ -144,22 +144,31 @@ class Readings(Resource):
             new_reading = Reading(
                 user_id = data.get('user_id'),
                 past_card_id = data.get('past_card_id'),
+                past_card_reversed = data.get('past_card_reversed'),
                 present_card_id = data.get('present_card_id'),
+                present_card_reversed = data.get('present_card_reversed'),
                 future_card_id = data.get('future_card_id'),
-                meaning = data.get('meaning'),
-                created_at = data.get('created_at')
+                future_card_reversed = data.get('future_card_reversed')
             )
             if new_reading:
                 db.session.add(new_reading)
                 db.session.commit()
 
-                return make_response(new_reading)
+                return make_response(new_reading.to_dict())
             else:
                 return make_response({'error': 'Reading could not be made'}, 400)
         except:
             return make_response({'error': ['validation errors']}, 400)
         
 api.add_resource(Readings, '/readings')
+
+@app.route('/saved-readings/<int:id>')
+def get_saved_reading(id):
+    reading = Reading.query.filter(Reading.id == id).first()
+    if reading:
+        return make_response(reading.to_dict())
+    else:
+        return make_response({"error": "No readings yet"})
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)

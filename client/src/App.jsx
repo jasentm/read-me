@@ -37,7 +37,7 @@ function App() {
             <Route path="/deck" element={<Deck />} />
             <Route path="/" element={<LessonList user={user} />} />
             <Route path="/lesson/:id" element={<Lesson user={user}/>} />
-            <Route path="/readings" element={<Readings />} />
+            <Route path="/readings" element={<Readings user={user}/>} />
             <Route path="/readings/:id" element={<SavedReading />} />
           </>
         ) : (

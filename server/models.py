@@ -156,8 +156,11 @@ class Reading(db.Model, SerializerMixin):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     past_card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
+    past_card_reversed = db.Column(db.Boolean)
     present_card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
+    present_card_reversed = db.Column(db.Boolean)
     future_card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
+    future_card_reversed = db.Column(db.Boolean)
     meaning = db.Column(db.String)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 

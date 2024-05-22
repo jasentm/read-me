@@ -1,0 +1,45 @@
+.saved-reading-card {
+    position: relative;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, z-index 0.3s ease;
+    width: 200px;
+    margin: 0 10px;
+    padding: 50px;
+    margin-bottom: -35px;
+    margin-top: -25px;
+}
+
+.saved-reading-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+.saved-reading-card.reversed {
+    transform: rotate(180deg) translateY(2%);
+}
+
+.saved-reading-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -20px;
+}
+
+.saved-reading-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.meaning-container {
+    width: 450px;  /* Adjust this value to set the width of the meaning container */
+    margin: 0 auto;
+}
+
+.meaning {
+    word-wrap: break-word;
+    text-align: center;
+}

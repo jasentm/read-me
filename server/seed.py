@@ -22,13 +22,19 @@ def seed_readings():
     tarot_cards = TarotCard.query.all()
     for _ in range(10):
         past_card = rc(tarot_cards)
+        past_card_reversed = rc([True, False])
         present_card = rc(tarot_cards)
+        present_card_reversed = rc([True, False])
         future_card = rc(tarot_cards)
+        future_card_reversed = rc([True, False])
         reading = Reading(
             user_id=1,
             past_card=past_card,
+            past_card_reversed=past_card_reversed,
             present_card=present_card,
+            present_card_reversed=present_card_reversed,
             future_card=future_card,
+            future_card_reversed=future_card_reversed,
             meaning=fake.sentence()
         )
         db.session.add(reading)
