@@ -4,7 +4,7 @@ Join us in the techno-mystica: Learn how to read tarot cards through fun, intera
 ---
 
 ## Introduction
-- A user can log in to view their own personal progress/profile (and stay logged in through JWT Web Tokens)
+- A user can log in to view their own personal progress/profile (and stay logged in with Flask-Login)
 - A user can take dynamically generated lessons to expand their learning with reading tarot cards
 - A user can view all tarot cards and learn more about each one
 - A user can get a three-card reading and save it to their profile to view later

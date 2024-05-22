@@ -18,28 +18,6 @@ def seed_lessons():
         db.session.add(lesson_stat)
     db.session.commit()
 
-def seed_readings():
-    tarot_cards = TarotCard.query.all()
-    for _ in range(10):
-        past_card = rc(tarot_cards)
-        past_card_reversed = rc([True, False])
-        present_card = rc(tarot_cards)
-        present_card_reversed = rc([True, False])
-        future_card = rc(tarot_cards)
-        future_card_reversed = rc([True, False])
-        reading = Reading(
-            user_id=1,
-            past_card=past_card,
-            past_card_reversed=past_card_reversed,
-            present_card=present_card,
-            present_card_reversed=present_card_reversed,
-            future_card=future_card,
-            future_card_reversed=future_card_reversed,
-            meaning=fake.sentence()
-        )
-        db.session.add(reading)
-    db.session.commit()
-
 def create_cards():
     file_path = join(dirname(__file__), '../tarot/tarot-images.json')
 
@@ -86,5 +64,5 @@ if __name__ == '__main__':
         
         create_cards()
         seed_lessons()
-        seed_readings()
+
         

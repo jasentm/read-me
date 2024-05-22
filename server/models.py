@@ -10,7 +10,7 @@ from bcrypt_utils import bcrypt
 
 class User(db.Model, SerializerMixin, UserMixin):
     __tablename__ = 'users'
-    serialize_rules = ('-_password_hash', '-reading.user', '-lesson_statistics.user')
+    serialize_rules = ('-_password_hash', '-reading.user', '-lesson_statistics.user','-reading.past_card', '-reading.present_card', '-reading.future_card')
 
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String, nullable=False)
@@ -161,7 +161,9 @@ class Reading(db.Model, SerializerMixin):
     present_card_reversed = db.Column(db.Boolean)
     future_card_id = db.Column(db.Integer, db.ForeignKey('tarotCards.id'), nullable=False)
     future_card_reversed = db.Column(db.Boolean)
-    meaning = db.Column(db.String)
+    past_card_meaning = db.Column(db.String)
+    present_card_meaning = db.Column(db.String)
+    future_card_meaning = db.Column(db.String)  
     created_at = db.Column(db.DateTime, server_default=db.func.now())
 
     user = db.relationship('User', back_populates='reading')

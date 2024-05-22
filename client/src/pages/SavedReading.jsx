@@ -3,12 +3,6 @@ import { useParams } from 'react-router-dom';
 import ReadingCard from '../components/ReadingCard'; 
 import '../components/ReadingCard.css'; 
 
-const getRandomMeaning = (meanings) => {
-  if (meanings.length === 0) return "";
-  const randomIndex = Math.floor(Math.random() * meanings.length);
-  return meanings[randomIndex].light_meaning || meanings[randomIndex].shadow_meaning;
-};
-
 const SavedReading = () => {
   const { id } = useParams();
   const [reading, setReading] = useState(null);
@@ -24,19 +18,7 @@ const SavedReading = () => {
     return <div>Loading...</div>;
   }
 
-  const { past_card, present_card, future_card, past_card_reversed, present_card_reversed, future_card_reversed } = reading;
-
-  const pastMeaning = past_card_reversed
-    ? getRandomMeaning(past_card.shadow_meanings)
-    : getRandomMeaning(past_card.light_meanings);
-
-  const presentMeaning = present_card_reversed
-    ? getRandomMeaning(present_card.shadow_meanings)
-    : getRandomMeaning(present_card.light_meanings);
-
-  const futureMeaning = future_card_reversed
-    ? getRandomMeaning(future_card.shadow_meanings)
-    : getRandomMeaning(future_card.light_meanings);
+  const { past_card, present_card, future_card, past_card_reversed, present_card_reversed, future_card_reversed, past_card_meaning, present_card_meaning, future_card_meaning } = reading;
 
   return (
     <div className="saved-reading-page">
@@ -51,7 +33,7 @@ const SavedReading = () => {
             isReversed={past_card_reversed}
           />
           <div className="meaning-container">
-            <p className='meaning'>{pastMeaning}</p>
+            <p className='meaning'>{past_card_meaning}</p>
           </div>
         </div>
         <div className="saved-reading-section">
@@ -61,7 +43,7 @@ const SavedReading = () => {
             isReversed={present_card_reversed}
           />
           <div className="meaning-container">
-            <p className='meaning'>{presentMeaning}</p>
+            <p className='meaning'>{present_card_meaning}</p>
           </div>
         </div>
         <div className="saved-reading-section">
@@ -71,7 +53,7 @@ const SavedReading = () => {
             isReversed={future_card_reversed}
           />
           <div className="meaning-container">
-            <p className='meaning'>{futureMeaning}</p>
+            <p className='meaning'>{future_card_meaning}</p>
           </div>
         </div>
       </div>

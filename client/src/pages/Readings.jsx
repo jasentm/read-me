@@ -16,7 +16,13 @@ const shuffledDeck = (cards) => {
   }));
 };
 
-export default function Readings({user}) {
+const getRandomMeaning = (meanings) => {
+  if (meanings.length === 0) return "";
+  const randomIndex = Math.floor(Math.random() * meanings.length);
+  return meanings[randomIndex].light_meaning || meanings[randomIndex].shadow_meaning;
+};
+
+export default function Readings({ user }) {
   const [showDeck, setShowDeck] = useState(false);
   const [tarotCards, setTarotCards] = useState([]);
   const [shuffledCards, setShuffledCards] = useState([]);
@@ -47,6 +53,10 @@ export default function Readings({user}) {
       setSelectedCards(updatedSelectedCards);
 
       if (updatedSelectedCards.length === 3) {
+        const pastMeaning = getRandomMeaning(updatedSelectedCards[0].isReversed ? updatedSelectedCards[0].shadow_meanings : updatedSelectedCards[0].light_meanings);
+        const presentMeaning = getRandomMeaning(updatedSelectedCards[1].isReversed ? updatedSelectedCards[1].shadow_meanings : updatedSelectedCards[1].light_meanings);
+        const futureMeaning = getRandomMeaning(updatedSelectedCards[2].isReversed ? updatedSelectedCards[2].shadow_meanings : updatedSelectedCards[2].light_meanings);
+
         // Create a new Reading instance
         const response = await fetch(`http://localhost:5555/readings`, {
           method: 'POST',
@@ -57,13 +67,16 @@ export default function Readings({user}) {
             user_id: user.id,
             past_card_id: updatedSelectedCards[0].id,
             past_card_reversed: updatedSelectedCards[0].isReversed,
+            past_card_meaning: pastMeaning,  // Send the selected meaning
             present_card_id: updatedSelectedCards[1].id,
             present_card_reversed: updatedSelectedCards[1].isReversed,
+            present_card_meaning: presentMeaning,  // Send the selected meaning
             future_card_id: updatedSelectedCards[2].id,
-            future_card_reversed: updatedSelectedCards[2].isReversed, //TODO think about meaning and if that's a patch request or created here
+            future_card_reversed: updatedSelectedCards[2].isReversed,
+            future_card_meaning: futureMeaning  // Send the selected meaning
           })
         });
-        console.log(response)
+
         if (response.ok) {
           const newReading = await response.json();
           // Navigate to the new reading page
@@ -108,18 +121,12 @@ export default function Readings({user}) {
                 A three-card tarot spread unveils profound insights into your life's journey.
                 <br /><br />The first card illuminates the experiences and lessons from the <span style={{ textDecorationLine: 'underline' }}>past</span> that shape your current reality.
                 <br /><br />The second card reflects the energies and influences surrounding you in the <span style={{ textDecorationLine: 'underline' }}>present</span> moment.
-                <br /><br />The third card unveils the potential <span style={{ textDecorationLine: 'underline' }}>futures</span> that await, guiding you towards your highest path.
-                <br /><br />By interpreting the symbolism within each card, you unlock the hidden wisdom of the tarot, gaining profound self-discovery and enlightenment.
+                <br /><br />The third card unveils the potential <span style={{ textDecorationLine: 'underline' }}>futures</span> that lie ahead, offering guidance for the path you are on.
               </h2>
+              <Button variant="contained" onClick={handleShuffleDeck} sx={{ mt: 6, backgroundColor: '#1E5F22', fontFamily: 'cursive' }}>
+                Shuffle the Deck
+              </Button>
             </div>
-            <Button
-              className='reading-button'
-              variant="contained"
-              sx={{ mt: 6, backgroundColor: '#1E5F22', fontFamily: 'cursive' }}
-              onClick={handleShuffleDeck}
-            >
-              Get a Reading
-            </Button>
           </>
         )}
       </div>

@@ -113,7 +113,7 @@ class LessonStatsByUser(Resource):
                 return make_response({'errors': ['validation errors']}, 400)
             
     def get(self, user_id):
-        lessonstats = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id).all()]
+        lessonstats = [lessonstat.to_dict(only=['completed', 'created_at', 'updated_at', 'id', 'lesson.type']) for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id).all()]
         if lessonstats:
             return make_response(lessonstats)
         else:
@@ -122,7 +122,7 @@ class LessonStatsByUser(Resource):
 api.add_resource(LessonStatsByUser, '/lesson-statistics/<int:user_id>')
 
 @app.route('/completed/<int:user_id>')
-def get_completed_games(user_id):
+def get_completed_lessons(user_id):
     completed = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id, LessonStatistics.completed == True).order_by(LessonStatistics.updated_at.desc()).all()]
     if completed:
         return make_response(completed)
@@ -131,7 +131,7 @@ def get_completed_games(user_id):
     
 @app.route('/readings/<int:user_id>')
 def get_readings(user_id):
-    readings = [reading.to_dict() for reading in Reading.query.filter(Reading.user_id == user_id).order_by(Reading.created_at.desc()).all()]
+    readings = [reading.to_dict(only=['created_at', 'id']) for reading in Reading.query.filter(Reading.user_id == user_id).order_by(Reading.created_at.desc()).all()]
     if readings:
         return make_response(readings)
     else:
@@ -148,7 +148,10 @@ class Readings(Resource):
                 present_card_id = data.get('present_card_id'),
                 present_card_reversed = data.get('present_card_reversed'),
                 future_card_id = data.get('future_card_id'),
-                future_card_reversed = data.get('future_card_reversed')
+                future_card_reversed = data.get('future_card_reversed'),
+                past_card_meaning=data.get('past_card_meaning'),
+                present_card_meaning=data.get('present_card_meaning'),
+                future_card_meaning=data.get('future_card_meaning')
             )
             if new_reading:
                 db.session.add(new_reading)
