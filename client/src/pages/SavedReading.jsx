@@ -33,7 +33,7 @@ const SavedReading = () => {
             isReversed={past_card_reversed}
           />
           <div className="meaning-container">
-            <p className='meaning'>{past_card_meaning}</p>
+            <h2 className='meaning'>{past_card_meaning}</h2>
           </div>
         </div>
         <div className="saved-reading-section">
@@ -43,7 +43,7 @@ const SavedReading = () => {
             isReversed={present_card_reversed}
           />
           <div className="meaning-container">
-            <p className='meaning'>{present_card_meaning}</p>
+            <h2 className='meaning'>{present_card_meaning}</h2>
           </div>
         </div>
         <div className="saved-reading-section">
@@ -53,7 +53,7 @@ const SavedReading = () => {
             isReversed={future_card_reversed}
           />
           <div className="meaning-container">
-            <p className='meaning'>{future_card_meaning}</p>
+            <h2 className='meaning'>{future_card_meaning}</h2>
           </div>
         </div>
       </div>

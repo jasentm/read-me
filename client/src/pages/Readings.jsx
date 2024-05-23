@@ -113,7 +113,7 @@ export default function Readings({ user }) {
           </>
         ) : (
           <>
-            <div className='title' style={{ marginTop: 50 }}>
+            <div className='title' style={{marginBottom: 50}}>
               <h1>The Readings</h1>
             </div>
             <div className='description-container'>
@@ -123,7 +123,7 @@ export default function Readings({ user }) {
                 <br /><br />The second card reflects the energies and influences surrounding you in the <span style={{ textDecorationLine: 'underline' }}>present</span> moment.
                 <br /><br />The third card unveils the potential <span style={{ textDecorationLine: 'underline' }}>futures</span> that lie ahead, offering guidance for the path you are on.
               </h2>
-              <Button variant="contained" onClick={handleShuffleDeck} sx={{ mt: 6, backgroundColor: '#1E5F22', fontFamily: 'cursive' }}>
+              <Button variant="contained" onClick={handleShuffleDeck} sx={{ mt: 6, backgroundColor: '#1E5F22', fontFamily: 'cursive' }} style={{top: 40}}>
                 Shuffle the Deck
               </Button>
             </div>

@@ -10,7 +10,7 @@ from bcrypt_utils import bcrypt
 
 class User(db.Model, SerializerMixin, UserMixin):
     __tablename__ = 'users'
-    serialize_rules = ('-_password_hash', '-reading.user', '-lesson_statistics.user','-reading.past_card', '-reading.present_card', '-reading.future_card')
+    serialize_rules = ('-_password_hash', '-reading.user', '-lesson_statistics.user')
 
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String, nullable=False)
@@ -148,6 +148,19 @@ class LessonStatistics(db.Model, SerializerMixin):
     user = db.relationship('User', back_populates='lesson_statistics')
     lesson = db.relationship('Lesson', back_populates='lesson_statistics')
     #TODO finish validations
+
+class Question(db.Model, SerializerMixin):
+    __tablename__ = 'questions'
+    #TODO add serialize rules
+
+    id = db.Column(db.Integer, primary_key = True)
+    lesson_id = db.Column(db.Integer, db.ForeignKey('lessons.id'), nullable=False)
+    question = db.Column(db.String)
+    answer1 = db.Column(db.String)
+    answer2 = db.Column(db.String)
+    answer3 = db.Column(db.String)
+    answer4 = db.Column(db.String)
+    correct_answer = db.Column(db.String)
 
 class Reading(db.Model, SerializerMixin):
     __tablename__ = 'readings'
