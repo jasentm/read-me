@@ -123,13 +123,14 @@ class Question(db.Model, SerializerMixin):
     #TODO finish validations
 class Lesson(db.Model, SerializerMixin):
     __tablename__ = 'lessons'
-    serialize_rules = ('-tarot_card.lesson', '-lesson_statistics.lesson')
+    serialize_rules = ('-tarot_card.lesson', '-lesson_statistics.lesson', '-lesson_questions.lesson')
     
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(db.String)
 
     lesson_statistics = db.relationship('LessonStatistics', back_populates='lesson')
     tarot_card = db.relationship('TarotCard', back_populates='lesson')
+    lesson_questions = db.relationship('LessonQuestion', back_populates='lesson')
 
     users = association_proxy('lessonStatistics', 'user')
 
@@ -149,9 +150,9 @@ class LessonStatistics(db.Model, SerializerMixin):
     lesson = db.relationship('Lesson', back_populates='lesson_statistics')
     #TODO finish validations
 
-class Question(db.Model, SerializerMixin):
-    __tablename__ = 'questions'
-    #TODO add serialize rules
+class LessonQuestion(db.Model, SerializerMixin):
+    __tablename__ = 'lessonQuestions'
+    serialize_rules = ('-lesson.lesson_questions')
 
     id = db.Column(db.Integer, primary_key = True)
     lesson_id = db.Column(db.Integer, db.ForeignKey('lessons.id'), nullable=False)
@@ -161,6 +162,9 @@ class Question(db.Model, SerializerMixin):
     answer3 = db.Column(db.String)
     answer4 = db.Column(db.String)
     correct_answer = db.Column(db.String)
+    explanation = db.Column(db.String)
+
+    lesson = db.relationship('Lesson', back_populates='lesson_questions')
 
 class Reading(db.Model, SerializerMixin):
     __tablename__ = 'readings'

@@ -1,0 +1,1413 @@
+{
+    "introduction": [
+        {
+            "lesson_id": 1,
+            "question": "How many cards are in a Tarot deck?",
+            "answer1": "52",
+            "answer2": "75",
+            "answer3": "50",
+            "answer4": "78",
+            "correct_answer": "78",
+            "explanation": "There are 22 cards in the The Major Arcana and 56 cards in the Minor Arcana (the Minor Arcana is like a deck of average playing cards with one extra card in each suit)"
+        },
+        {
+            "lesson_id": 1,
+            "question": "What are the main sections of a Tarot deck?",
+            "answer1": "The Major Arcana and the Minor Arcana",
+            "answer2": "The Court Cards and the Pip Cards",
+            "answer3": "The Suits and the Trumps",
+            "answer4": "The Major Suits and the Minor Suits",
+            "correct_answer": "The Major Arcana and the Minor Arcana",
+            "explanation": "The Tarot deck is divided into the Major Arcana (22 cards) and the Minor Arcana (56 cards)."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What are the Major Arcana?",
+            "answer1": "22 cards that represent significant life events and spiritual lessons",
+            "answer2": "56 cards that represent everyday events",
+            "answer3": "A separate deck of cards used in Tarot readings",
+            "answer4": "The instruction manual for Tarot readings",
+            "correct_answer": "22 cards that represent significant life events and spiritual lessons",
+            "explanation": "The Major Arcana are the core of the Tarot deck, including key cards like The Fool and The Magician."
+        }, 
+        {
+            "lesson_id": 1,
+            "question": "What are the Minor Arcana?",
+            "answer1": "22 cards that represent major life lessons",
+            "answer2": "A separate deck used in advanced readings",
+            "answer3": "56 cards that represent everyday events and experiences",
+            "answer4": "The spread used in a Tarot reading",
+            "correct_answer": "56 cards that represent everyday events and experiences",
+            "explanation": "The Minor Arcana is made up of four suits: Cups, Pentacles, Swords, and Wands."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What do the four suits in the Minor Arcana represent?",
+            "answer1": "Different types of divination tools",
+            "answer2": "Four different phases of the moon",
+            "answer3": "Different aspects of life: emotions, material aspects, intellect, and creativity",
+            "answer4": "Four seasons of the year",
+            "correct_answer": "Different aspects of life: emotions, material aspects, intellect, and creativity",
+            "explanation": "The suits are Cups (emotions), Pentacles (material aspects), Swords (intellect), and Wands (creativity)."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What is a Tarot spread?",
+            "answer1": "A specific layout of cards used during a reading",
+            "answer2": "A type of card shuffle",
+            "answer3": "A ritual to cleanse the cards",
+            "answer4": "The instruction manual for Tarot readings",
+            "correct_answer": "A specific layout of cards used during a reading",
+            "explanation": "Each position in the spread has a particular meaning and helps provide insight."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What is a querent?",
+            "answer1": "The person who asks the question or seeks guidance from the Tarot reading",
+            "answer2": "The person who reads the Tarot cards",
+            "answer3": "A specific type of Tarot card",
+            "answer4": "A type of Tarot spread",
+            "correct_answer": "The person who asks the question or seeks guidance from the Tarot reading",
+            "explanation": "The querent is the individual seeking insight from the Tarot."
+        },        
+        {
+            "lesson_id": 1,
+            "question": "What is the role of the Tarot reader?",
+            "answer1": "To predict the future with certainty",
+            "answer2": "To interpret the cards and provide guidance",
+            "answer3": "To create a sacred space for readings",
+            "answer4": "To shuffle the cards",
+            "correct_answer": "To interpret the cards and provide guidance",
+            "explanation": "The reader helps the querent (the asker) to gain insight and clarity about their question or situation - futures are always uncertain.  Someone could make a different decision in light of new information and their future could change drastically."
+        },
+        {
+            "lesson_id": 1,
+            "question": "Why is it important to create a sacred space for Tarot reading?",
+            "answer1": "To ensure the cards are in order",
+            "answer2": "To invite positive energies and set the intention",
+            "answer3": "To decorate the area with Tarot art",
+            "answer4": "To impress the querent",
+            "correct_answer": "To invite positive energies and set the intention",
+            "explanation": "It helps focus the mind and enhances the reader's connection to the cards."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What does the Suit of Cups generally relate to?",
+            "answer1": "Material aspects and career",
+            "answer2": "Emotions and relationships",
+            "answer3": "Intellect and conflict",
+            "answer4": "Creativity and action",
+            "correct_answer": "Emotions and relationships",
+            "explanation": "The Suit of Cups is associated with emotions, relationships, and feelings."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What does the Suit of Pentacles generally relate to?",
+            "answer1": "Material aspects and career",
+            "answer2": "Emotions and relationships",
+            "answer3": "Intellect and conflict",
+            "answer4": "Creativity and action",
+            "correct_answer": "Material aspects and career",
+            "explanation": "The Suit of Pentacles is connected to material wealth, career, and financial matters."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What does the Suit of Swords generally relate to?",
+            "answer1": "Material aspects and career",
+            "answer2": "Emotions and relationships",
+            "answer3": "Intellect and conflict",
+            "answer4": "Creativity and action",
+            "correct_answer": "Intellect and conflict",
+            "explanation": "The Suit of Swords is linked to intellect, conflict, and decision-making."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What does the Suit of Wands generally relate to?",
+            "answer1": "Material aspects and career",
+            "answer2": "Emotions and relationships",
+            "answer3": "Intellect and conflict",
+            "answer4": "Creativity and action",
+            "correct_answer": "Creativity and action",
+            "explanation": "The Suit of Wands is associated with creativity, action, and ambition."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What is the role of the Court Cards in Tarot?",
+            "answer1": "They represent specific events",
+            "answer2": "They represent people or personality traits",
+            "answer3": "They determine the outcome of a reading",
+            "answer4": "They are used only in special spreads",
+            "correct_answer": "They represent people or personality traits",
+            "explanation": "Court Cards typically represent people, their characteristics, or situations involving these traits."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What is an example of a common three-card spread?",
+            "answer1": "Past, Present, Future",
+            "answer2": "Love, Career, Health",
+            "answer3": "Mind, Body, Spirit",
+            "answer4": "Problem, Solution, Outcome",
+            "correct_answer": "Past, Present, Future",
+            "explanation": "The Past, Present, Future spread is a common three-card spread used to provide insight into different time frames."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What is the importance of the imagery on Tarot cards?",
+            "answer1": "It is purely decorative",
+            "answer2": "It helps in interpreting the card's meaning",
+            "answer3": "It indicates the card's age",
+            "answer4": "It is used for card shuffling techniques",
+            "correct_answer": "It helps in interpreting the card's meaning",
+            "explanation": "The imagery on Tarot cards is rich with symbols that aid in their interpretation."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What is a significator in Tarot readings?",
+            "answer1": "A card that represents the reader",
+            "answer2": "A card chosen to represent the querent",
+            "answer3": "A card that is always included in the reading",
+            "answer4": "A card that predicts the outcome",
+            "correct_answer": "A card chosen to represent the querent",
+            "explanation": "A significator is a card chosen to represent the querent or a situation in the reading."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What should the querent focus on when drawing a Tarot card?",
+            "answer1": "The card's artwork",
+            "answer2": "Your question or intention",
+            "answer3": "The position of the deck",
+            "answer4": "The time of day",
+            "correct_answer": "Your question or intention",
+            "explanation": "Focusing on your question or intention helps connect your energy to the cards."
+        }, 
+        {
+            "lesson_id": 1,
+            "question": "What does it mean if a card is drawn in reverse?",
+            "answer1": "It has no meaning",
+            "answer2": "It indicates the opposite of the card's upright meaning",
+            "answer3": "It suggests a blockage or challenge",
+            "answer4": "It predicts a positive outcome",
+            "correct_answer": "It suggests a blockage or challenge",
+            "explanation": "Reversed cards often indicate blockages, challenges, or a need for introspection. Each card has specific reversed meanings that are not always the opposite of the card's upright meaning."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What should you invite someone do before starting a Tarot reading?",
+            "answer1": "Clear their mind and set an intention",
+            "answer2": "Memorize the card meanings",
+            "answer3": "Predict the outcome",
+            "answer4": "Shuffle the cards for exactly 10 minutes",
+            "correct_answer": "Clear their mind and set an intention",
+            "explanation": "Clearing your mind and setting an intention helps focus the reading and connect with the cards."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What is one method of cleansing Tarot cards?",
+            "answer1": "Washing them with water",
+            "answer2": "Placing them under a full moon",
+            "answer3": "Leaving them in a drawer",
+            "answer4": "Shuffling them exactly 100 times",
+            "correct_answer": "Placing them under a full moon",
+            "explanation": "Placing Tarot cards under a full moon is a common method to cleanse and recharge their energy."
+        },
+        {
+            "lesson_id": 1,
+            "question": "What does it mean if a reading feels unclear or confusing?",
+            "answer1": "The Tarot deck is faulty",
+            "answer2": "The question needs to be rephrased or the cards need to be reshuffled",
+            "answer3": "The querent is hiding something",
+            "answer4": "The reading should be stopped immediately",
+            "correct_answer": "The question needs to be rephrased or the cards need to be reshuffled",
+            "explanation": "If a reading feels unclear, rephrasing the question or reshuffling the cards can help provide clarity."
+        } 
+        ],
+    "elements": [
+        {
+            "lesson_id": 2,
+            "question": "What element is the suit of Swords typically associated with?",
+            "answer1": "Air",
+            "answer2": "Fire",
+            "answer3": "Water",
+            "answer4": "Earth",
+            "correct_answer": "Air",
+            "explanation": "The Suit of Swords is linked to the element of Air as well as intellect, conflict, and decision-making."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which element is the Suit of Wands associated with?",
+            "answer1": "Air",
+            "answer2": "Fire",
+            "answer3": "Water",
+            "answer4": "Earth",
+            "correct_answer": "Fire",
+            "explanation": "The Suit of Wands is connected to the element of Fire, symbolizing creativity, action, and ambition."
+        },
+        {
+            "lesson_id": 2,
+            "question": "The Suit of Pentacles is linked to which element?",
+            "answer1": "Air",
+            "answer2": "Fire",
+            "answer3": "Water",
+            "answer4": "Earth",
+            "correct_answer": "Earth",
+            "explanation": "The Suit of Pentacles is connected to the element of Earth, symbolizing material aspects, career, and financial matters."
+        },
+        {
+            "lesson_id": 2,
+            "question": "The Suit of Pentacles is linked to which element?",
+            "answer1": "Air",
+            "answer2": "Fire",
+            "answer3": "Water",
+            "answer4": "Earth",
+            "correct_answer": "Earth",
+            "explanation": "The Suit of Pentacles is connected to the element of Earth, symbolizing material aspects, career, and financial matters."
+        },
+        {
+            "lesson_id": 2,
+            "question": "What element is linked to intuition and emotions?",
+            "answer1": "Air",
+            "answer2": "Fire",
+            "answer3": "Water",
+            "answer4": "Earth",
+            "correct_answer": "Water",
+            "explanation": "The element of Water is linked to intuition and emotions, often represented by the Suit of Cups."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which element represents stability and practicality?",
+            "answer1": "Air",
+            "answer2": "Fire",
+            "answer3": "Water",
+            "answer4": "Earth",
+            "correct_answer": "Earth",
+            "explanation": "The element of Earth represents stability, practicality, and material aspects, often symbolized by the Suit of Pentacles."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which element is associated with creativity and action?",
+            "answer1": "Air",
+            "answer2": "Fire",
+            "answer3": "Water",
+            "answer4": "Earth",
+            "correct_answer": "Fire",
+            "explanation": "The element of Fire is associated with creativity and action, often represented by the Suit of Wands."
+        },
+        {
+            "lesson_id": 2,
+            "question": "What element is associated with communication and thoughts?",
+            "answer1": "Air",
+            "answer2": "Fire",
+            "answer3": "Water",
+            "answer4": "Earth",
+            "correct_answer": "Air",
+            "explanation": "The element of Air is associated with communication and thoughts, often represented by the Suit of Swords."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of earth?",
+            "answer1": "/cards/w03.jpg",
+            "answer2": "/cards/c06.jpg",
+            "answer3": "/cards/s06.jpg",
+            "answer4": "/cards/p06.jpg",
+            "correct_answer": "/cards/p06.jpg",
+            "explanation": "The Six of Pentacles is associated with the element of Earth."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of water?",
+            "answer1": "/cards/w09.jpg",
+            "answer2": "/cards/c09.jpg",
+            "answer3": "/cards/s09.jpg",
+            "answer4": "/cards/p09.jpg",
+            "correct_answer": "/cards/c09.jpg",
+            "explanation": "The Nine of Cups is associated with the element of Water."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of air?",
+            "answer1": "/cards/w13.jpg",
+            "answer2": "/cards/c13.jpg",
+            "answer3": "/cards/s13.jpg",
+            "answer4": "/cards/p13.jpg",
+            "correct_answer": "/cards/s13.jpg",
+            "explanation": "The Queen of Swords is associated with the element of Air."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of fire?",
+            "answer1": "/cards/w10.jpg",
+            "answer2": "/cards/c10.jpg",
+            "answer3": "/cards/s10.jpg",
+            "answer4": "/cards/p10.jpg",
+            "correct_answer": "/cards/w10.jpg",
+            "explanation": "The Ten of Wands is associated with the element of Fire."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of earth?",
+            "answer1": "/cards/w14.jpg",
+            "answer2": "/cards/c14.jpg",
+            "answer3": "/cards/s14.jpg",
+            "answer4": "/cards/p14.jpg",
+            "correct_answer": "/cards/p14.jpg",
+            "explanation": "The King of Pentacles is associated with the element of Earth."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of water?",
+            "answer1": "/cards/w08.jpg",
+            "answer2": "/cards/c08.jpg",
+            "answer3": "/cards/s08.jpg",
+            "answer4": "/cards/p08.jpg",
+            "correct_answer": "/cards/c08.jpg",
+            "explanation": "The Eight of Cups is associated with the element of Water."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of air?",
+            "answer1": "/cards/w04.jpg",
+            "answer2": "/cards/c04.jpg",
+            "answer3": "/cards/s04.jpg",
+            "answer4": "/cards/p04.jpg",
+            "correct_answer": "/cards/s04.jpg",
+            "explanation": "The Four of Swords is associated with the element of Air."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of fire?",
+            "answer1": "/cards/w12.jpg",
+            "answer2": "/cards/c12.jpg",
+            "answer3": "/cards/s12.jpg",
+            "answer4": "/cards/p12.jpg",
+            "correct_answer": "/cards/s12.jpg",
+            "explanation": "The Knight of Swords is associated with the element of Fire."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of earth?",
+            "answer1": "/cards/w02.jpg",
+            "answer2": "/cards/c02.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/p02.jpg",
+            "correct_answer": "/cards/p02.jpg",
+            "explanation": "The Two of Pentacles is associated with the element of Earth."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of water?",
+            "answer1": "/cards/w07.jpg",
+            "answer2": "/cards/c07.jpg",
+            "answer3": "/cards/s07.jpg",
+            "answer4": "/cards/p07.jpg",
+            "correct_answer": "/cards/c07.jpg",
+            "explanation": "The Seven of Cups is associated with the element of Water."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of air?",
+            "answer1": "/cards/w11.jpg",
+            "answer2": "/cards/c11.jpg",
+            "answer3": "/cards/s11.jpg",
+            "answer4": "/cards/p11.jpg",
+            "correct_answer": "/cards/s11.jpg",
+            "explanation": "The Page of Swords is associated with the element of Air."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of water?",
+            "answer1": "/cards/w09.jpg",
+            "answer2": "/cards/c09.jpg",
+            "answer3": "/cards/s09.jpg",
+            "answer4": "/cards/p09.jpg",
+            "correct_answer": "/cards/c09.jpg",
+            "explanation": "The Nine of Cups is associated with the element of Water."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of air?",
+            "answer1": "/cards/w03.jpg",
+            "answer2": "/cards/c03.jpg",
+            "answer3": "/cards/s03.jpg",
+            "answer4": "/cards/p03.jpg",
+            "correct_answer": "/cards/s03.jpg",
+            "explanation": "The Three of Swords is associated with the element of Air."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of fire?",
+            "answer1": "/cards/w14.jpg",
+            "answer2": "/cards/c14.jpg",
+            "answer3": "/cards/s14.jpg",
+            "answer4": "/cards/p14.jpg",
+            "correct_answer": "/cards/w14.jpg",
+            "explanation": "The King of Wands is associated with the element of Fire."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of earth?",
+            "answer1": "/cards/w08.jpg",
+            "answer2": "/cards/c08.jpg",
+            "answer3": "/cards/s08.jpg",
+            "answer4": "/cards/p08.jpg",
+            "correct_answer": "/cards/p08.jpg",
+            "explanation": "The Eight of Pentacles is associated with the element of Earth."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of water?",
+            "answer1": "/cards/w01.jpg",
+            "answer2": "/cards/c01.jpg",
+            "answer3": "/cards/s01.jpg",
+            "answer4": "/cards/p01.jpg",
+            "correct_answer": "/cards/c01.jpg",
+            "explanation": "The Ace of Cups is associated with the element of Water."
+        },
+        {
+            "lesson_id": 2,
+            "question": "Which of these cards are associated with the element of air?",
+            "answer1": "/cards/w13.jpg",
+            "answer2": "/cards/c13.jpg",
+            "answer3": "/cards/s13.jpg",
+            "answer4": "/cards/p13.jpg",
+            "correct_answer": "/cards/s13.jpg",
+            "explanation": "The Queen of Swords is associated with the element of Air."
+        }
+        
+    ],
+    "numbers": [
+        {
+            "lesson_id": 3,
+            "question": "What card/number is most associated with beginnings?",
+            "answer1": "10",
+            "answer2": "Ace",
+            "answer3": "King",
+            "answer4": "2",
+            "correct_answer": "Ace",
+            "explanation": "The Ace card is most commonly associated with beginnings in Tarot. It represents new opportunities, fresh starts, and the potential for growth and creation."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What does the number 2 symbolize in Tarot?",
+            "answer1": "Duality",
+            "answer2": "Transformation",
+            "answer3": "Success",
+            "answer4": "Stagnation",
+            "correct_answer": "Duality",
+            "explanation": "In Tarot, the number 2 symbolizes duality, balance, choices, and partnerships."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What is the significance of the number 3 in Tarot?",
+            "answer1": "Creativity",
+            "answer2": "Isolation",
+            "answer3": "Achievement",
+            "answer4": "Struggle",
+            "correct_answer": "Achievement",
+            "explanation": "The number 3 in Tarot signifies achievement, growth, expansion, and collaboration."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What does the number 4 represent in Tarot readings?",
+            "answer1": "Change",
+            "answer2": "Stability",
+            "answer3": "Deception",
+            "answer4": "Confusion",
+            "correct_answer": "Stability",
+            "explanation": "In Tarot, the number 4 represents stability, structure, foundations, and security."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What does the number 5 typically signify in Tarot?",
+            "answer1": "Unity",
+            "answer2": "Conflict",
+            "answer3": "Balance",
+            "answer4": "Harmony",
+            "correct_answer": "Conflict",
+            "explanation": "The number 5 in Tarot often signifies conflict, challenges, instability, and change."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What does the number 6 symbolize in Tarot?",
+            "answer1": "Harmony",
+            "answer2": "Isolation",
+            "answer3": "Struggle",
+            "answer4": "Achievement",
+            "correct_answer": "Harmony",
+            "explanation": "In Tarot, the number 6 symbolizes harmony, balance, peace, and cooperation."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What does the number 7 represent in Tarot readings?",
+            "answer1": "Completion",
+            "answer2": "Spirituality",
+            "answer3": "Materialism",
+            "answer4": "Stagnation",
+            "correct_answer": "Spirituality",
+            "explanation": "The number 7 in Tarot often represents spirituality, inner growth, introspection, and seeking answers."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What does the number 8 symbolize in Tarot?",
+            "answer1": "Progress",
+            "answer2": "Isolation",
+            "answer3": "Conflict",
+            "answer4": "Stability",
+            "correct_answer": "Progress",
+            "explanation": "In Tarot, the number 8 symbolizes progress, movement, momentum, and overcoming obstacles."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What is the significance of the number 9 in Tarot readings?",
+            "answer1": "Resolution",
+            "answer2": "Struggle",
+            "answer3": "Stability",
+            "answer4": "Confusion",
+            "correct_answer": "Resolution",
+            "explanation": "The number 9 in Tarot signifies resolution, fulfillment, accomplishment, and reaching the end of a cycle."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What does the number 10 typically represent in Tarot?",
+            "answer1": "Isolation",
+            "answer2": "Beginnings",
+            "answer3": "Completion",
+            "answer4": "Stagnation",
+            "correct_answer": "Completion",
+            "explanation": "In Tarot, the number 10 often represents completion, fulfillment, achievement, and reaching the end of a journey."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with stability in Tarot?",
+            "answer1": "Ace",
+            "answer2": "4",
+            "answer3": "7",
+            "answer4": "10",
+            "correct_answer": "4",
+            "explanation": "In Tarot, the number 4 is often associated with stability, structure, and security."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with conflict in Tarot?",
+            "answer1": "2",
+            "answer2": "5",
+            "answer3": "7",
+            "answer4": "10",
+            "correct_answer": "5",
+            "explanation": "In Tarot, the number 5 is often associated with conflict, challenges, and instability."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with harmony in Tarot?",
+            "answer1": "3",
+            "answer2": "6",
+            "answer3": "8",
+            "answer4": "10",
+            "correct_answer": "6",
+            "explanation": "In Tarot, the number 6 is often associated with harmony, balance, and cooperation."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with resolution in Tarot?",
+            "answer1": "6",
+            "answer2": "9",
+            "answer3": "King",
+            "answer4": "4",
+            "correct_answer": "9",
+            "explanation": "In Tarot, the number 9 is often associated with resolution, fulfillment, and successful endings."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with achievement in Tarot?",
+            "answer1": "3",
+            "answer2": "6",
+            "answer3": "Ace",
+            "answer4": "10",
+            "correct_answer": "10",
+            "explanation": "In Tarot, the number 10 is often associated with achievement, completion, and reaching the end of a cycle."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with progress in Tarot?",
+            "answer1": "2",
+            "answer2": "6",
+            "answer3": "8",
+            "answer4": "10",
+            "correct_answer": "8",
+            "explanation": "In Tarot, the number 8 is often associated with progress, forward momentum, and equilibrium."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with spirituality in Tarot?",
+            "answer1": "3",
+            "answer2": "7",
+            "answer3": "9",
+            "answer4": "10",
+            "correct_answer": "7",
+            "explanation": "In Tarot, the number 7 is often associated with spirituality, introspection, and seeking answers within."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with struggle in Tarot?",
+            "answer1": "2",
+            "answer2": "5",
+            "answer3": "8",
+            "answer4": "10",
+            "correct_answer": "5",
+            "explanation": "In Tarot, the number 5 is often associated with struggle, conflict, and adversity."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with achievement in Tarot?",
+            "answer1": "3",
+            "answer2": "6",
+            "answer3": "9",
+            "answer4": "10",
+            "correct_answer": "10",
+            "explanation": "In Tarot, the number 10 is often associated with achievement, completion, and success."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with resolution in Tarot?",
+            "answer1": "6",
+            "answer2": "9",
+            "answer3": "King",
+            "answer4": "10",
+            "correct_answer": "9",
+            "explanation": "In Tarot, the number 9 is often associated with resolution, completion, and successful endings."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with isolation in Tarot?",
+            "answer1": "3",
+            "answer2": "7",
+            "answer3": "9",
+            "answer4": "10",
+            "correct_answer": "7",
+            "explanation": "In Tarot, the number 7 is often associated with isolation, introspection, and self-reflection."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with struggle in Tarot?",
+            "answer1": "2",
+            "answer2": "5",
+            "answer3": "8",
+            "answer4": "10",
+            "correct_answer": "5",
+            "explanation": "In Tarot, the number 5 is often associated with struggle, conflict, and adversity."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which number is most associated with completion in Tarot?",
+            "answer1": "7",
+            "answer2": "9",
+            "answer3": "10",
+            "answer4": "King",
+            "correct_answer": "10",
+            "explanation": "In Tarot, the number 10 is often associated with completion, fulfillment, and accomplishment."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What is a key difference between court cards and number cards in Tarot?",
+            "answer1": "Court cards represent people, while number cards represent situations and energies.",
+            "answer2": "Court cards represent major life events, while number cards represent minor details.",
+            "answer3": "Court cards are always associated with positive outcomes, while number cards can indicate challenges.",
+            "answer4": "Court cards are used for timing in readings, while number cards represent personalities.",
+            "correct_answer": "Court cards represent people, while number cards represent situations and energies.",
+            "explanation": "In Tarot, court cards typically represent people, such as personalities or individuals in the querent's life, while number cards represent various situations, energies, or aspects of the querent's journey."
+        },
+        {
+            "lesson_id": 3,
+            "question": "What distinguishes court cards from number cards in Tarot readings?",
+            "answer1": "Court cards focus on external influences, while number cards focus on internal emotions.",
+            "answer2": "Court cards represent specific individuals, while number cards represent general energies.",
+            "answer3": "Court cards indicate major life events, while number cards indicate minor details.",
+            "answer4": "Court cards are associated with timing, while number cards represent specific outcomes.",
+            "correct_answer": "Court cards represent specific individuals, while number cards represent general energies.",
+            "explanation": "Court cards in Tarot often represent specific individuals, such as people in the querent's life or aspects of the querent's personality, while number cards typically represent broader energies, situations, or themes within the reading."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which court card is most associated with new beginnings and opportunities in Tarot?",
+            "answer1": "Page",
+            "answer2": "Knight",
+            "answer3": "Queen",
+            "answer4": "King",
+            "correct_answer": "Page",
+            "explanation": "In Tarot, the Page cards are often associated with new beginnings, opportunities, and youthful energy."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which court card is most associated with action and movement in Tarot?",
+            "answer1": "Page",
+            "answer2": "Knight",
+            "answer3": "Queen",
+            "answer4": "King",
+            "correct_answer": "Knight",
+            "explanation": "In Tarot, the Knight cards are often associated with action, movement, and progression."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which court card is most associated with compassion and nurturing in Tarot?",
+            "answer1": "Page",
+            "answer2": "Knight",
+            "answer3": "Queen",
+            "answer4": "King",
+            "correct_answer": "Queen",
+            "explanation": "In Tarot, the Queen cards are often associated with compassion, nurturing, and emotional support."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which court card is most associated with authority and leadership in Tarot?",
+            "answer1": "Page",
+            "answer2": "Knight",
+            "answer3": "Queen",
+            "answer4": "King",
+            "correct_answer": "King",
+            "explanation": "In Tarot, the King cards are often associated with authority, leadership, and mastery of one's domain."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Beginnings?",
+            "answer1": "/cards/w01.jpg",
+            "answer2": "/cards/c03.jpg",
+            "answer3": "/cards/s06.jpg",
+            "answer4": "/cards/p09.jpg",
+            "correct_answer": "/cards/w01.jpg",
+            "explanation": "The Ace is often associated with beginnings, new opportunities, and creative potential."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Stability?",
+            "answer1": "/cards/w04.jpg",
+            "answer2": "/cards/c05.jpg",
+            "answer3": "/cards/s07.jpg",
+            "answer4": "/cards/p10.jpg",
+            "correct_answer": "/cards/w04.jpg",
+            "explanation": "The Four is often associated with stability, security, and a solid foundation."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Conflict?",
+            "answer1": "/cards/p05.jpg",
+            "answer2": "/cards/c06.jpg",
+            "answer3": "/cards/s08.jpg",
+            "answer4": "/cards/p11.jpg",
+            "correct_answer": "/cards/p05.jpg",
+            "explanation": "The Five is often associated with conflict, competition, and challenges."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Harmony?",
+            "answer1": "/cards/w06.jpg",
+            "answer2": "/cards/c07.jpg",
+            "answer3": "/cards/s09.jpg",
+            "answer4": "/cards/p12.jpg",
+            "correct_answer": "/cards/w06.jpg",
+            "explanation": "The Six is often associated with harmony, nostalgia, and childhood memories."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Spirituality?",
+            "answer1": "/cards/w07.jpg",
+            "answer2": "/cards/c08.jpg",
+            "answer3": "/cards/s10.jpg",
+            "answer4": "/cards/p13.jpg",
+            "correct_answer": "/cards/c07.jpg",
+            "explanation": "The Seven is often associated with spirituality, imagination, and dreams."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Balance?",
+            "answer1": "/cards/s08.jpg",
+            "answer2": "/cards/c09.jpg",
+            "answer3": "/cards/s11.jpg",
+            "answer4": "/cards/p14.jpg",
+            "correct_answer": "/cards/s08.jpg",
+            "explanation": "The Eight is often associated with balance, movement, and swift action."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Completion?",
+            "answer1": "/cards/w10.jpg",
+            "answer2": "/cards/c11.jpg",
+            "answer3": "/cards/s13.jpg",
+            "answer4": "/cards/p02.jpg",
+            "correct_answer": "/cards/w10.jpg",
+            "explanation": "The Ten is often associated with completion, burden, and reaching the end of a journey."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with New?",
+            "answer1": "/cards/p11.jpg",
+            "answer2": "/cards/c12.jpg",
+            "answer3": "/cards/s14.jpg",
+            "answer4": "/cards/p03.jpg",
+            "correct_answer": "/cards/p11.jpg",
+            "explanation": "The Page is often associated with new beginnings, opportunities, and enthusiasm."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Action?",
+            "answer1": "/cards/w12.jpg",
+            "answer2": "/cards/c13.jpg",
+            "answer3": "/cards/s01.jpg",
+            "answer4": "/cards/p04.jpg",
+            "correct_answer": "/cards/w12.jpg",
+            "explanation": "The Knight is often associated with action, adventure, and forward momentum."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Compassion?",
+            "answer1": "/cards/c13.jpg",
+            "answer2": "/cards/c14.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/p05.jpg",
+            "correct_answer": "/cards/c13.jpg",
+            "explanation": "The Queen is often associated with compassion, empathy, and emotional intelligence."
+        },
+        {
+            "lesson_id": 3,
+            "question": "Which card is most associated with Authority?",
+            "answer1": "/cards/w14.jpg",
+            "answer2": "/cards/c01.jpg",
+            "answer3": "/cards/s03.jpg",
+            "answer4": "/cards/p06.jpg",
+            "correct_answer": "/cards/w14.jpg",
+            "explanation": "The King is often associated with authority, leadership, and taking charge."
+        }
+    ],
+    "major_arcana": [
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card represents new beginnings, potential, and a fresh start?",
+            "answer1": "The Fool",
+            "answer2": "The Magician",
+            "answer3": "The High Priestess",
+            "answer4": "The Empress",
+            "correct_answer": "The Fool",
+            "explanation": "The Fool card represents new beginnings, innocence, and the start of a journey."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card symbolizes intuition, unconscious knowledge, and mystery?",
+            "answer1": "The Hierophant",
+            "answer2": "The High Priestess",
+            "answer3": "The Emperor",
+            "answer4": "The Lovers",
+            "correct_answer": "The High Priestess",
+            "explanation": "The High Priestess represents intuition, inner guidance, and accessing the subconscious mind."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card embodies power, action, and resourcefulness?",
+            "answer1": "The Emperor",
+            "answer2": "The Hierophant",
+            "answer3": "The Chariot",
+            "answer4": "Strength",
+            "correct_answer": "The Emperor",
+            "explanation": "The Emperor card represents authority, structure, and the power of the masculine principle."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card signifies love, union, and partnership?",
+            "answer1": "The Lovers",
+            "answer2": "The Hierophant",
+            "answer3": "The Chariot",
+            "answer4": "The Empress",
+            "correct_answer": "The Lovers",
+            "explanation": "The Lovers card represents relationships, harmony, and the choices we make in love."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card symbolizes authority, tradition, and conformity?",
+            "answer1": "The Hierophant",
+            "answer2": "The Emperor",
+            "answer3": "The Devil",
+            "answer4": "Justice",
+            "correct_answer": "The Hierophant",
+            "explanation": "The Hierophant represents tradition, spirituality, and seeking guidance from established institutions."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card represents ambition, determination, and control?",
+            "answer1": "The Chariot",
+            "answer2": "The Emperor",
+            "answer3": "The Lovers",
+            "answer4": "The Magician",
+            "correct_answer": "The Chariot",
+            "explanation": "The Chariot card symbolizes victory, self-discipline, and harnessing one's willpower."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card embodies compassion, nurturing, and fertility?",
+            "answer1": "The Empress",
+            "answer2": "The High Priestess",
+            "answer3": "The Chariot",
+            "answer4": "The Fool",
+            "correct_answer": "The Empress",
+            "explanation": "The Empress represents fertility, creativity, and abundance in all areas of life."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card signifies strength, courage, and inner fortitude?",
+            "answer1": "=Strength",
+            "answer2": "The Emperor",
+            "answer3": "The Hermit",
+            "answer4": "The Devil",
+            "correct_answer": "Strength",
+            "explanation": "The Strength card symbolizes courage, inner strength, and overcoming challenges through resilience."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card represents introspection, soul-searching, and solitude?",
+            "answer1": "The Hermit",
+            "answer2": "The High Priestess",
+            "answer3": "The Fool",
+            "answer4": "The Tower",
+            "correct_answer": "The Hermit",
+            "explanation": "The Hermit card symbolizes introspection, solitude, and seeking inner wisdom through reflection."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card symbolizes change, upheaval, and revelation?",
+            "answer1": "The Tower",
+            "answer2": "The Devil",
+            "answer3": "The Chariot",
+            "answer4": "The Magician",
+            "correct_answer": "The Tower",
+            "explanation": "The Tower represents sudden change, upheaval, and the breaking down of existing structures."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card represents balance, fairness, and decision-making?",
+            "answer1": "Justice",
+            "answer2": "The Emperor",
+            "answer3": "The Chariot",
+            "answer4": "The Lovers",
+            "correct_answer": "Justice",
+            "explanation": "The Justice card symbolizes fairness, balance, and making decisions based on impartial judgment."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card signifies introspection, wisdom, and inner guidance?",
+            "answer1": "The Hermit",
+            "answer2": "The High Priestess",
+            "answer3": "The Magician",
+            "answer4": "The Empress",
+            "correct_answer": "The High Priestess",
+            "explanation": "The High Priestess represents intuition, inner wisdom, and connecting with the subconscious mind."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card symbolizes transformation, rebirth, and new beginnings?",
+            "answer1": "Death",
+            "answer2": "The Fool",
+            "answer3": "The Hanged Man",
+            "answer4": "The Tower",
+            "correct_answer": "Death",
+            "explanation": "Death card signifies transformation, endings, and the start of a new chapter or cycle."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card represents patience, contemplation, and inner guidance?",
+            "answer1": "The Hermit",
+            "answer2": "The High Priestess",
+            "answer3": "Justice",
+            "answer4": "The Hanged Man",
+            "correct_answer": "The Hanged Man",
+            "explanation": "The Hanged Man represents surrender, letting go, and gaining a new perspective through suspension."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card embodies reflection, meditation, and spiritual enlightenment?",
+            "answer1": "The Hanged Man",
+            "answer2": "The High Priestess",
+            "answer3": "The Hermit",
+            "answer4": "Justice",
+            "correct_answer": "The Hermit",
+            "explanation": "The Hermit card symbolizes introspection, soul-searching, and seeking inner wisdom through solitude."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card signifies ambition, manifestation, and willpower?",
+            "answer1": "The Magician",
+            "answer2": "The Emperor",
+            "answer3": "The Chariot",
+            "answer4": "The Strength",
+            "correct_answer": "The Magician",
+            "explanation": "The Magician represents manifestation, willpower, and using one's skills and resources to achieve goals."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card symbolizes illusion, deception, and materialism?",
+            "answer1": "The Devil",
+            "answer2": "The Tower",
+            "answer3": "The Hanged Man",
+            "answer4": "The Fool",
+            "correct_answer": "The Devil",
+            "explanation": "The Devil card represents materialism, bondage, and the illusions that hold us back from true freedom."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card represents balance, harmony, and integration?",
+            "answer1": "Temperance",
+            "answer2": "Justice",
+            "answer3": "The Star",
+            "answer4": "The Chariot",
+            "correct_answer": "Temperance",
+            "explanation": "The Temperance card symbolizes balance, moderation, and integration of opposing forces or energies."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card signifies hope, inspiration, and spiritual guidance?",
+            "answer1": "The Star",
+            "answer2": "The Moon",
+            "answer3": "The Sun",
+            "answer4": "The Empress",
+            "correct_answer": "The Star",
+            "explanation": "The Star represents hope, inspiration, and receiving guidance from the divine or spiritual realm."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card symbolizes confusion, uncertainty, and illusion?",
+            "answer1": "The Moon",
+            "answer2": "The Sun",
+            "answer3": "The Tower",
+            "answer4": "The Fool",
+            "correct_answer": "The Moon",
+            "explanation": "The Moon card represents confusion, illusion, and the mysteries of the subconscious mind."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card represents illumination, clarity, and joy?",
+            "answer1": "The Sun",
+            "answer2": "The Star",
+            "answer3": "The Tower",
+            "answer4": "The Fool",
+            "correct_answer": "The Sun",
+            "explanation": "The Sun card signifies illumination, clarity, and experiencing joy and vitality."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card embodies celebration, success, and fulfillment?",
+            "answer1": "The World",
+            "answer2": "The Tower",
+            "answer3": "The Moon",
+            "answer4": "The Sun",
+            "correct_answer": "The Sun",
+            "explanation": "The Sun card symbolizes celebration, success, and experiencing the fullness of life's blessings."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card signifies reflection, completion, and integration?",
+            "answer1": "The World",
+            "answer2": "Judgement",
+            "answer3": "Death",
+            "answer4": "The Moon",
+            "correct_answer": "The Moon",
+            "explanation": "The Moon represents reflection, intuition, and the need to confront illusions or fears to find clarity."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card symbolizes transformation, rebirth, and inner awakening?",
+            "answer1": "Death",
+            "answer2": "The World",
+            "answer3": "Judgement",
+            "answer4": "The Sun",
+            "correct_answer": "Death",
+            "explanation": "The Death card signifies transformation, letting go of the old, and embracing a new phase of life."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card represents redemption, renewal, and awakening?",
+            "answer1": "The World",
+            "answer2": "Judgement",
+            "answer3": "Death",
+            "answer4": "The Moon",
+            "correct_answer": "Judgement",
+            "explanation": "The Judgement card symbolizes redemption, renewal, and awakening to higher spiritual truths."
+        },
+        {
+            "lesson_id": 4,
+            "question": "Which Major Arcana card signifies completion, achievement, and fulfillment?",
+            "answer1": "Judgement",
+            "answer2": "The World",
+            "answer3": "Death",
+            "answer4": "The Tower",
+            "correct_answer": "The World",
+            "explanation": "The World card represents completion, achievement, and reaching a state of fulfillment and wholeness."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Fool card represent?",
+            "answer1": "Wisdom",
+            "answer2": "New Beginnings",
+            "answer3": "Authority",
+            "answer4": "Compassion",
+            "correct_answer": "New Beginnings",
+            "explanation": "The Fool card represents new beginnings, innocence, and embarking on a journey."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Magician card symbolize?",
+            "answer1": "Intuition",
+            "answer2": "Strength",
+            "answer3": "Manifestation",
+            "answer4": "Illusion",
+            "correct_answer": "Manifestation",
+            "explanation": "The Magician card symbolizes manifestation, willpower, and using one's skills and resources to achieve goals."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The High Priestess card represent?",
+            "answer1": "Authority",
+            "answer2": "Intuition",
+            "answer3": "Balance",
+            "answer4": "Ambition",
+            "correct_answer": "Intuition",
+            "explanation": "The High Priestess represents intuition, inner guidance, and accessing the subconscious mind."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Empress card symbolize?",
+            "answer1": "Transformation",
+            "answer2": "Creativity",
+            "answer3": "Justice",
+            "answer4": "Illusion",
+            "correct_answer": "Creativity",
+            "explanation": "The Empress represents creativity and abundance in all areas of life."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Emperor card embody?",
+            "answer1": "Authority",
+            "answer2": "Balance",
+            "answer3": "Strength",
+            "answer4": "Hope",
+            "correct_answer": "Authority",
+            "explanation": "The Emperor card embodies authority, structure, and the power of the masculine principle."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Hierophant card signify?",
+            "answer1": "Manifestation",
+            "answer2": "Tradition",
+            "answer3": "Strength",
+            "answer4": "Transformation",
+            "correct_answer": "Tradition",
+            "explanation": "The Hierophant signifies tradition, spirituality, and seeking guidance from established institutions."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Lovers card represent?",
+            "answer1": "Authority",
+            "answer2": "Harmony",
+            "answer3": "Fertility",
+            "answer4": "Balance",
+            "correct_answer": "Harmony",
+            "explanation": "The Lovers card represents relationships, harmony, and the choices we make in love."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Chariot card symbolize?",
+            "answer1": "Transformation",
+            "answer2": "Balance",
+            "answer3": "Victory",
+            "answer4": "Compassion",
+            "correct_answer": "Victory",
+            "explanation": "The Chariot symbolizes victory, self-discipline, and harnessing one's willpower."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Strength card signify?",
+            "answer1": "Illusion",
+            "answer2": "Courage",
+            "answer3": "Wisdom",
+            "answer4": "Justice",
+            "correct_answer": "Courage",
+            "explanation": "The Strength card signifies courage, inner strength, and overcoming challenges through resilience."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Hermit card represent?",
+            "answer1": "Reflection",
+            "answer2": "Victory",
+            "answer3": "Harmony",
+            "answer4": "Wisdom",
+            "correct_answer": "Reflection",
+            "explanation": "The Hermit card represents introspection, solitude, and seeking inner wisdom through reflection."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Wheel of Fortune card symbolize?",
+            "answer1": "Strength",
+            "answer2": "Transformation",
+            "answer3": "Balance",
+            "answer4": "Change",
+            "correct_answer": "Change",
+            "explanation": "The Wheel of Fortune card symbolizes change, cycles, and the ups and downs of life."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does the Justice card represent?",
+            "answer1": "Authority",
+            "answer2": "Balance",
+            "answer3": "Illusion",
+            "answer4": "Reflection",
+            "correct_answer": "Balance",
+            "explanation": "The Justice card represents fairness, balance, and making decisions based on impartial judgment."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Hanged Man card symbolize?",
+            "answer1": "Courage",
+            "answer2": "Transformation",
+            "answer3": "Wisdom",
+            "answer4": "Surrender",
+            "correct_answer": "Surrender",
+            "explanation": "The Hanged Man symbolizes surrender, letting go, and gaining a new perspective through suspension."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does the Death card represent?",
+            "answer1": "Transformation",
+            "answer2": "Victory",
+            "answer3": "Creativity",
+            "answer4": "Illusion",
+            "correct_answer": "Transformation",
+            "explanation": "The Death card represents transformation, endings, and the start of a new chapter or cycle."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does the Temperance card symbolize?",
+            "answer1": "Illusion",
+            "answer2": "Balance",
+            "answer3": "Manifestation",
+            "answer4": "Harmony",
+            "correct_answer": "Balance",
+            "explanation": "The Temperance card symbolizes balance, moderation, and integration of opposing forces or energies."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Devil card signify?",
+            "answer1": "Creativity",
+            "answer2": "Authority",
+            "answer3": "Illusion",
+            "answer4": "Materialism",
+            "correct_answer": "Materialism",
+            "explanation": "The Devil card signifies materialism, bondage, and the illusions that hold us back from true freedom."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Tower card represent?",
+            "answer1": "Victory",
+            "answer2": "Change",
+            "answer3": "Transformation",
+            "answer4": "Balance",
+            "correct_answer": "Change",
+            "explanation": "The Tower card represents sudden change, upheaval, and the breaking down of old structures."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Star card symbolize?",
+            "answer1": "Illusion",
+            "answer2": "Reflection",
+            "answer3": "Hope",
+            "answer4": "Manifestation",
+            "correct_answer": "Hope",
+            "explanation": "The Star symbolizes hope, inspiration, and receiving guidance from the divine or spiritual realm."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Moon card represent?",
+            "answer1": "Balance",
+            "answer2": "Confusion",
+            "answer3": "Reflection",
+            "answer4": "Harmony",
+            "correct_answer": "Confusion",
+            "explanation": "The Moon card represents confusion, illusion, and the mysteries of the subconscious mind."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The Sun card signify?",
+            "answer1": "Transformation",
+            "answer2": "Illumination",
+            "answer3": "Reflection",
+            "answer4": "Balance",
+            "correct_answer": "Illumination",
+            "explanation": "The Sun card signifies illumination, clarity, and experiencing joy and vitality."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does the Judgement card symbolize?",
+            "answer1": "Transformation",
+            "answer2": "Hope",
+            "answer3": "Redemption",
+            "answer4": "Reflection",
+            "correct_answer": "Redemption",
+            "explanation": "The Judgment card symbolizes redemption, renewal, and awakening to higher spiritual truths."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does The World card represent?",
+            "answer1": "Transformation",
+            "answer2": "Reflection",
+            "answer3": "Fulfillment",
+            "answer4": "Illusion",
+            "correct_answer": "Fulfillment",
+            "explanation": "The World card represents completion, achievement, and reaching a state of fulfillment and wholeness."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What is the main difference between the Major Arcana and the Minor Arcana?",
+            "answer1": "The Major Arcana represents major life events, while the Minor Arcana represents everyday experiences.",
+            "answer2": "The Major Arcana has 22 cards, while the Minor Arcana has 56 cards.",
+            "answer3": "The Major Arcana represents external influences, while the Minor Arcana represents internal factors.",
+            "answer4": "The Major Arcana cards have illustrations, while the Minor Arcana cards have only symbols.",
+            "correct_answer": "The Major Arcana represents major life events, while the Minor Arcana represents everyday experiences.",
+            "explanation": "The Major Arcana cards represent significant life events and spiritual lessons, while the Minor Arcana cards focus on everyday experiences and practical matters."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does it mean when a Major Arcana card appears in a tarot reading?",
+            "answer1": "It indicates a minor issue or concern.",
+            "answer2": "It suggests a significant event or spiritual lesson.",
+            "answer3": "It represents a person in the querent's life.",
+            "answer4": "It signifies a future prediction or outcome.",
+            "correct_answer": "It suggests a significant event or spiritual lesson.",
+            "explanation": "When a Major Arcana card appears in a tarot reading, it suggests that the situation at hand carries significant meaning or that the querent is encountering a powerful spiritual lesson or milestone."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What does it mean if multiple Major Arcana cards appear in a tarot reading?",
+            "answer1": "It indicates a lack of clarity in the reading.",
+            "answer2": "It suggests a period of major life changes or transformations.",
+            "answer3": "It signifies a need for additional cards to clarify the message.",
+            "answer4": "It implies that the querent's future is uncertain.",
+            "correct_answer": "It suggests a period of major life changes or transformations.",
+            "explanation": "When multiple Major Arcana cards appear in a tarot reading, it often indicates a period of significant life changes, growth, or transformation for the querent."
+        },
+        {
+            "lesson_id": 4,
+            "question": "How can Major Arcana cards be interpreted in a tarot reading?",
+            "answer1": "They are interpreted based on their numerological significance.",
+            "answer2": "They are interpreted as representing external influences or spiritual lessons.",
+            "answer3": "They are interpreted by their astrological correspondences.",
+            "answer4": "They are interpreted based on the querent's personal experiences.",
+            "correct_answer": "They are interpreted as representing external influences or spiritual lessons.",
+            "explanation": "Major Arcana cards are interpreted as representing significant external influences, major life events, or powerful spiritual lessons that the querent may be experiencing or encountering."
+        },
+        {
+            "lesson_id": 4,
+            "question": "What role do Major Arcana cards play in a tarot spread?",
+            "answer1": "They provide specific advice or guidance for the querent.",
+            "answer2": "They represent the querent's past, present, and future.",
+            "answer3": "They serve as the focal point or central theme of the reading.",
+            "answer4": "They indicate the outcome or final result of the situation.",
+            "correct_answer": "They serve as the focal point or central theme of the reading.",
+            "explanation": "Major Arcana cards often serve as the focal point or central theme of a tarot reading, influencing the overall interpretation and providing insight into the querent's current life path or spiritual journey."
+        }    
+    ]
+
+    
+}

@@ -172,6 +172,14 @@ def get_saved_reading(id):
         return make_response(reading.to_dict())
     else:
         return make_response({"error": "No readings yet"})
+    
+@app.route('/lessons')
+def get_lesson_titles():
+    lessons = [lesson.to_dict(only=['id', 'type']) for lesson in Lesson.query.all()]
+    if lessons:
+        return make_response(lessons)
+    else:
+        return make_response({'error': "No lessons found"})
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)

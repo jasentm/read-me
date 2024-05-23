@@ -6,12 +6,12 @@ export default function LessonList({ user }) {
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5555/lesson-statistics/${user.id}`)
+    fetch(`http://localhost:5555/lessons`)
       .then(res => {
         if (res.ok) {
           return res.json();
         } else {
-          console.error('Could not fetch lesson statistics data');
+          console.error('Could not fetch lesson data');
         }
       })
       .then(data => {
@@ -33,7 +33,7 @@ export default function LessonList({ user }) {
             {lessons.slice(0, Math.ceil(lessons.length / 2)).map(lesson => (
               <div className="lesson-card" key={lesson.id}>
                 <Link to={`/lesson/${lesson.id}`}>
-                  <h2>{lesson.lesson.type}</h2>
+                  <h2>{lesson.type}</h2>
                 </Link>
               </div>
             ))}
@@ -42,7 +42,7 @@ export default function LessonList({ user }) {
             {lessons.slice(Math.ceil(lessons.length / 2)).map(lesson => (
               <div className="lesson-card" key={lesson.id}>
                 <Link to={`/lesson/${lesson.id}`}>
-                  <h2>{lesson.lesson.type}</h2>
+                  <h2>{lesson.type}</h2>
                 </Link>
               </div>
             ))}
