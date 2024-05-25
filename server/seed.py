@@ -3,23 +3,21 @@
 from random import randint, choice as rc
 from faker import Faker
 from app import app
-from models import db, User, TarotCard, Lesson, LessonStatistics, Reading, Fortune, Keyword, LightMeaning, ShadowMeaning, Question
+from models import db, User, TarotCard, Lesson, LessonStatistics, Reading, Fortune, Keyword, LightMeaning, ShadowMeaning, Question, LessonQuestion
 from os.path import join, dirname
 import json
 
 fake = Faker()
 
 def seed_lessons():
-    lesson_types = ['Introduction', 'Major Arcana', 'Minor Arcana', 'Spreads', 'Interpretation']
+    lesson_types = ['Introduction', 'Elements', 'Numbers', 'Major Arcana', 'Cups', 'Swords', 'Wands', 'Pentacles']
     for lesson_type in lesson_types:
         lesson = Lesson(type=lesson_type)
         db.session.add(lesson)
-        lesson_stat = LessonStatistics(user_id=1, lesson=lesson)
-        db.session.add(lesson_stat)
     db.session.commit()
 
 def create_cards():
-    file_path = join(dirname(__file__), '../tarot/tarot-images.json')
+    file_path = join(dirname(__file__), '../json/tarot-images.json')
 
     with open(file_path, 'r') as file:
         data = json.load(file)
@@ -57,6 +55,42 @@ def create_cards():
 
     db.session.commit()
 
+def seed_questions():
+    file_path = join(dirname(__file__), '../json/questions.json')
+
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+
+    lesson_types = {
+        'introduction': 'Introduction',
+        'elements': 'Elements',
+        'numbers': 'Numbers',
+        'major_arcana': 'Major Arcana',
+        'cups': 'Cups',
+        'swords': 'Swords',
+        'wands': 'Wands',
+        'pentacles': 'Pentacles'
+    }
+
+    for key, questions in data.items():
+        lesson_type = lesson_types[key]
+        lesson = Lesson.query.filter_by(type=lesson_type).first()
+        if lesson:
+            for question_data in questions:
+                question = LessonQuestion(
+                    lesson_id=lesson.id,
+                    question=question_data['question'],
+                    answer1=question_data['answer1'],
+                    answer2=question_data['answer2'],
+                    answer3=question_data['answer3'],
+                    answer4=question_data['answer4'],
+                    correct_answer=question_data['correct_answer'],
+                    explanation=question_data['explanation']
+                )
+                db.session.add(question)
+
+    db.session.commit()
+
 if __name__ == '__main__':
     with app.app_context():
         db.drop_all()
@@ -64,5 +98,4 @@ if __name__ == '__main__':
         
         create_cards()
         seed_lessons()
-
-        
+        seed_questions()

@@ -50,7 +50,9 @@ export default function SignUpForm({updateUser}) {
         }
       })
       .then((data) => {
-        updateUser(data); // Update user state with response data
+        // Save the userId to local storage
+        localStorage.setItem('userId', data.id);
+        updateUser(data)
         console.log('Success:', data);
         navigate('/', { relative: 'path' }); // Navigate to home page on successful login/signup
       })

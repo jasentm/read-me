@@ -51,6 +51,7 @@ const LoginForm = ({updateUser}) => {
       }
     })
     .then(data => {
+        localStorage.setItem('userId', data.id);
         updateUser(data) // Update user state with response data
         console.log('Success:', data);
         navigate('/', { relative: 'path' }); // Navigate to home page on successful login/signup

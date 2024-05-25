@@ -23,11 +23,8 @@ export default function Profile({user}) {
     fetch(`http://localhost:5555/completed/${user.id}`)
       .then((res) => res.json())
       .then((data) => {
-        if (Array.isArray(data)) {
           setCompletedLessons(data);
-        } else {
-          setCompletedLessons([]);  // Set to empty array if error
-        }
+        
       })
       .catch((error) => console.error('Error fetching completed lessons:', error));
   }, [user]);
@@ -55,7 +52,7 @@ export default function Profile({user}) {
                 Take a Lesson
               </Button>
             <div className='lesson-container'>
-              {completedLessons.length <=2 ? (
+              {completedLessons.length <1 ? (
                 <div className='no-lessons-message'>
                   <h3>You haven't completed any lessons yet...</h3>
                 </div>
@@ -63,7 +60,8 @@ export default function Profile({user}) {
               <>
                 {completedLessons.map((lesson) => (
                   <div className="lesson-card" key={lesson.id}>
-                    <h2>{lesson.lesson.type} {lesson.updated_at}</h2>
+                    <h2>{lesson.lesson.type} {lesson.correct_answers}/10 </h2>
+                    <h4>{lesson.created_at} UTC</h4>
                 </div>
                 ))}
               </>
@@ -82,7 +80,7 @@ export default function Profile({user}) {
                 Get a Reading
               </Button>
           <div className='reading-container'>
-          {readings.length <= 2 ? (
+          {readings.length <1 ? (
                 <div className='no-readings-message'>
                   <h3>You haven't had any readings yet...</h3>
                 </div>
@@ -91,7 +89,7 @@ export default function Profile({user}) {
                 {readings.map((reading) => (
                   <div className="lesson-card" key={reading.id}>
                     <Link to={`/readings/${reading.id}`}>
-                      <h2>{reading.created_at}</h2>
+                      <h2>{reading.created_at} UTC</h2>
                     </Link>
                 </div>
                 ))}

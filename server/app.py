@@ -2,9 +2,10 @@
 from flask import request, make_response, session
 from flask_restful import Resource
 from config import app, db, api
-from models import User, Lesson, LessonStatistics, Reading, TarotCard
+from models import User, Lesson, LessonStatistics, Reading, TarotCard, LessonQuestion
 from flask_login import login_user, logout_user, login_required, current_user
 from sqlalchemy import desc
+import random
 
 
 # routes for login and user authentication 
@@ -21,7 +22,6 @@ def signup():
         db.session.commit()
         login_user(new_user) 
 
-        #TODO ADD INSTANTIATING LESSON STATS FOR USER FOR ALL LESSONS
         return make_response(new_user.to_dict(only=['id', 'username', 'email']), 201)
 
 @app.route('/logout')
@@ -30,10 +30,16 @@ def logout():
     logout_user()  # Log out the current user
     return make_response({}), 200
 
-@app.route('/authenticate-session') #route for authentication 
+@app.route('/authenticate-session', methods=['POST'])
 def authenticate_session():
-    if current_user.is_authenticated:
-        return make_response(current_user.to_dict(only=['id', 'username', 'email'])), 200
+    data = request.json
+    user_id = data.get('userId')  # Get the user ID from the request body
+
+    if user_id:
+        user = User.query.filter(User.id == user_id).first()
+        if user:
+            return make_response(user.to_dict(only=['id', 'username', 'email'])), 200
+
     return make_response({'message': 'failed to authenticate'}), 401
 
 @app.route('/login', methods=['POST'])
@@ -95,23 +101,7 @@ class UsersById(Resource):
         
 api.add_resource(UsersById, '/users/<int:id>')
 
-class LessonStatsByUser(Resource):
-    def patch(self, user_id):
-        lessonstats = LessonStatistics.query.filter(LessonStatistics.user_id == user_id).first()
-        if not lessonstats:
-            return make_response({'error': 'Statistics not found'}, 404)
-        else:
-            try:
-                for attr in request.json:
-                    setattr(lessonstats, attr, request.json.get(attr))
-
-                db.session.add(lessonstats)
-                db.session.commit()
-
-                return make_response(lessonstats.to_dict(), 202)
-            except:
-                return make_response({'errors': ['validation errors']}, 400)
-            
+class LessonStatsByUser(Resource):         
     def get(self, user_id):
         lessonstats = [lessonstat.to_dict(only=['completed', 'created_at', 'updated_at', 'id', 'lesson.type']) for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id).all()]
         if lessonstats:
@@ -121,9 +111,29 @@ class LessonStatsByUser(Resource):
         
 api.add_resource(LessonStatsByUser, '/lesson-statistics/<int:user_id>')
 
+@app.route('/lesson-statistics/<int:user_id>/<int:lesson_id>', methods=['POST'])
+def patch_completed_lesson(user_id, lesson_id):
+    data = request.json
+    try:
+        new_lesson_stat = LessonStatistics(
+            user_id = data.get('user_id'),
+            lesson_id = data.get('lesson_id'),
+            completed = data.get('completed'),
+            correct_answers = data.get('correct_answers')
+        )
+        if new_lesson_stat:
+            db.session.add(new_lesson_stat)
+            db.session.commit()
+
+            return make_response(new_lesson_stat.to_dict(), 201)
+    except:
+            return make_response({"errors": ["validation errors"]}, 400)
+
+
+
 @app.route('/completed/<int:user_id>')
 def get_completed_lessons(user_id):
-    completed = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id, LessonStatistics.completed == True).order_by(LessonStatistics.updated_at.desc()).all()]
+    completed = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id, LessonStatistics.completed == True).order_by(LessonStatistics.created_at.desc()).all()]
     if completed:
         return make_response(completed)
     else:
@@ -180,6 +190,17 @@ def get_lesson_titles():
         return make_response(lessons)
     else:
         return make_response({'error': "No lessons found"})
+
+@app.route('/lesson-questions/<int:lesson_id>')
+def get_lesson_questions(lesson_id):
+    all_questions = [question.to_dict() for question in LessonQuestion.query.filter(LessonQuestion.lesson_id == lesson_id).all()]
+    if all_questions:
+        random.shuffle(all_questions)
+        questions = all_questions[:10]
+        return make_response(questions)
+    else:
+        return make_response({'error': 'No questions found'})
+
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)

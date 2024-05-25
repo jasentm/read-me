@@ -7,3 +7,13 @@
     position: relative;
     top: 100px;
 }
+
+.lesson-button, .reading-button {
+    position: fixed;
+    z-index: 1; /* Ensure they appear on top */
+  }
+  
+  .lesson-container, .reading-container {
+    overflow: auto;
+    max-height: 400px; /* Adjust height as needed */
+  }

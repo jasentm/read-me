@@ -182,7 +182,7 @@
         }, 
         {
             "lesson_id": 1,
-            "question": "What does it mean if a card is drawn in reverse?",
+            "question": "What does it mean if a card is drawn in reverse (upside down)?",
             "answer1": "It has no meaning",
             "answer2": "It indicates the opposite of the card's upright meaning",
             "answer3": "It suggests a blockage or challenge",
@@ -219,8 +219,216 @@
             "answer4": "The reading should be stopped immediately",
             "correct_answer": "The question needs to be rephrased or the cards need to be reshuffled",
             "explanation": "If a reading feels unclear, rephrasing the question or reshuffling the cards can help provide clarity."
-        } 
+        },
+        {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Ten of Pentacles?",
+            "answer1": "/cards/p02.jpg",
+            "answer2": "/cards/p06.jpg", 
+            "answer3": "/cards/p07.jpg",
+            "answer4": "/cards/p10.jpg",
+            "correct_answer": "/cards/p10.jpg",
+            "explanation": "The Ten of Pentacles represents an abundance of wealth and asks us to celebrate our physical and financial blessings."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Nine of Cups?",
+            "answer1": "/cards/c08.jpg",
+            "answer2": "/cards/c09.jpg",
+            "answer3": "/cards/c10.jpg",
+            "answer4": "/cards/c03.jpg",
+            "correct_answer": "/cards/c09.jpg",
+            "explanation": "The Nine of Cups symbolizes contentment, satisfaction, and the fulfillment of wishes."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Eight of Wands?",
+            "answer1": "/cards/w06.jpg",
+            "answer2": "/cards/w07.jpg",
+            "answer3": "/cards/w08.jpg",
+            "answer4": "/cards/w09.jpg",
+            "correct_answer": "/cards/w08.jpg",
+            "explanation": "The Eight of Wands represents swift movement, progress, and the arrival of news or messages."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Seven of Swords?",
+            "answer1": "/cards/s05.jpg",
+            "answer2": "/cards/s06.jpg",
+            "answer3": "/cards/s07.jpg",
+            "answer4": "/cards/s08.jpg",
+            "correct_answer": "/cards/s07.jpg",
+            "explanation": "The Seven of Swords suggests betrayal, deception, and the need to be cautious in your dealings with others."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Six of Cups?",
+            "answer1": "/cards/c04.jpg",
+            "answer2": "/cards/c05.jpg", 
+            "answer3": "/cards/c06.jpg",
+            "answer4": "/cards/c07.jpg",
+            "correct_answer": "/cards/c06.jpg",
+            "explanation": "The Six of Cups represents nostalgia, childhood memories, and the joy of simple pleasures."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Five of Wands?",
+            "answer1": "/cards/w03.jpg",
+            "answer2": "/cards/w04.jpg",
+            "answer3": "/cards/w05.jpg",
+            "answer4": "/cards/w06.jpg", 
+            "correct_answer": "/cards/w05.jpg",
+            "explanation": "The Five of Wands symbolizes conflict, competition, and the need to find a way to cooperate and compromise."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Four of Swords?",
+            "answer1": "/cards/s02.jpg",
+            "answer2": "/cards/s03.jpg",
+            "answer3": "/cards/s04.jpg",
+            "answer4": "/cards/s05.jpg",
+            "correct_answer": "/cards/s04.jpg",
+            "explanation": "The Four of Swords represents rest, recuperation, and the need to take a break from the stresses of life."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Three of Pentacles?",
+            "answer1": "/cards/p02.jpg",
+            "answer2": "/cards/p03.jpg",
+            "answer3": "/cards/p04.jpg",
+            "answer4": "/cards/p05.jpg",
+            "correct_answer": "/cards/p03.jpg",
+            "explanation": "The Three of Pentacles symbolizes teamwork, collaboration, and the importance of skilled craftsmanship."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Two of Cups?",
+            "answer1": "/cards/c09.jpg",
+            "answer2": "/cards/c10.jpg",
+            "answer3": "/cards/c02.jpg",
+            "answer4": "/cards/c03.jpg",
+            "correct_answer": "/cards/c02.jpg",
+            "explanation": "The Two of Cups represents love, harmony, and the coming together of two people or forces."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Nine of Wands?",
+            "answer1": "/cards/w07.jpg",
+            "answer2": "/cards/w08.jpg", 
+            "answer3": "/cards/w09.jpg",
+            "answer4": "/cards/w10.jpg",
+            "correct_answer": "/cards/w09.jpg",
+            "explanation": "The Nine of Wands symbolizes resilience, perseverance, and the determination to overcome obstacles."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Eight of Cups?",
+            "answer1": "/cards/c06.jpg",
+            "answer2": "/cards/c07.jpg",
+            "answer3": "/cards/c08.jpg",
+            "answer4": "/cards/c09.jpg",
+            "correct_answer": "/cards/c08.jpg",
+            "explanation": "The Eight of Cups represents the need for change, the abandonment of something that no longer serves you, and the search for deeper meaning."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Seven of Cups?",
+            "answer1": "/cards/c05.jpg",
+            "answer2": "/cards/c06.jpg",
+            "answer3": "/cards/c07.jpg",
+            "answer4": "/cards/c08.jpg",
+            "correct_answer": "/cards/c07.jpg",
+            "explanation": "The Seven of Cups symbolizes choices, opportunities, and the need to carefully consider your options before making a decision."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Six of Wands?",
+            "answer1": "/cards/w04.jpg",
+            "answer2": "/cards/w05.jpg",
+            "answer3": "/cards/w06.jpg",
+            "answer4": "/cards/w07.jpg",
+            "correct_answer": "/cards/w06.jpg",
+            "explanation": "The Six of Wands represents victory, success, and the recognition of your achievements."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Five of Cups?",
+            "answer1": "/cards/c03.jpg",
+            "answer2": "/cards/c04.jpg",
+            "answer3": "/cards/c05.jpg",
+            "answer4": "/cards/c06.jpg",
+            "correct_answer": "/cards/c05.jpg",
+            "explanation": "The Five of Cups symbolizes loss, grief, and the need to let go of what cannot be changed."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Four of Cups?",
+            "answer1": "/cards/c02.jpg",
+            "answer2": "/cards/c03.jpg",
+            "answer3": "/cards/c04.jpg",
+            "answer4": "/cards/c05.jpg",
+            "correct_answer": "/cards/c04.jpg",
+            "explanation": "The Four of Cups represents apathy, dissatisfaction, and the need to open your eyes to the opportunities around you."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Three of Cups?",
+            "answer1": "/cards/c02.jpg",
+            "answer2": "/cards/c03.jpg",
+            "answer3": "/cards/c04.jpg",
+            "answer4": "/cards/c05.jpg",
+            "correct_answer": "/cards/c03.jpg",
+            "explanation": "The Three of Cups symbolizes celebration, friendship, and the joy of coming together with loved ones."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Two of Swords?",
+            "answer1": "/cards/s09.jpg",
+            "answer2": "/cards/s10.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/s03.jpg",
+            "correct_answer": "/cards/s02.jpg",
+            "explanation": "The Two of Swords represents the need for balance, the avoidance of conflict, and the importance of making difficult decisions."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Ten of Swords?",
+            "answer1": "/cards/s08.jpg",
+            "answer2": "/cards/s09.jpg",
+            "answer3": "/cards/s10.jpg",
+            "answer4": "/cards/s02.jpg",
+            "correct_answer": "/cards/s10.jpg",
+            "explanation": "The Ten of Swords symbolizes endings, loss, and the need to let go of what is no longer serving you."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Nine of Pentacles?",
+            "answer1": "/cards/p07.jpg",
+            "answer2": "/cards/p08.jpg",
+            "answer3": "/cards/p09.jpg",
+            "answer4": "/cards/p10.jpg",
+            "correct_answer": "/cards/p09.jpg",
+            "explanation": "The Nine of Pentacles represents luxury, self-sufficiency, and the enjoyment of the finer things in life."
+          },
+          {
+            "lesson_id": 1,
+            "question": "Which of these cards is the Eight of Pentacles?",
+            "answer1": "/cards/p06.jpg",
+            "answer2": "/cards/p07.jpg",
+            "answer3": "/cards/p08.jpg",
+            "answer4": "/cards/p09.jpg",
+            "correct_answer": "/cards/p08.jpg",
+            "explanation": "The Eight of Pentacles symbolizes hard work, dedication, and the importance of developing your skills and talents."
+          }
         ],
+
+
+
+
+
+
+
+
     "elements": [
         {
             "lesson_id": 2,
@@ -474,6 +682,14 @@
         }
         
     ],
+
+
+
+
+
+
+
+
     "numbers": [
         {
             "lesson_id": 3,
@@ -876,6 +1092,16 @@
             "explanation": "The King is often associated with authority, leadership, and taking charge."
         }
     ],
+
+
+
+
+
+
+
+
+
+
     "major_arcana": [
         {
             "lesson_id": 4,
@@ -1407,7 +1633,1646 @@
             "correct_answer": "They serve as the focal point or central theme of the reading.",
             "explanation": "Major Arcana cards often serve as the focal point or central theme of a tarot reading, influencing the overall interpretation and providing insight into the querent's current life path or spiritual journey."
         }    
-    ]
+    ],
 
+
+
+
+
+
+
+
+
+    "cups": [
+
+        {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Ten of Cups?",
+            "answer1": "/cards/c03.jpg",
+            "answer2": "/cards/c08.jpg",
+            "answer3": "/cards/c10.jpg",
+            "answer4": "/cards/c09.jpg",
+            "correct_answer": "/cards/c10.jpg",
+            "explanation": "The Ten of Cups represents complete happiness, emotional fulfillment, and the joy of family and community."
+            },
+            {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Nine of Cups?",
+            "answer1": "/cards/c03.jpg",
+            "answer2": "/cards/c09.jpg",
+            "answer3": "/cards/c08.jpg",
+            "answer4": "/cards/c10.jpg",
+            "correct_answer": "/cards/c09.jpg",
+            "explanation": "The Nine of Cups symbolizes contentment, satisfaction, and the fulfillment of wishes."
+            },
+            {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Eight of Cups?",
+            "answer1": "/cards/c09.jpg",
+            "answer2": "/cards/c07.jpg",
+            "answer3": "/cards/c06.jpg",
+            "answer4": "/cards/c08.jpg",
+            "correct_answer": "/cards/c08.jpg",
+            "explanation": "The Eight of Cups represents the need for change, the abandonment of something that no longer serves you, and the search for deeper meaning."
+            },
+            {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Seven of Cups?",
+            "answer1": "/cards/c08.jpg",
+            "answer2": "/cards/c06.jpg",
+            "answer3": "/cards/c05.jpg",
+            "answer4": "/cards/c07.jpg",
+            "correct_answer": "/cards/c07.jpg",
+            "explanation": "The Seven of Cups symbolizes choices, opportunities, and the need to carefully consider your options before making a decision."
+            },
+            {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Six of Cups?",
+            "answer1": "/cards/c07.jpg",
+            "answer2": "/cards/c05.jpg",
+            "answer3": "/cards/c04.jpg",
+            "answer4": "/cards/c06.jpg",
+            "correct_answer": "/cards/c06.jpg",
+            "explanation": "The Six of Cups represents nostalgia, childhood memories, and the joy of simple pleasures."
+            },
+            {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Five of Cups?",
+            "answer1": "/cards/c06.jpg",
+            "answer2": "/cards/c04.jpg",
+            "answer3": "/cards/c03.jpg",
+            "answer4": "/cards/c05.jpg",
+            "correct_answer": "/cards/c05.jpg",
+            "explanation": "The Five of Cups symbolizes loss, grief, and the need to let go of what cannot be changed."
+            },
+            {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Four of Cups?",
+            "answer1": "/cards/c05.jpg",
+            "answer2": "/cards/c03.jpg",
+            "answer3": "/cards/c02.jpg",
+            "answer4": "/cards/c04.jpg",
+            "correct_answer": "/cards/c04.jpg",
+            "explanation": "The Four of Cups represents apathy, dissatisfaction, and the need to open your eyes to the opportunities around you."
+            },
+            {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Three of Cups?",
+            "answer1": "/cards/c05.jpg",
+            "answer2": "/cards/c04.jpg",
+            "answer3": "/cards/c02.jpg",
+            "answer4": "/cards/c03.jpg",
+            "correct_answer": "/cards/c03.jpg",
+            "explanation": "The Three of Cups symbolizes celebration, friendship, and the joy of coming together with loved ones."
+            },
+            {
+            "lesson_id": 5,
+            "question": "Which of these cards is the Two of Cups?",
+            "answer1": "/cards/c10.jpg",
+            "answer2": "/cards/c03.jpg",
+            "answer3": "/cards/c02.jpg",
+            "answer4": "/cards/c09.jpg",
+            "correct_answer": "/cards/c02.jpg",
+            "explanation": "The Two of Cups represents love, harmony, and the coming together of two people or forces."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Trusting your feelings'?",
+                "answer1": "/cards/c01.jpg",
+                "answer2": "/cards/c02.jpg",
+                "answer3": "/cards/c03.jpg",
+                "answer4": "/cards/c04.jpg",
+                "correct_answer": "/cards/c01.jpg",
+                "explanation": "The Ace of Cups is associated with 'Trusting your feelings' and 'Opening yourself to spirit'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Being drawn to someone'?",
+                "answer1": "/cards/c02.jpg",
+                "answer2": "/cards/c05.jpg",
+                "answer3": "/cards/c03.jpg",
+                "answer4": "/cards/c04.jpg",
+                "correct_answer": "/cards/c02.jpg",
+                "explanation": "The Two of Cups is associated with 'Being drawn to someone' and 'Longing for someone or something'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Celebrating your feelings or connections with others'?",
+                "answer1": "/cards/c01.jpg",
+                "answer2": "/cards/c03.jpg",
+                "answer3": "/cards/c04.jpg",
+                "answer4": "/cards/c05.jpg",
+                "correct_answer": "/cards/c03.jpg",
+                "explanation": "The Three of Cups is associated with 'Celebrating your feelings or connections with others' and 'Expressing joy through song, dance, or physical affection'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Maintaining your emotional stability'?",
+                "answer1": "/cards/c02.jpg",
+                "answer2": "/cards/c04.jpg",
+                "answer3": "/cards/c06.jpg",
+                "answer4": "/cards/c05.jpg",
+                "correct_answer": "/cards/c04.jpg",
+                "explanation": "The Four of Cups is associated with 'Maintaining your emotional stability' and 'Refusing to give in to overwhelming emotions'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Acknowledging loss and moving on'?",
+                "answer1": "/cards/c05.jpg",
+                "answer2": "/cards/c04.jpg",
+                "answer3": "/cards/c03.jpg",
+                "answer4": "/cards/c02.jpg",
+                "correct_answer": "/cards/c05.jpg",
+                "explanation": "The Five of Cups is associated with 'Acknowledging loss and moving on' and 'Focusing on how the glass remains \"half-full\"'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Donating your time and talents to others'?",
+                "answer1": "/cards/c06.jpg",
+                "answer2": "/cards/c07.jpg",
+                "answer3": "/cards/c08.jpg",
+                "answer4": "/cards/c05.jpg",
+                "correct_answer": "/cards/c06.jpg",
+                "explanation": "The Six of Cups is associated with 'Donating your time and talents to others' and 'Taking satisfaction in knowing how your efforts will aid others'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Motivating yourself with images of future success'?",
+                "answer1": "/cards/c07.jpg",
+                "answer2": "/cards/c08.jpg",
+                "answer3": "/cards/c09.jpg",
+                "answer4": "/cards/c10.jpg",
+                "correct_answer": "/cards/c07.jpg",
+                "explanation": "The Seven of Cups is associated with 'Motivating yourself with images of future success' and 'Using visualization to encourage progress'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Wanting something better'?",
+                "answer1": "/cards/c08.jpg",
+                "answer2": "/cards/c09.jpg",
+                "answer3": "/cards/c10.jpg",
+                "answer4": "/cards/c07.jpg",
+                "correct_answer": "/cards/c08.jpg",
+                "explanation": "The Eight of Cups is associated with 'Wanting something better' and 'Blazing your own trail'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Being delighted with your own achievements'?",
+                "answer1": "/cards/c09.jpg",
+                "answer2": "/cards/c10.jpg",
+                "answer3": "/cards/c11.jpg",
+                "answer4": "/cards/c12.jpg",
+                "correct_answer": "/cards/c09.jpg",
+                "explanation": "The Nine of Cups is associated with 'Being delighted with your own achievements' and 'Recognizing your own talents and abilities'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Having more than you ever dreamed'?",
+                "answer1": "/cards/c10.jpg",
+                "answer2": "/cards/c11.jpg",
+                "answer3": "/cards/c12.jpg",
+                "answer4": "/cards/c09.jpg",
+                "correct_answer": "/cards/c10.jpg",
+                "explanation": "The Ten of Cups is associated with 'Having more than you ever dreamed' and 'Being deeply thankful for all you've been given'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Showing your emotions freely'?",
+                "answer1": "/cards/c11.jpg",
+                "answer2": "/cards/c12.jpg",
+                "answer3": "/cards/c13.jpg",
+                "answer4": "/cards/c14.jpg",
+                "correct_answer": "/cards/c11.jpg",
+                "explanation": "The Page of Cups is associated with 'Showing your emotions freely' and 'Throwing yourself into romance'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Being deeply committed to a cause'?",
+                "answer1": "/cards/c12.jpg",
+                "answer2": "/cards/c11.jpg",
+                "answer3": "/cards/c13.jpg",
+                "answer4": "/cards/c14.jpg",
+                "correct_answer": "/cards/c12.jpg",
+                "explanation": "The Knight of Cups is associated with 'Being deeply committed to a cause' and 'Giving in to strong emotions, from excitement to depression'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Allowing yourself to be moved by the plight of others'?",
+                "answer1": "/cards/c13.jpg",
+                "answer2": "/cards/c14.jpg",
+                "answer3": "/cards/c12.jpg",
+                "answer4": "/cards/c11.jpg",
+                "correct_answer": "/cards/c13.jpg",
+                "explanation": "The Queen of Cups is associated with 'Allowing yourself to be moved by the plight of others' and 'Feeling strong emotions'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Keeping a stiff upper lip'?",
+                "answer1": "/cards/c14.jpg",
+                "answer2": "/cards/c13.jpg",
+                "answer3": "/cards/c12.jpg",
+                "answer4": "/cards/c11.jpg",
+                "correct_answer": "/cards/c14.jpg",
+                "explanation": "The King of Cups is associated with 'Keeping a stiff upper lip' and 'Being brave and clear in the face of adverse circumstances'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Trusting your feelings'?",
+                "answer1": "/cards/c01.jpg",
+                "answer2": "/cards/c02.jpg",
+                "answer3": "/cards/c03.jpg",
+                "answer4": "/cards/c04.jpg",
+                "correct_answer": "/cards/c01.jpg",
+                "explanation": "The Ace of Cups is associated with 'Trusting your feelings' and 'Opening yourself to spirit'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Discovering a feeling is mutual'?",
+                "answer1": "/cards/c02.jpg",
+                "answer2": "/cards/c03.jpg",
+                "answer3": "/cards/c04.jpg",
+                "answer4": "/cards/c05.jpg",
+                "correct_answer": "/cards/c02.jpg",
+                "explanation": "The Two of Cups is associated with 'Discovering a feeling is mutual' and 'Being drawn to someone'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Working together with others who share your feelings'?",
+                "answer1": "/cards/c03.jpg",
+                "answer2": "/cards/c04.jpg",
+                "answer3": "/cards/c05.jpg",
+                "answer4": "/cards/c06.jpg",
+                "correct_answer": "/cards/c03.jpg",
+                "explanation": "The Three of Cups is associated with 'Working together with others who share your feelings' and 'Celebrating your feelings or connections with others'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Having positive expectations for a relationship'?",
+                "answer1": "/cards/c04.jpg",
+                "answer2": "/cards/c05.jpg",
+                "answer3": "/cards/c06.jpg",
+                "answer4": "/cards/c07.jpg",
+                "correct_answer": "/cards/c04.jpg",
+                "explanation": "The Four of Cups is associated with 'Having positive expectations for a relationship' and 'Maintaining your emotional stability'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Realizing that emotional losses are temporary'?",
+                "answer1": "/cards/c05.jpg",
+                "answer2": "/cards/c06.jpg",
+                "answer3": "/cards/c07.jpg",
+                "answer4": "/cards/c08.jpg",
+                "correct_answer": "/cards/c05.jpg",
+                "explanation": "The Five of Cups is associated with 'Realizing that emotional losses are temporary' and 'Acknowledging loss and moving on'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Sharing old memories with loved ones'?",
+                "answer1": "/cards/c06.jpg",
+                "answer2": "/cards/c07.jpg",
+                "answer3": "/cards/c08.jpg",
+                "answer4": "/cards/c09.jpg",
+                "correct_answer": "/cards/c06.jpg",
+                "explanation": "The Six of Cups is associated with 'Sharing old memories with loved ones' and 'Donating your time and talents to others'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Visualizing a dream come true'?",
+                "answer1": "/cards/c07.jpg",
+                "answer2": "/cards/c08.jpg",
+                "answer3": "/cards/c09.jpg",
+                "answer4": "/cards/c10.jpg",
+                "correct_answer": "/cards/c07.jpg",
+                "explanation": "The Seven of Cups is associated with 'Visualizing a dream come true' and 'Motivating yourself with images of future success'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Feeling that you need more from life'?",
+                "answer1": "/cards/c08.jpg",
+                "answer2": "/cards/c09.jpg",
+                "answer3": "/cards/c10.jpg",
+                "answer4": "/cards/c11.jpg",
+                "correct_answer": "/cards/c08.jpg",
+                "explanation": "The Eight of Cups is associated with 'Feeling that you need more from life' and 'Wanting something better'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Recognizing your own talents and abilities'?",
+                "answer1": "/cards/c09.jpg",
+                "answer2": "/cards/c10.jpg",
+                "answer3": "/cards/c11.jpg",
+                "answer4": "/cards/c12.jpg",
+                "correct_answer": "/cards/c09.jpg",
+                "explanation": "The Nine of Cups is associated with 'Recognizing your own talents and abilities' and 'Being delighted with your own achievements'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Sharing your love'?",
+                "answer1": "/cards/c10.jpg",
+                "answer2": "/cards/c11.jpg",
+                "answer3": "/cards/c12.jpg",
+                "answer4": "/cards/c13.jpg",
+                "correct_answer": "/cards/c10.jpg",
+                "explanation": "The Ten of Cups is associated with 'Sharing your love' and 'Having more than you ever dreamed'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Expressing your love for someone'?",
+                "answer1": "/cards/c11.jpg",
+                "answer2": "/cards/c12.jpg",
+                "answer3": "/cards/c13.jpg",
+                "answer4": "/cards/c14.jpg",
+                "correct_answer": "/cards/c11.jpg",
+                "explanation": "The Page of Cups is associated with 'Expressing your love for someone' and 'Showing your emotions freely'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Embodying the ideal of chivalry'?",
+                "answer1": "/cards/c12.jpg",
+                "answer2": "/cards/c13.jpg",
+                "answer3": "/cards/c14.jpg",
+                "answer4": "/cards/c05.jpg",
+                "correct_answer": "/cards/c12.jpg",
+                "explanation": "The Knight of Cups is associated with 'Embodying the ideal of chivalry' and 'Being deeply committed to a cause'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Allowing yourself to be moved by art and beauty'?",
+                "answer1": "/cards/c13.jpg",
+                "answer2": "/cards/c14.jpg",
+                "answer3": "/cards/c05.jpg",
+                "answer4": "/cards/c06.jpg",
+                "correct_answer": "/cards/c13.jpg",
+                "explanation": "The Queen of Cups is associated with 'Allowing yourself to be moved by art and beauty' and 'Allowing yourself to be moved by the plight of others'."
+            },
+            {
+                "lesson_id": 5,
+                "question": "Which card is associated with the meaning 'Leading a creative project'?",
+                "answer1": "/cards/c14.jpg",
+                "answer2": "/cards/c05.jpg",
+                "answer3": "/cards/c02.jpg",
+                "answer4": "/cards/c13.jpg",
+                "correct_answer": "/cards/c14.jpg",
+                "explanation": "The King of Cups is associated with 'Leading a creative project' and 'Keeping a stiff upper lip'."
+            }
+    ],
+
+
+
+
+
+
+
+
+
+
+    "swords": [
+        {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Ten of Swords?",
+            "answer1": "/cards/s08.jpg",
+            "answer2": "/cards/s10.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/s09.jpg",
+            "correct_answer": "/cards/s10.jpg",
+            "explanation": "The Ten of Swords symbolizes endings, loss, and the need to let go of what is no longer serving you."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Nine of Swords?",
+            "answer1": "/cards/s03.jpg",
+            "answer2": "/cards/s09.jpg",
+            "answer3": "/cards/s07.jpg",
+            "answer4": "/cards/s02.jpg",
+            "correct_answer": "/cards/s09.jpg",
+            "explanation": "The Nine of Swords represents anxiety, worry, and the need to find a way to overcome your fears and doubts."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Eight of Swords?",
+            "answer1": "/cards/s06.jpg",
+            "answer2": "/cards/s08.jpg",
+            "answer3": "/cards/s04.jpg",
+            "answer4": "/cards/s05.jpg",
+            "correct_answer": "/cards/s08.jpg",
+            "explanation": "The Eight of Swords symbolizes feeling trapped, powerless, and the need to find a way to break free from your limitations."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Seven of Swords?",
+            "answer1": "/cards/s05.jpg",
+            "answer2": "/cards/s06.jpg",
+            "answer3": "/cards/s07.jpg",
+            "answer4": "/cards/s08.jpg",
+            "correct_answer": "/cards/s07.jpg",
+            "explanation": "The Seven of Swords suggests betrayal, deception, and the need to be cautious in your dealings with others."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Six of Swords?",
+            "answer1": "/cards/s04.jpg",
+            "answer2": "/cards/s05.jpg",
+            "answer3": "/cards/s06.jpg",
+            "answer4": "/cards/s07.jpg",
+            "correct_answer": "/cards/s06.jpg",
+            "explanation": "The Six of Swords represents the need for transition, moving on from a difficult situation, and the journey towards calmer waters."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Five of Swords?",
+            "answer1": "/cards/s03.jpg",
+            "answer2": "/cards/s04.jpg",
+            "answer3": "/cards/s05.jpg",
+            "answer4": "/cards/s06.jpg",
+            "correct_answer": "/cards/s05.jpg",
+            "explanation": "The Five of Swords symbolizes conflict, competition, and the need to find a way to resolve disputes peacefully."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Four of Swords?",
+            "answer1": "/cards/s02.jpg",
+            "answer2": "/cards/s03.jpg",
+            "answer3": "/cards/s04.jpg",
+            "answer4": "/cards/s05.jpg",
+            "correct_answer": "/cards/s04.jpg",
+            "explanation": "The Four of Swords represents rest, recuperation, and the need to take a break from the stresses of life."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Three of Swords?",
+            "answer1": "/cards/s09.jpg",
+            "answer2": "/cards/s10.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/s03.jpg",
+            "correct_answer": "/cards/s03.jpg",
+            "explanation": "The Three of Swords symbolizes heartbreak, grief, and the pain of loss or betrayal."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which of these cards is the Two of Swords?",
+            "answer1": "/cards/s09.jpg",
+            "answer2": "/cards/s10.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/s03.jpg",
+            "correct_answer": "/cards/s02.jpg",
+            "explanation": "The Two of Swords represents the need for balance, the avoidance of conflict, and the importance of making difficult decisions."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Making objective decisions'?",
+            "answer1": "/cards/s02.jpg",
+            "answer2": "/cards/s03.jpg",
+            "answer3": "/cards/s04.jpg",
+            "answer4": "/cards/s01.jpg",
+            "correct_answer": "/cards/s01.jpg",
+            "explanation": "The Ace of Swords is associated with 'Making objective decisions' and 'Applying logic'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Refusing to make a decision without getting the facts'?",
+            "answer1": "/cards/s01.jpg",
+            "answer2": "/cards/s02.jpg",
+            "answer3": "/cards/s03.jpg",
+            "answer4": "/cards/s04.jpg",
+            "correct_answer": "/cards/s02.jpg",
+            "explanation": "The Two of Swords is associated with 'Refusing to make a decision without getting the facts' and 'Exploring both sides of an argument'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Being brave enough to see things as they really are'?",
+            "answer1": "/cards/s04.jpg",
+            "answer2": "/cards/s05.jpg",
+            "answer3": "/cards/s03.jpg",
+            "answer4": "/cards/s06.jpg",
+            "correct_answer": "/cards/s03.jpg",
+            "explanation": "The Three of Swords is associated with 'Being brave enough to see things as they really are' and 'Exercising your critical eye'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Thinking over your plans before putting them into action'?",
+            "answer1": "/cards/s05.jpg",
+            "answer2": "/cards/s06.jpg",
+            "answer3": "/cards/s07.jpg",
+            "answer4": "/cards/s04.jpg",
+            "correct_answer": "/cards/s04.jpg",
+            "explanation": "The Four of Swords is associated with 'Thinking over your plans before putting them into action' and 'Pausing to meditate or clear your mind'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Acting in your own best interest'?",
+            "answer1": "/cards/s07.jpg",
+            "answer2": "/cards/s08.jpg",
+            "answer3": "/cards/s05.jpg",
+            "answer4": "/cards/s09.jpg",
+            "correct_answer": "/cards/s05.jpg",
+            "explanation": "The Five of Swords is associated with 'Acting in your own best interest' and 'Choosing to stand up for yourself'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Making the best of a bad situation'?",
+            "answer1": "/cards/s08.jpg",
+            "answer2": "/cards/s09.jpg",
+            "answer3": "/cards/s10.jpg",
+            "answer4": "/cards/s06.jpg",
+            "correct_answer": "/cards/s06.jpg",
+            "explanation": "The Six of Swords is associated with 'Making the best of a bad situation' and 'Recovering from defeat'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Refusing to do something dishonest, even when there's no chance of ever being caught'?",
+            "answer1": "/cards/s09.jpg",
+            "answer2": "/cards/s10.jpg",
+            "answer3": "/cards/s11.jpg",
+            "answer4": "/cards/s07.jpg",
+            "correct_answer": "/cards/s07.jpg",
+            "explanation": "The Seven of Swords is associated with 'Refusing to do something dishonest, even when there's no chance of ever being caught' and 'Handling a difficult situation with finesse'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Honoring limits'?",
+            "answer1": "/cards/s10.jpg",
+            "answer2": "/cards/s11.jpg",
+            "answer3": "/cards/s12.jpg",
+            "answer4": "/cards/s08.jpg",
+            "correct_answer": "/cards/s08.jpg",
+            "explanation": "The Eight of Swords is associated with 'Honoring limits' and 'Respecting the rules'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Refusing to worry about what you cannot control'?",
+            "answer1": "/cards/s11.jpg",
+            "answer2": "/cards/s12.jpg",
+            "answer3": "/cards/s13.jpg",
+            "answer4": "/cards/s09.jpg",
+            "correct_answer": "/cards/s09.jpg",
+            "explanation": "The Nine of Swords is associated with 'Refusing to worry about what you cannot control' and 'Rejecting anxiety'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Seeing the signs that you've reached your limits'?",
+            "answer1": "/cards/s12.jpg",
+            "answer2": "/cards/s13.jpg",
+            "answer3": "/cards/s14.jpg",
+            "answer4": "/cards/s10.jpg",
+            "correct_answer": "/cards/s10.jpg",
+            "explanation": "The Ten of Swords is associated with 'Seeing the signs that you've reached your limits' and 'Paying attention to what your body is trying to tell you'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Pursuing a course of study'?",
+            "answer1": "/cards/s13.jpg",
+            "answer2": "/cards/s14.jpg",
+            "answer3": "/cards/s01.jpg",
+            "answer4": "/cards/s11.jpg",
+            "correct_answer": "/cards/s11.jpg",
+            "explanation": "The Page of Swords is associated with 'Pursuing a course of study' and 'Asking good questions'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Speaking your mind'?",
+            "answer1": "/cards/s14.jpg",
+            "answer2": "/cards/s01.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/s12.jpg",
+            "correct_answer": "/cards/s12.jpg",
+            "explanation": "The Knight of Swords is associated with 'Speaking your mind' and 'Making your opinions known'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Exercising tact or using diplomacy'?",
+            "answer1": "/cards/s01.jpg",
+            "answer2": "/cards/s02.jpg",
+            "answer3": "/cards/s03.jpg",
+            "answer4": "/cards/s13.jpg",
+            "correct_answer": "/cards/s13.jpg",
+            "explanation": "The Queen of Swords is associated with 'Exercising tact or using diplomacy' and 'Defusing a tense situation'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Expressing yourself with firmness and authority'?",
+            "answer1": "/cards/s02.jpg",
+            "answer2": "/cards/s03.jpg",
+            "answer3": "/cards/s04.jpg",
+            "answer4": "/cards/s14.jpg",
+            "correct_answer": "/cards/s14.jpg",
+            "explanation": "The King of Swords is associated with 'Expressing yourself with firmness and authority' and 'Rendering a final decision'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Applying logic'?",
+            "answer1": "/cards/s03.jpg",
+            "answer2": "/cards/s04.jpg",
+            "answer3": "/cards/s05.jpg",
+            "answer4": "/cards/s01.jpg",
+            "correct_answer": "/cards/s01.jpg",
+            "explanation": "The Ace of Swords is associated with 'Applying logic' and 'Reasoning your way out of a difficult situation'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Exploring both sides of an argument'?",
+            "answer1": "/cards/s04.jpg",
+            "answer2": "/cards/s05.jpg",
+            "answer3": "/cards/s06.jpg",
+            "answer4": "/cards/s02.jpg",
+            "correct_answer": "/cards/s02.jpg",
+            "explanation": "The Two of Swords is associated with 'Exploring both sides of an argument' and 'Arguing passionately for what you believe in'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Exercising your critical eye'?",
+            "answer1": "/cards/s05.jpg",
+            "answer2": "/cards/s06.jpg",
+            "answer3": "/cards/s07.jpg",
+            "answer4": "/cards/s03.jpg",
+            "correct_answer": "/cards/s03.jpg",
+            "explanation": "The Three of Swords is associated with 'Exercising your critical eye' and 'Being your own best critic'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Pausing to meditate or clear your mind'?",
+            "answer1": "/cards/s06.jpg",
+            "answer2": "/cards/s07.jpg",
+            "answer3": "/cards/s08.jpg",
+            "answer4": "/cards/s04.jpg",
+            "correct_answer": "/cards/s04.jpg",
+            "explanation": "The Four of Swords is associated with 'Pausing to meditate or clear your mind' and 'Taking time to understand someone or something before criticizing it'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Choosing to stand up for yourself'?",
+            "answer1": "/cards/s07.jpg",
+            "answer2": "/cards/s08.jpg",
+            "answer3": "/cards/s09.jpg",
+            "answer4": "/cards/s05.jpg",
+            "correct_answer": "/cards/s05.jpg",
+            "explanation": "The Five of Swords is associated with 'Choosing to stand up for yourself' and 'Not backing down from disagreement and discord'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Recovering from defeat'?",
+            "answer1": "/cards/s08.jpg",
+            "answer2": "/cards/s09.jpg",
+            "answer3": "/cards/s10.jpg",
+            "answer4": "/cards/s06.jpg",
+            "correct_answer": "/cards/s06.jpg",
+            "explanation": "The Six of Swords is associated with 'Recovering from defeat' and 'Resetting expectations'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Handling a difficult situation with finesse'?",
+            "answer1": "/cards/s09.jpg",
+            "answer2": "/cards/s10.jpg",
+            "answer3": "/cards/s11.jpg",
+            "answer4": "/cards/s07.jpg",
+            "correct_answer": "/cards/s07.jpg",
+            "explanation": "The Seven of Swords is associated with 'Handling a difficult situation with finesse' and 'Pointing out assumptions'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Respecting the rules'?",
+            "answer1": "/cards/s10.jpg",
+            "answer2": "/cards/s11.jpg",
+            "answer3": "/cards/s12.jpg",
+            "answer4": "/cards/s08.jpg",
+            "correct_answer": "/cards/s08.jpg",
+            "explanation": "The Eight of Swords is associated with 'Respecting the rules' and 'Deciding to go on a diet for your health's sake'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Rejecting anxiety'?",
+            "answer1": "/cards/s11.jpg",
+            "answer2": "/cards/s12.jpg",
+            "answer3": "/cards/s13.jpg",
+            "answer4": "/cards/s09.jpg",
+            "correct_answer": "/cards/s09.jpg",
+            "explanation": "The Nine of Swords is associated with 'Rejecting anxiety' and 'Judging your own performance with kindness and gentleness'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Paying attention to what your body is trying to tell you'?",
+            "answer1": "/cards/s12.jpg",
+            "answer2": "/cards/s13.jpg",
+            "answer3": "/cards/s14.jpg",
+            "answer4": "/cards/s10.jpg",
+            "correct_answer": "/cards/s10.jpg",
+            "explanation": "The Ten of Swords is associated with 'Paying attention to what your body is trying to tell you' and 'Giving in to the need for rest and renewal'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Asking good questions'?",
+            "answer1": "/cards/s13.jpg",
+            "answer2": "/cards/s14.jpg",
+            "answer3": "/cards/s01.jpg",
+            "answer4": "/cards/s11.jpg",
+            "correct_answer": "/cards/s11.jpg",
+            "explanation": "The Page of Swords is associated with 'Asking good questions' and 'Investing time in study and practice'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Making your opinions known'?",
+            "answer1": "/cards/s14.jpg",
+            "answer2": "/cards/s01.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/s12.jpg",
+            "correct_answer": "/cards/s12.jpg",
+            "explanation": "The Knight of Swords is associated with 'Making your opinions known' and 'Offering constructive criticism'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Rendering a final decision'?",
+            "answer1": "/cards/s11.jpg",
+            "answer2": "/cards/s12.jpg", 
+            "answer3": "/cards/s13.jpg",
+            "answer4": "/cards/s14.jpg",
+            "correct_answer": "/cards/s14.jpg",
+            "explanation": "The King of Swords is associated with 'Rendering a final decision' and 'Consulting an expert'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Having a way with words'?",
+            "answer1": "/cards/s12.jpg",
+            "answer2": "/cards/s13.jpg",
+            "answer3": "/cards/s14.jpg",
+            "answer4": "/cards/s11.jpg",
+            "correct_answer": "/cards/s13.jpg",
+            "explanation": "The Queen of Swords is associated with 'Having a way with words' and 'Telling jokes'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Sharing your knowledge'?",
+            "answer1": "/cards/s13.jpg",
+            "answer2": "/cards/s14.jpg",
+            "answer3": "/cards/s11.jpg",
+            "answer4": "/cards/s12.jpg",
+            "correct_answer": "/cards/s12.jpg",
+            "explanation": "The Knight of Swords is associated with 'Sharing your knowledge' and 'Making insightful observations'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Doing research'?",
+            "answer1": "/cards/s14.jpg",
+            "answer2": "/cards/s11.jpg",
+            "answer3": "/cards/s12.jpg",
+            "answer4": "/cards/s13.jpg",
+            "correct_answer": "/cards/s11.jpg",
+            "explanation": "The Page of Swords is associated with 'Doing research' and 'Making a habit of learning new things'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Confronting nightmares and fears'?",
+            "answer1": "/cards/s11.jpg",
+            "answer2": "/cards/s12.jpg",
+            "answer3": "/cards/s13.jpg",
+            "answer4": "/cards/s09.jpg",
+            "correct_answer": "/cards/s09.jpg",
+            "explanation": "The Nine of Swords is associated with 'Confronting nightmares and fears' and 'Drawing a conclusion and putting an issue out of your mind'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Identifying obstacles to further progress'?",
+            "answer1": "/cards/s10.jpg",
+            "answer2": "/cards/s11.jpg",
+            "answer3": "/cards/s12.jpg",
+            "answer4": "/cards/s08.jpg",
+            "correct_answer": "/cards/s08.jpg",
+            "explanation": "The Eight of Swords is associated with 'Identifying obstacles to further progress' and 'Refusing to think about unhealthy or unethical options'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Pointing out assumptions'?",
+            "answer1": "/cards/s11.jpg",
+            "answer2": "/cards/s12.jpg",
+            "answer3": "/cards/s13.jpg", 
+            "answer4": "/cards/s07.jpg",
+            "correct_answer": "/cards/s07.jpg",
+            "explanation": "The Seven of Swords is associated with 'Pointing out assumptions' and 'Acting ethically in public and in private'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Encouraging the open exchange of ideas'?",
+            "answer1": "/cards/s12.jpg",
+            "answer2": "/cards/s13.jpg",
+            "answer3": "/cards/s14.jpg",
+            "answer4": "/cards/s02.jpg",
+            "correct_answer": "/cards/s02.jpg",
+            "explanation": "The Two of Swords is associated with 'Encouraging the open exchange of ideas' and 'Discussing political or religious issues without getting \"hot under the collar\"'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Solving puzzles'?",
+            "answer1": "/cards/s13.jpg",
+            "answer2": "/cards/s14.jpg",
+            "answer3": "/cards/s01.jpg",
+            "answer4": "/cards/s11.jpg",
+            "correct_answer": "/cards/s01.jpg",
+            "explanation": "The Ace of Swords is associated with 'Solving puzzles' and 'Thinking things through'."
+          },
+          {
+            "lesson_id": 6,
+            "question": "Which card is associated with the meaning 'Emphasizing the facts'?",
+            "answer1": "/cards/s14.jpg",
+            "answer2": "/cards/s01.jpg",
+            "answer3": "/cards/s02.jpg",
+            "answer4": "/cards/s03.jpg",
+            "correct_answer": "/cards/s01.jpg",
+            "explanation": "The Ace of Swords is associated with 'Emphasizing the facts' and 'Clearing your mind'."
+          }
+    ],
+
+
+
+
+
+    "wands": [
+        {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Ten of Wands?",
+            "answer1": "/cards/w02.jpg",
+            "answer2": "/cards/w08.jpg",
+            "answer3": "/cards/w09.jpg",
+            "answer4": "/cards/w10.jpg",
+            "correct_answer": "/cards/w10.jpg",
+            "explanation": "The Ten of Wands represents feeling burdened, overwhelmed, and the need to delegate or let go of some responsibilities."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Nine of Wands?",
+            "answer1": "/cards/w10.jpg",
+            "answer2": "/cards/w07.jpg",
+            "answer3": "/cards/w09.jpg",
+            "answer4": "/cards/w08.jpg",
+            "correct_answer": "/cards/w09.jpg",
+            "explanation": "The Nine of Wands symbolizes resilience, perseverance, and the determination to overcome obstacles."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Eight of Wands?",
+            "answer1": "/cards/w09.jpg",
+            "answer2": "/cards/w06.jpg",
+            "answer3": "/cards/w08.jpg",
+            "answer4": "/cards/w07.jpg",
+            "correct_answer": "/cards/w08.jpg",
+            "explanation": "The Eight of Wands represents swift movement, progress, and the arrival of news or messages."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Seven of Wands?",
+            "answer1": "/cards/w08.jpg",
+            "answer2": "/cards/w05.jpg",
+            "answer3": "/cards/w07.jpg",
+            "answer4": "/cards/w06.jpg",
+            "correct_answer": "/cards/w07.jpg",
+            "explanation": "The Seven of Wands symbolizes standing up for your beliefs, defending your position, and the need to be courageous in the face of opposition."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Six of Wands?",
+            "answer1": "/cards/w07.jpg",
+            "answer2": "/cards/w04.jpg",
+            "answer3": "/cards/w06.jpg",
+            "answer4": "/cards/w05.jpg",
+            "correct_answer": "/cards/w06.jpg",
+            "explanation": "The Six of Wands represents victory, success, and the recognition of your achievements."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Five of Wands?",
+            "answer1": "/cards/w06.jpg",
+            "answer2": "/cards/w03.jpg",
+            "answer3": "/cards/w05.jpg",
+            "answer4": "/cards/w04.jpg",
+            "correct_answer": "/cards/w05.jpg",
+            "explanation": "The Five of Wands symbolizes conflict, competition, and the need to find a way to cooperate and compromise."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Four of Wands?",
+            "answer1": "/cards/w05.jpg",
+            "answer2": "/cards/w02.jpg",
+            "answer3": "/cards/w04.jpg",
+            "answer4": "/cards/w03.jpg",
+            "correct_answer": "/cards/w04.jpg",
+            "explanation": "The Four of Wands represents celebration, joy, and the coming together of people in harmony."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Three of Wands?",
+            "answer1": "/cards/w10.jpg",
+            "answer2": "/cards/w02.jpg",
+            "answer3": "/cards/w03.jpg",
+            "answer4": "/cards/w09.jpg",
+            "correct_answer": "/cards/w03.jpg",
+            "explanation": "The Three of Wands symbolizes looking ahead, planning for the future, and the need to take a risk or seize an opportunity."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which of these cards is the Two of Wands?",
+            "answer1": "/cards/w03.jpg",
+            "answer2": "/cards/w10.jpg",
+            "answer3": "/cards/w09.jpg",
+            "answer4": "/cards/w02.jpg",
+            "correct_answer": "/cards/w02.jpg",
+            "explanation": "The Two of Wands represents the need to make a decision, consider your options, and the potential for future growth and success."
+          },
+          {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Being inspired'?",
+            "answer1": "/cards/w01.jpg",
+            "answer2": "/cards/w02.jpg",
+            "answer3": "/cards/w03.jpg",
+            "answer4": "/cards/w04.jpg",
+            "correct_answer": "/cards/w01.jpg",
+            "explanation": "The Ace of Wands is associated with 'Being inspired' and 'Identifying an important goal'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Offering or being offered an option'?",
+            "answer1": "/cards/w02.jpg",
+            "answer2": "/cards/w03.jpg",
+            "answer3": "/cards/w04.jpg",
+            "answer4": "/cards/w05.jpg",
+            "correct_answer": "/cards/w02.jpg",
+            "explanation": "The Two of Wands is associated with 'Offering or being offered an option' and 'Seeing the value of another person's approach'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Putting a plan into motion'?",
+            "answer1": "/cards/w03.jpg",
+            "answer2": "/cards/w04.jpg",
+            "answer3": "/cards/w05.jpg",
+            "answer4": "/cards/w06.jpg",
+            "correct_answer": "/cards/w03.jpg",
+            "explanation": "The Three of Wands is associated with 'Putting a plan into motion' and 'Taking that critical first step'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Sharing in a great celebration'?",
+            "answer1": "/cards/w04.jpg",
+            "answer2": "/cards/w05.jpg",
+            "answer3": "/cards/w06.jpg",
+            "answer4": "/cards/w07.jpg",
+            "correct_answer": "/cards/w04.jpg",
+            "explanation": "The Four of Wands is associated with 'Sharing in a great celebration' and 'Preparing for a party'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Calmly expressing a dissenting opinion'?",
+            "answer1": "/cards/w05.jpg",
+            "answer2": "/cards/w06.jpg",
+            "answer3": "/cards/w07.jpg",
+            "answer4": "/cards/w08.jpg",
+            "correct_answer": "/cards/w05.jpg",
+            "explanation": "The Five of Wands is associated with 'Calmly expressing a dissenting opinion' and 'Allowing someone to use his or her own methods to get a job done'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Outperforming your peers'?",
+            "answer1": "/cards/w06.jpg",
+            "answer2": "/cards/w07.jpg",
+            "answer3": "/cards/w08.jpg",
+            "answer4": "/cards/w09.jpg",
+            "correct_answer": "/cards/w06.jpg",
+            "explanation": "The Six of Wands is associated with 'Outperforming your peers' and 'Winning a competition'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Refusing to be silenced through fear or intimidation'?",
+            "answer1": "/cards/w07.jpg",
+            "answer2": "/cards/w08.jpg",
+            "answer3": "/cards/w09.jpg",
+            "answer4": "/cards/w10.jpg",
+            "correct_answer": "/cards/w07.jpg",
+            "explanation": "The Seven of Wands is associated with 'Refusing to be silenced through fear or intimidation' and 'Continuing a fight against all odds'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Taking swift action'?",
+            "answer1": "/cards/w08.jpg",
+            "answer2": "/cards/w09.jpg",
+            "answer3": "/cards/w10.jpg",
+            "answer4": "/cards/w11.jpg",
+            "correct_answer": "/cards/w08.jpg",
+            "explanation": "The Eight of Wands is associated with 'Taking swift action' and 'Moving forward with a plan as quickly as possible'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Sticking with it for the duration'?",
+            "answer1": "/cards/w09.jpg",
+            "answer2": "/cards/w10.jpg",
+            "answer3": "/cards/w11.jpg",
+            "answer4": "/cards/w12.jpg",
+            "correct_answer": "/cards/w09.jpg",
+            "explanation": "The Nine of Wands is associated with 'Sticking with it for the duration' and 'Fulfilling your promises and obligations'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Holding your own in extreme circumstances'?",
+            "answer1": "/cards/w10.jpg",
+            "answer2": "/cards/w11.jpg",
+            "answer3": "/cards/w12.jpg",
+            "answer4": "/cards/w13.jpg",
+            "correct_answer": "/cards/w10.jpg",
+            "explanation": "The Ten of Wands is associated with 'Holding your own in extreme circumstances' and 'Helping others carry their burdens'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Leaping at a new opportunity'?",
+            "answer1": "/cards/w11.jpg",
+            "answer2": "/cards/w12.jpg",
+            "answer3": "/cards/w13.jpg",
+            "answer4": "/cards/w14.jpg",
+            "correct_answer": "/cards/w11.jpg",
+            "explanation": "The Page of Wands is associated with 'Leaping at a new opportunity' and 'Being a cheerleader or ardent advocate for your cause'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Charging ahead'?",
+            "answer1": "/cards/w12.jpg",
+            "answer2": "/cards/w13.jpg",
+            "answer3": "/cards/w14.jpg",
+            "answer4": "/cards/w01.jpg",
+            "correct_answer": "/cards/w12.jpg",
+            "explanation": "The Knight of Wands is associated with 'Charging ahead' and 'Making rapid progress'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Paying close attention'?",
+            "answer1": "/cards/w13.jpg",
+            "answer2": "/cards/w14.jpg",
+            "answer3": "/cards/w01.jpg",
+            "answer4": "/cards/w02.jpg",
+            "correct_answer": "/cards/w13.jpg",
+            "explanation": "The Queen of Wands is associated with 'Paying close attention' and 'Helping others focus on the issue at hand'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Putting old things together in new and exciting ways'?",
+            "answer1": "/cards/w14.jpg",
+            "answer2": "/cards/w01.jpg",
+            "answer3": "/cards/w02.jpg",
+            "answer4": "/cards/w03.jpg",
+            "correct_answer": "/cards/w14.jpg",
+            "explanation": "The King of Wands is associated with 'Putting old things together in new and exciting ways' and 'Using your experience to solve puzzles and problems'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Identifying an important goal'?",
+            "answer1": "/cards/w02.jpg",
+            "answer2": "/cards/w03.jpg",
+            "answer3": "/cards/w04.jpg",
+            "answer4": "/cards/w05.jpg",
+            "correct_answer": "/cards/w02.jpg",
+            "explanation": "The Two of Wands is associated with 'Identifying an important goal' and 'Seeing the value of another person's approach'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Seeing a solution'?",
+            "answer1": "/cards/w03.jpg",
+            "answer2": "/cards/w04.jpg",
+            "answer3": "/cards/w05.jpg",
+            "answer4": "/cards/w06.jpg",
+            "correct_answer": "/cards/w03.jpg",
+            "explanation": "The Three of Wands is associated with 'Seeing a solution' and 'Going beyond your limits'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Creating something new'?",
+            "answer1": "/cards/w04.jpg",
+            "answer2": "/cards/w05.jpg",
+            "answer3": "/cards/w06.jpg",
+            "answer4": "/cards/w07.jpg",
+            "correct_answer": "/cards/w04.jpg",
+            "explanation": "The Four of Wands is associated with 'Creating something new' and 'Working together toward a common goal'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Blazing new trails'?",
+            "answer1": "/cards/w05.jpg",
+            "answer2": "/cards/w06.jpg",
+            "answer3": "/cards/w07.jpg",
+            "answer4": "/cards/w08.jpg",
+            "correct_answer": "/cards/w06.jpg",
+            "explanation": "The Six of Wands is associated with 'Blazing new trails' and 'Winning a competition'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Defending yourself against physical and emotional attacks'?",
+            "answer1": "/cards/w07.jpg",
+            "answer2": "/cards/w08.jpg",
+            "answer3": "/cards/w09.jpg",
+            "answer4": "/cards/w10.jpg",
+            "correct_answer": "/cards/w07.jpg",
+            "explanation": "The Seven of Wands is associated with 'Defending yourself against physical and emotional attacks' and 'Being fierce'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Adapting to sudden changes'?",
+            "answer1": "/cards/w08.jpg",
+            "answer2": "/cards/w09.jpg",
+            "answer3": "/cards/w10.jpg",
+            "answer4": "/cards/w11.jpg",
+            "correct_answer": "/cards/w08.jpg",
+            "explanation": "The Eight of Wands is associated with 'Adapting to sudden changes' and 'Taking setbacks in stride'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Dragging yourself across the finish line'?",
+            "answer1": "/cards/w09.jpg",
+            "answer2": "/cards/w10.jpg",
+            "answer3": "/cards/w11.jpg",
+            "answer4": "/cards/w12.jpg",
+            "correct_answer": "/cards/w09.jpg",
+            "explanation": "The Nine of Wands is associated with 'Dragging yourself across the finish line' and 'Sticking with it for the duration'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Coming up with unexpected solutions'?",
+            "answer1": "/cards/w10.jpg",
+            "answer2": "/cards/w11.jpg",
+            "answer3": "/cards/w12.jpg",
+            "answer4": "/cards/w13.jpg",
+            "correct_answer": "/cards/w10.jpg",
+            "explanation": "The Ten of Wands is associated with 'Coming up with unexpected solutions' and 'Putting old things together in new and exciting ways'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Being a True Believer'?",
+            "answer1": "/cards/w11.jpg",
+            "answer2": "/cards/w12.jpg",
+            "answer3": "/cards/w13.jpg",
+            "answer4": "/cards/w14.jpg",
+            "correct_answer": "/cards/w11.jpg",
+            "explanation": "The Page of Wands is associated with 'Being a True Believer' and 'Leaping at a new opportunity'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Convincing others of your right to leadership'?",
+            "answer1": "/cards/w12.jpg",
+            "answer2": "/cards/w13.jpg",
+            "answer3": "/cards/w14.jpg",
+            "answer4": "/cards/w01.jpg",
+            "correct_answer": "/cards/w12.jpg",
+            "explanation": "The Knight of Wands is associated with 'Convincing others of your right to leadership' and 'Charging ahead'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Bringing people together, despite their differences'?",
+            "answer1": "/cards/w13.jpg",
+            "answer2": "/cards/w14.jpg",
+            "answer3": "/cards/w01.jpg",
+            "answer4": "/cards/w02.jpg",
+            "correct_answer": "/cards/w13.jpg",
+            "explanation": "The Queen of Wands is associated with 'Bringing people together, despite their differences' and 'Paying close attention'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Directing the efforts of others'?",
+            "answer1": "/cards/w14.jpg",
+            "answer2": "/cards/w01.jpg",
+            "answer3": "/cards/w02.jpg",
+            "answer4": "/cards/w03.jpg",
+            "correct_answer": "/cards/w14.jpg",
+            "explanation": "The King of Wands is associated with 'Directing the efforts of others' and 'Putting old things together in new and exciting ways'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Understanding there's more than one way to \"skin a cat\"'?",
+            "answer1": "/cards/w01.jpg",
+            "answer2": "/cards/w02.jpg",
+            "answer3": "/cards/w03.jpg",
+            "answer4": "/cards/w04.jpg",
+            "correct_answer": "/cards/w02.jpg",
+            "explanation": "The Two of Wands is associated with 'Understanding there's more than one way to \"skin a cat\"' and 'Offering or being offered an option'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Successfully doing more than one thing at a time'?",
+            "answer1": "/cards/w02.jpg",
+            "answer2": "/cards/w03.jpg",
+            "answer3": "/cards/w04.jpg",
+            "answer4": "/cards/w05.jpg",
+            "correct_answer": "/cards/w02.jpg",
+            "explanation": "The Two of Wands is associated with 'Successfully doing more than one thing at a time' and 'Offering or being offered an option'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Being empowered to make a choice'?",
+            "answer1": "/cards/w03.jpg",
+            "answer2": "/cards/w04.jpg",
+            "answer3": "/cards/w05.jpg",
+            "answer4": "/cards/w06.jpg",
+            "correct_answer": "/cards/w03.jpg",
+            "explanation": "The Three of Wands is associated with 'Being empowered to make a choice' and 'Putting a plan into motion'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Being recognized as a capable person'?",
+            "answer1": "/cards/w06.jpg",
+            "answer2": "/cards/w07.jpg",
+            "answer3": "/cards/w08.jpg",
+            "answer4": "/cards/w09.jpg",
+            "correct_answer": "/cards/w06.jpg",
+            "explanation": "The Six of Wands is associated with 'Being recognized as a capable person' and 'Outperforming your peers'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Continuing a fight against all odds'?",
+            "answer1": "/cards/w07.jpg",
+            "answer2": "/cards/w08.jpg",
+            "answer3": "/cards/w09.jpg",
+            "answer4": "/cards/w10.jpg",
+            "correct_answer": "/cards/w07.jpg",
+            "explanation": "The Seven of Wands is associated with 'Continuing a fight against all odds' and 'Refusing to be silenced through fear or intimidation'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Taking setbacks in stride'?",
+            "answer1": "/cards/w08.jpg",
+            "answer2": "/cards/w09.jpg",
+            "answer3": "/cards/w10.jpg",
+            "answer4": "/cards/w11.jpg",
+            "correct_answer": "/cards/w08.jpg",
+            "explanation": "The Eight of Wands is associated with 'Taking setbacks in stride' and 'Taking swift action'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Picking yourself up by your own bootstraps'?",
+            "answer1": "/cards/w09.jpg",
+            "answer2": "/cards/w10.jpg",
+            "answer3": "/cards/w11.jpg",
+            "answer4": "/cards/w12.jpg",
+            "correct_answer": "/cards/w09.jpg",
+            "explanation": "The Nine of Wands is associated with 'Picking yourself up by your own bootstraps' and 'Sticking with it for the duration'."
+        },
+        {
+            "lesson_id": 7,
+            "question": "Which card is associated with the meaning 'Doing what you set out to do'?",
+            "answer1": "/cards/w10.jpg",
+            "answer2": "/cards/w11.jpg",
+            "answer3": "/cards/w12.jpg",
+            "answer4": "/cards/w13.jpg",
+            "correct_answer": "/cards/w10.jpg",
+            "explanation": "The Ten of Wands is associated with 'Doing what you set out to do' and 'Holding your own in extreme circumstances'."
+        }
+    ],
+
+
+
+
+
+
+    "pentacles": [
+        {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Ten of Pentacles?",
+            "answer1": "/cards/p07.jpg",
+            "answer2": "/cards/p08.jpg",
+            "answer3": "/cards/p10.jpg",
+            "answer4": "/cards/p09.jpg",
+            "correct_answer": "/cards/p10.jpg",
+            "explanation": "The Ten of Pentacles represents an abundance of wealth, financial security, and the importance of family and legacy."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Nine of Pentacles?",
+            "answer1": "/cards/p08.jpg",
+            "answer2": "/cards/p09.jpg",
+            "answer3": "/cards/p10.jpg",
+            "answer4": "/cards/p07.jpg",
+            "correct_answer": "/cards/p09.jpg",
+            "explanation": "The Nine of Pentacles represents luxury, self-sufficiency, and the enjoyment of the finer things in life."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Eight of Pentacles?",
+            "answer1": "/cards/p09.jpg",
+            "answer2": "/cards/p06.jpg",
+            "answer3": "/cards/p08.jpg",
+            "answer4": "/cards/p07.jpg",
+            "correct_answer": "/cards/p08.jpg",
+            "explanation": "The Eight of Pentacles symbolizes hard work, dedication, and the importance of developing your skills and talents."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Seven of Pentacles?",
+            "answer1": "/cards/p05.jpg",
+            "answer2": "/cards/p06.jpg",
+            "answer3": "/cards/p07.jpg",
+            "answer4": "/cards/p08.jpg",
+            "correct_answer": "/cards/p07.jpg",
+            "explanation": "The Seven of Pentacles represents taking stock, assessing your progress, and the need for patience and perseverance."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Six of Pentacles?",
+            "answer1": "/cards/p04.jpg",
+            "answer2": "/cards/p05.jpg",
+            "answer3": "/cards/p06.jpg",
+            "answer4": "/cards/p07.jpg",
+            "correct_answer": "/cards/p06.jpg",
+            "explanation": "The Six of Pentacles symbolizes generosity, charity, and the importance of sharing your resources with others."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Five of Pentacles?",
+            "answer1": "/cards/p03.jpg",
+            "answer2": "/cards/p04.jpg",
+            "answer3": "/cards/p05.jpg",
+            "answer4": "/cards/p06.jpg",
+            "correct_answer": "/cards/p05.jpg",
+            "explanation": "The Five of Pentacles represents financial hardship, poverty, and the need to seek help or support from others."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Four of Pentacles?",
+            "answer1": "/cards/p02.jpg",
+            "answer2": "/cards/p03.jpg",
+            "answer3": "/cards/p04.jpg",
+            "answer4": "/cards/p05.jpg",
+            "correct_answer": "/cards/p04.jpg",
+            "explanation": "The Four of Pentacles symbolizes greed, possessiveness, and the need to learn to share and let go of material attachments."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Three of Pentacles?",
+            "answer1": "/cards/p09.jpg",
+            "answer2": "/cards/p10.jpg",
+            "answer3": "/cards/p02.jpg",
+            "answer4": "/cards/p03.jpg",
+            "correct_answer": "/cards/p03.jpg",
+            "explanation": "The Three of Pentacles symbolizes teamwork, collaboration, and the importance of skilled craftsmanship."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which of these cards is the Two of Pentacles?",
+            "answer1": "/cards/p09.jpg",
+            "answer2": "/cards/p10.jpg",
+            "answer3": "/cards/p02.jpg",
+            "answer4": "/cards/p03.jpg",
+            "correct_answer": "/cards/p02.jpg",
+            "explanation": "The Two of Pentacles represents the need for balance, multitasking, and the ability to juggle multiple responsibilities."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Outlining a plan for achieving prosperity'?",
+            "answer1": "/cards/p02.jpg",
+            "answer2": "/cards/p03.jpg",
+            "answer3": "/cards/p04.jpg",
+            "answer4": "/cards/p01.jpg",
+            "correct_answer": "/cards/p01.jpg",
+            "explanation": "The Ace of Pentacles is associated with 'Outlining a plan for achieving prosperity' and 'Becoming aware of opportunities to improve income or health'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Weighing options'?",
+            "answer1": "/cards/p09.jpg",
+            "answer2": "/cards/p10.jpg",
+            "answer3": "/cards/p02.jpg",
+            "answer4": "/cards/p08.jpg",
+            "correct_answer": "/cards/p02.jpg",
+            "explanation": "The Two of Pentacles is associated with 'Weighing options' and 'Comparing prices'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Finishing a project'?",
+            "answer1": "/cards/p01.jpg",
+            "answer2": "/cards/p02.jpg",
+            "answer3": "/cards/p03.jpg",
+            "answer4": "/cards/p04.jpg",
+            "correct_answer": "/cards/p03.jpg",
+            "explanation": "The Three of Pentacles is associated with 'Finishing a project' and 'Making something others value'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Saving for a rainy day'?",
+            "answer1": "/cards/p02.jpg",
+            "answer2": "/cards/p03.jpg",
+            "answer3": "/cards/p04.jpg",
+            "answer4": "/cards/p05.jpg",
+            "correct_answer": "/cards/p04.jpg",
+            "explanation": "The Four of Pentacles is associated with 'Saving for a rainy day' and 'Fasting as part of a spiritual practice'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Recognizing your needs and taking action to fulfill them'?",
+            "answer1": "/cards/p03.jpg",
+            "answer2": "/cards/p04.jpg",
+            "answer3": "/cards/p05.jpg",
+            "answer4": "/cards/p06.jpg",
+            "correct_answer": "/cards/p05.jpg",
+            "explanation": "The Five of Pentacles is associated with 'Recognizing your needs and taking action to fulfill them' and 'Doing as much as you can do with what little you have'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Giving time, money, or effort to a charity'?",
+            "answer1": "/cards/p04.jpg",
+            "answer2": "/cards/p05.jpg",
+            "answer3": "/cards/p06.jpg",
+            "answer4": "/cards/p07.jpg",
+            "correct_answer": "/cards/p06.jpg",
+            "explanation": "The Six of Pentacles is associated with 'Giving time, money, or effort to a charity' and 'Taking part in a group effort'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Measuring progress toward your goal'?",
+            "answer1": "/cards/p05.jpg",
+            "answer2": "/cards/p06.jpg",
+            "answer3": "/cards/p07.jpg",
+            "answer4": "/cards/p08.jpg",
+            "correct_answer": "/cards/p07.jpg",
+            "explanation": "The Seven of Pentacles is associated with 'Measuring progress toward your goal' and 'Coming up with ideas for improving your health or prosperity'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Doing your best'?",
+            "answer1": "/cards/p06.jpg",
+            "answer2": "/cards/p07.jpg",
+            "answer3": "/cards/p08.jpg",
+            "answer4": "/cards/p09.jpg",
+            "correct_answer": "/cards/p08.jpg",
+            "explanation": "The Eight of Pentacles is associated with 'Doing your best' and 'Finding the work that is right for you'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Investing time in learning or teaching a difficult task'?",
+            "answer1": "/cards/p07.jpg",
+            "answer2": "/cards/p08.jpg",
+            "answer3": "/cards/p09.jpg",
+            "answer4": "/cards/p10.jpg",
+            "correct_answer": "/cards/p09.jpg",
+            "explanation": "The Nine of Pentacles is associated with 'Investing time in learning or teaching a difficult task' and 'Restraining yourself from physical or financial extremes'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Celebrating your physical and financial blessings'?",
+            "answer1": "/cards/p08.jpg",
+            "answer2": "/cards/p09.jpg",
+            "answer3": "/cards/p10.jpg",
+            "answer4": "/cards/p01.jpg",
+            "correct_answer": "/cards/p10.jpg",
+            "explanation": "The Ten of Pentacles is associated with 'Celebrating your physical and financial blessings' and 'Realizing how lucky or how blessed you are'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Learning the value of a dollar'?",
+            "answer1": "/cards/p09.jpg",
+            "answer2": "/cards/p10.jpg",
+            "answer3": "/cards/p11.jpg",
+            "answer4": "/cards/p12.jpg",
+            "correct_answer": "/cards/p11.jpg",
+            "explanation": "The Page of Pentacles is associated with 'Learning the value of a dollar' and 'Starting a savings plan'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Spending money wisely'?",
+            "answer1": "/cards/p10.jpg",
+            "answer2": "/cards/p11.jpg",
+            "answer3": "/cards/p12.jpg",
+            "answer4": "/cards/p01.jpg",
+            "correct_answer": "/cards/p12.jpg",
+            "explanation": "The Knight of Pentacles is associated with 'Spending money wisely' and 'Paying close attention to physical or financial details'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Becoming aware of opportunities to improve income or health'?",
+            "answer1": "/cards/p11.jpg",
+            "answer2": "/cards/p12.jpg",
+            "answer3": "/cards/p01.jpg",
+            "answer4": "/cards/p02.jpg",
+            "correct_answer": "/cards/p01.jpg",
+            "explanation": "The Ace of Pentacles is associated with 'Becoming aware of opportunities to improve income or health' and 'Realizing you have everything you need'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Comparing prices'?",
+            "answer1": "/cards/p12.jpg",
+            "answer2": "/cards/p01.jpg",
+            "answer3": "/cards/p02.jpg",
+            "answer4": "/cards/p03.jpg",
+            "correct_answer": "/cards/p02.jpg",
+            "explanation": "The Two of Pentacles is associated with 'Comparing prices' and 'Determining the value of one option over another'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Making something others value'?",
+            "answer1": "/cards/p01.jpg",
+            "answer2": "/cards/p02.jpg",
+            "answer3": "/cards/p03.jpg",
+            "answer4": "/cards/p04.jpg",
+            "correct_answer": "/cards/p03.jpg",
+            "explanation": "The Three of Pentacles is associated with 'Making something others value' and 'Performing according to specifications'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Fasting as part of a spiritual practice'?",
+            "answer1": "/cards/p02.jpg",
+            "answer2": "/cards/p03.jpg",
+            "answer3": "/cards/p04.jpg",
+            "answer4": "/cards/p05.jpg",
+            "correct_answer": "/cards/p04.jpg",
+            "explanation": "The Four of Pentacles is associated with 'Fasting as part of a spiritual practice' and 'Abstaining from sex as a way of honoring a spiritual tradition or personal promise'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Doing as much as you can do with what little you have'?",
+            "answer1": "/cards/p03.jpg",
+            "answer2": "/cards/p04.jpg",
+            "answer3": "/cards/p05.jpg",
+            "answer4": "/cards/p06.jpg",
+            "correct_answer": "/cards/p05.jpg",
+            "explanation": "The Five of Pentacles is associated with 'Doing as much as you can do with what little you have' and 'Admitting you need help'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Taking part in a group effort'?",
+            "answer1": "/cards/p04.jpg",
+            "answer2": "/cards/p05.jpg",
+            "answer3": "/cards/p06.jpg",
+            "answer4": "/cards/p07.jpg",
+            "correct_answer": "/cards/p06.jpg",
+            "explanation": "The Six of Pentacles is associated with 'Taking part in a group effort' and 'Lending your resources to others without expecting anything in return'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Coming up with ideas for improving your health or prosperity'?",
+            "answer1": "/cards/p05.jpg",
+            "answer2": "/cards/p06.jpg",
+            "answer3": "/cards/p07.jpg",
+            "answer4": "/cards/p08.jpg",
+            "correct_answer": "/cards/p07.jpg",
+            "explanation": "The Seven of Pentacles is associated with 'Coming up with ideas for improving your health or prosperity' and 'Looking at results with an eye toward improving performance'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Finding the work that is right for you'?",
+            "answer1": "/cards/p06.jpg",
+            "answer2": "/cards/p07.jpg",
+            "answer3": "/cards/p08.jpg",
+            "answer4": "/cards/p09.jpg",
+            "correct_answer": "/cards/p08.jpg",
+            "explanation": "The Eight of Pentacles is associated with 'Finding the work that is right for you' and 'Bringing enthusiasm and zeal to your work'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Restraining yourself from physical or financial extremes'?",
+            "answer1": "/cards/p07.jpg",
+            "answer2": "/cards/p08.jpg",
+            "answer3": "/cards/p09.jpg",
+            "answer4": "/cards/p10.jpg",
+            "correct_answer": "/cards/p09.jpg",
+            "explanation": "The Nine of Pentacles is associated with 'Restraining yourself from physical or financial extremes' and 'Appreciating fine food, fine wine, beautiful art, beautiful bodies, or any of the better things in life'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Realizing how lucky or how blessed you are'?",
+            "answer1": "/cards/p08.jpg",
+            "answer2": "/cards/p09.jpg",
+            "answer3": "/cards/p10.jpg",
+            "answer4": "/cards/p11.jpg",
+            "correct_answer": "/cards/p10.jpg",
+            "explanation": "The Ten of Pentacles is associated with 'Realizing how lucky or how blessed you are' and 'Being satisfied with your physical and financial achievements'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Starting a savings plan'?",
+            "answer1": "/cards/p09.jpg",
+            "answer2": "/cards/p10.jpg",
+            "answer3": "/cards/p11.jpg",
+            "answer4": "/cards/p12.jpg",
+            "correct_answer": "/cards/p11.jpg",
+            "explanation": "The Page of Pentacles is associated with 'Starting a savings plan' and 'Taking the first steps toward getting out of debt'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Paying close attention to physical or financial details'?",
+            "answer1": "/cards/p10.jpg",
+            "answer2": "/cards/p11.jpg",
+            "answer3": "/cards/p12.jpg",
+            "answer4": "/cards/p01.jpg",
+            "correct_answer": "/cards/p12.jpg",
+            "explanation": "The Knight of Pentacles is associated with 'Paying close attention to physical or financial details' and 'Making contributions to a savings plan'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Realizing you have everything you need'?",
+            "answer1": "/cards/p11.jpg",
+            "answer2": "/cards/p12.jpg",
+            "answer3": "/cards/p01.jpg",
+            "answer4": "/cards/p02.jpg",
+            "correct_answer": "/cards/p01.jpg",
+            "explanation": "The Ace of Pentacles is associated with 'Realizing you have everything you need' and 'Appreciating everything the Universe has given you'."
+          },
+          {
+            "lesson_id": 8,
+            "question": "Which card is associated with the meaning 'Determining the value of one option over another'?",
+            "answer1": "/cards/p12.jpg",
+            "answer2": "/cards/p01.jpg",
+            "answer3": "/cards/p02.jpg",
+            "answer4": "/cards/p03.jpg",
+            "correct_answer": "/cards/p02.jpg",
+            "explanation": "The Two of Pentacles is associated with 'Determining the value of one option over another' and 'Looking at the bottom line'."
+          }
+    ]
+    
     
 }

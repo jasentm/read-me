@@ -40,19 +40,17 @@ class User(db.Model, SerializerMixin, UserMixin):
 
 class TarotCard(db.Model, SerializerMixin):
     __tablename__ = 'tarotCards'
-    serialize_rules = ('-lesson.tarot_card', '-past_readings.past_card', '-present_readings.present_card', 
+    serialize_rules = ('-past_readings.past_card', '-present_readings.present_card', 
                        '-future_readings.future_card', '-fortunes.tarot_card', '-keywords.tarot_card', 
                        '-light_meanings.tarot_card', '-shadow_meanings.tarot_card', '-questions.tarot_card')
 
     id = db.Column(db.Integer, primary_key=True)
-    lesson_id = db.Column(db.Integer, db.ForeignKey('lessons.id'))
     name = db.Column(db.String)
     number = db.Column(db.Integer)
     arcana = db.Column(db.String)
     suit = db.Column(db.String)
     image = db.Column(db.String)
 
-    lesson = db.relationship('Lesson', back_populates='tarot_card')
     past_readings = db.relationship('Reading', back_populates='past_card', foreign_keys='Reading.past_card_id')
     present_readings = db.relationship('Reading', back_populates='present_card', foreign_keys='Reading.present_card_id')
     future_readings = db.relationship('Reading', back_populates='future_card', foreign_keys='Reading.future_card_id')
@@ -123,13 +121,12 @@ class Question(db.Model, SerializerMixin):
     #TODO finish validations
 class Lesson(db.Model, SerializerMixin):
     __tablename__ = 'lessons'
-    serialize_rules = ('-tarot_card.lesson', '-lesson_statistics.lesson', '-lesson_questions.lesson')
+    serialize_rules = ('-lesson_statistics.lesson', '-lesson_questions.lesson')
     
     id = db.Column(db.Integer, primary_key=True)
     type = db.Column(db.String)
 
     lesson_statistics = db.relationship('LessonStatistics', back_populates='lesson')
-    tarot_card = db.relationship('TarotCard', back_populates='lesson')
     lesson_questions = db.relationship('LessonQuestion', back_populates='lesson')
 
     users = association_proxy('lessonStatistics', 'user')
@@ -142,6 +139,7 @@ class LessonStatistics(db.Model, SerializerMixin):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     lesson_id = db.Column(db.Integer, db.ForeignKey('lessons.id'), nullable=False)
     completed = db.Column(db.Boolean, default=False)
+    correct_answers = db.Column(db.Integer, default=0)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
     updated_at = db.Column(db.DateTime, onupdate=db.func.now())
    
@@ -152,7 +150,7 @@ class LessonStatistics(db.Model, SerializerMixin):
 
 class LessonQuestion(db.Model, SerializerMixin):
     __tablename__ = 'lessonQuestions'
-    serialize_rules = ('-lesson.lesson_questions')
+    serialize_rules = ('-lesson.lesson_questions', '-lesson.lesson_statistics', 'id', 'lesson_id', 'question', 'answer1', 'answer2', 'answer3', 'answer4', 'correct_answer', 'explanation')
 
     id = db.Column(db.Integer, primary_key = True)
     lesson_id = db.Column(db.Integer, db.ForeignKey('lessons.id'), nullable=False)

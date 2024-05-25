@@ -1,8 +1,8 @@
-"""initial migration
+"""initial migrate
 
-Revision ID: 92ed0254065b
+Revision ID: 38992afee918
 Revises: 
-Create Date: 2024-05-15 11:09:23.140501
+Create Date: 2024-05-24 16:21:03.688195
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '92ed0254065b'
+revision = '38992afee918'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -23,32 +23,20 @@ def upgrade():
     sa.Column('type', sa.String(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_table('users',
-    sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('email', sa.String(), nullable=False),
-    sa.Column('username', sa.String(), nullable=False),
-    sa.Column('_password_hash', sa.String(), nullable=False),
-    sa.PrimaryKeyConstraint('id')
-    )
-    op.create_table('lessonStatistics',
-    sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('user_id', sa.Integer(), nullable=False),
-    sa.Column('lesson_id', sa.Integer(), nullable=False),
-    sa.Column('completed', sa.Boolean(), nullable=True),
-    sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
-    sa.ForeignKeyConstraint(['lesson_id'], ['lessons.id'], name=op.f('fk_lessonStatistics_lesson_id_lessons')),
-    sa.ForeignKeyConstraint(['user_id'], ['users.id'], name=op.f('fk_lessonStatistics_user_id_users')),
-    sa.PrimaryKeyConstraint('id')
-    )
     op.create_table('tarotCards',
     sa.Column('id', sa.Integer(), nullable=False),
-    sa.Column('lesson_id', sa.Integer(), nullable=True),
     sa.Column('name', sa.String(), nullable=True),
     sa.Column('number', sa.Integer(), nullable=True),
     sa.Column('arcana', sa.String(), nullable=True),
     sa.Column('suit', sa.String(), nullable=True),
     sa.Column('image', sa.String(), nullable=True),
-    sa.ForeignKeyConstraint(['lesson_id'], ['lessons.id'], name=op.f('fk_tarotCards_lesson_id_lessons')),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_table('users',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('email', sa.String(), nullable=False),
+    sa.Column('username', sa.String(), nullable=False),
+    sa.Column('_password_hash', sa.String(), nullable=False),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('fortunes',
@@ -63,6 +51,31 @@ def upgrade():
     sa.Column('card_id', sa.Integer(), nullable=False),
     sa.Column('keyword', sa.String(), nullable=True),
     sa.ForeignKeyConstraint(['card_id'], ['tarotCards.id'], name=op.f('fk_keywords_card_id_tarotCards')),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_table('lessonQuestions',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('lesson_id', sa.Integer(), nullable=False),
+    sa.Column('question', sa.String(), nullable=True),
+    sa.Column('answer1', sa.String(), nullable=True),
+    sa.Column('answer2', sa.String(), nullable=True),
+    sa.Column('answer3', sa.String(), nullable=True),
+    sa.Column('answer4', sa.String(), nullable=True),
+    sa.Column('correct_answer', sa.String(), nullable=True),
+    sa.Column('explanation', sa.String(), nullable=True),
+    sa.ForeignKeyConstraint(['lesson_id'], ['lessons.id'], name=op.f('fk_lessonQuestions_lesson_id_lessons')),
+    sa.PrimaryKeyConstraint('id')
+    )
+    op.create_table('lessonStatistics',
+    sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('user_id', sa.Integer(), nullable=False),
+    sa.Column('lesson_id', sa.Integer(), nullable=False),
+    sa.Column('completed', sa.Boolean(), nullable=True),
+    sa.Column('correct_answers', sa.Integer(), nullable=True),
+    sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
+    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.ForeignKeyConstraint(['lesson_id'], ['lessons.id'], name=op.f('fk_lessonStatistics_lesson_id_lessons')),
+    sa.ForeignKeyConstraint(['user_id'], ['users.id'], name=op.f('fk_lessonStatistics_user_id_users')),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('lightMeanings',
@@ -83,9 +96,14 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('past_card_id', sa.Integer(), nullable=False),
+    sa.Column('past_card_reversed', sa.Boolean(), nullable=True),
     sa.Column('present_card_id', sa.Integer(), nullable=False),
+    sa.Column('present_card_reversed', sa.Boolean(), nullable=True),
     sa.Column('future_card_id', sa.Integer(), nullable=False),
-    sa.Column('meaning', sa.String(), nullable=True),
+    sa.Column('future_card_reversed', sa.Boolean(), nullable=True),
+    sa.Column('past_card_meaning', sa.String(), nullable=True),
+    sa.Column('present_card_meaning', sa.String(), nullable=True),
+    sa.Column('future_card_meaning', sa.String(), nullable=True),
     sa.Column('created_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
     sa.ForeignKeyConstraint(['future_card_id'], ['tarotCards.id'], name=op.f('fk_readings_future_card_id_tarotCards')),
     sa.ForeignKeyConstraint(['past_card_id'], ['tarotCards.id'], name=op.f('fk_readings_past_card_id_tarotCards')),
@@ -109,10 +127,11 @@ def downgrade():
     op.drop_table('readings')
     op.drop_table('questions')
     op.drop_table('lightMeanings')
+    op.drop_table('lessonStatistics')
+    op.drop_table('lessonQuestions')
     op.drop_table('keywords')
     op.drop_table('fortunes')
-    op.drop_table('tarotCards')
-    op.drop_table('lessonStatistics')
     op.drop_table('users')
+    op.drop_table('tarotCards')
     op.drop_table('lessons')
     # ### end Alembic commands ###

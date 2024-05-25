@@ -14,7 +14,10 @@ const NavBar = ({user, updateUser}) => {
         return console.error('Error with logout')
       }
     })
-    .then(res => updateUser(null))
+    .then(res => {
+      updateUser(null)
+      localStorage.removeItem('userId'); // Clear the userId from local storage
+    })
     navigate('/login', {relative: 'path'})
   }
 
