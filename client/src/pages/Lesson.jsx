@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import LessonStats from '../components/LessonStats';
+import './Lesson.css'
 
 const Lesson = ({ user }) => {
   const { id } = useParams();
@@ -86,35 +87,51 @@ const Lesson = ({ user }) => {
 
   const renderAnswer = answer => {
     if (isImageAnswer(answer)) {
-      return <button onClick={() => handleAnswerSelect(answer)}><img src={answer} alt={answer} /></button>;
+      return <button className='image-button' onClick={() => handleAnswerSelect(answer)}><img src={answer} alt={answer} /></button>;
     } else {
-      return <button onClick={() => handleAnswerSelect(answer)}>{answer}</button>;
+      return <button className='text-button' onClick={() => handleAnswerSelect(answer)}>{answer}</button>;
     }
   };
 
   return (
-    <div>
-      <h2>Question {currentQuestionIndex + 1}</h2>
-      <p>{currentQuestion.question}</p>
-      {renderAnswer(currentQuestion.answer1)}
-      {renderAnswer(currentQuestion.answer2)}
-      {renderAnswer(currentQuestion.answer3)}
-      {renderAnswer(currentQuestion.answer4)}
-      {showContinueButton ? (
-        <button onClick={handleContinue}>
-          {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Continue'}
-        </button>
-      ) : (
-        <button onClick={handleCheckAnswer} disabled={!selectedAnswer}>
-          Check
-        </button>
-      )}
+    <div className='lesson-page'>
+      <div className='question-title'>
+        <h1>Question {currentQuestionIndex + 1}</h1>
+      </div>
+      <div className='question-container'>
+        <h2>{currentQuestion.question}</h2>
+      </div>
+      <div className='answer-container'>
+        <div className='answer1-container'>
+          {renderAnswer(currentQuestion.answer1)}
+        </div>
+        <div className='answer2-container'>
+          {renderAnswer(currentQuestion.answer2)}
+        </div>
+        <div className='answer3-container'>
+          {renderAnswer(currentQuestion.answer3)}
+        </div>
+        <div className='answer4-container'>
+          {renderAnswer(currentQuestion.answer4)}
+        </div>
+      </div>
+      <div className='check-continue-button-container'>
+        {showContinueButton ? (
+          <button onClick={handleContinue}>
+            {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Continue'}
+          </button>
+        ) : (
+          <button onClick={handleCheckAnswer} disabled={!selectedAnswer}>
+            Check
+          </button>
+        )}
+      </div>
       {isAnswerCorrect !== null && (
-        <div>
+        <div className='correct-explanation-container'>
           {isAnswerCorrect ? (
-            <p>Correct!</p>
+            <h2 className='correct'>Correct!</h2>
           ) : (
-            <p>Incorrect. {currentQuestion.explanation}</p>
+            <h2 className='incorrect'>Incorrect. {currentQuestion.explanation}</h2>
           )}
         </div>
       )}

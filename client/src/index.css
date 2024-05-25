@@ -5,7 +5,9 @@
 
   color-scheme: light dark;
   color: #1E5F22;
-  background-color: #1C0730;
+  background-image: url(../public/6231428.jpg);
+  background-size: cover;
+  background-position: center;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

@@ -40,3 +40,10 @@ https://www.figma.com/design/xISGYeKuyy1RUjIfNT2xQu/Untitled?node-id=0%3A1&t=IUQ
 
 ## Kanban Board
 <img src="planning/Kanban Board.png" alt="kanban">
+
+## Acknowledgements 
+The original version of the Rider–Waite Tarot is in the public domain in all countries that have a copyright term of 70 years or fewer after the death of the last co-author.
+
+All data and images of the Rider-Waite Tarot was used under the MIT License from Daria Chemkaeva's open source project found here: https://www.kaggle.com/datasets/lsind18/tarot-json
+
+Background designed by Freepik

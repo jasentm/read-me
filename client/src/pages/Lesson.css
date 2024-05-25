@@ -1,0 +1,25 @@
+.answer-container {
+    display:flex;
+    padding: 10px;
+ 
+    
+}
+
+.answer1-container, .answer2-container, .answer3-container, .answer4-container {
+    padding: 50px
+}
+
+.image-button img {
+    width: 100%;
+    max-width: 150px;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+.text-button, .check-continue-button-container {
+    font-size:larger;
+}
+
+.incorrect {
+    color: crimson;
+}

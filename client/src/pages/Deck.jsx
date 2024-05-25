@@ -38,7 +38,7 @@ export default function Deck() {
 
   return (
     <div className='deck-page'>
-      <div className='title'>
+      <div className='deck-title'>
         <h1>The Deck</h1>
       </div>
       <div className='deck-container'>
