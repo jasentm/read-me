@@ -64,3 +64,6 @@ __pycache__
 instance
 .vscode
 package-lock.json
+
+# holding OpenAI secret key
+.env

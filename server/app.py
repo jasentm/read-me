@@ -6,7 +6,20 @@ from models import User, Lesson, LessonStatistics, Reading, TarotCard, LessonQue
 from flask_login import login_user, logout_user, login_required, current_user
 from sqlalchemy import desc
 import random
+import os
+import requests
+import pathlib
+import textwrap
 
+import google.generativeai as genai
+
+from IPython.display import display
+from IPython.display import Markdown
+
+
+model = genai.GenerativeModel('gemini-1.5-flash')
+gemini_api_key = os.getenv('GEMINI_API_KEY')
+genai.configure(api_key=gemini_api_key)
 
 # routes for login and user authentication 
 
@@ -201,6 +214,20 @@ def get_lesson_questions(lesson_id):
     else:
         return make_response({'error': 'No questions found'})
 
+@app.route('/ask-ai', methods=['POST'])
+def ask_ai():
+    # Retrieve data from the request
+    data = request.json
+    query = data.get('query')
+
+    # Make the request to the Gemini API
+    response = model.generate_content(query)
+
+    # Check if the request was successful
+    if response.ok:
+        return make_response(response.json(), 200)
+    else:
+        return make_response({'error': 'Failed to fetch AI interpretation'}, 500)
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)

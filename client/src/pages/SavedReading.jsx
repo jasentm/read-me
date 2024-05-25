@@ -6,13 +6,42 @@ import '../components/ReadingCard.css';
 const SavedReading = () => {
   const { id } = useParams();
   const [reading, setReading] = useState(null);
+  const [aiInterpretation, setAiInterpretation] = useState(null);
 
   useEffect(() => {
+    fetchReading(id);
+  }, [id]);
+
+  const fetchReading = (id) => {
     fetch(`http://localhost:5555/saved-readings/${id}`)
-      .then(res => res.ok ? res.json() : console.error('Something went wrong with your GET request'))
+      .then(res => res.ok ? res.json() : Promise.reject('Something went wrong with your GET request'))
       .then(data => setReading(data))
       .catch(error => console.error("Failed to fetch reading", error));
-  }, [id]);
+  };
+
+  const handleAskAI = () => {
+    const query = `Please synthesize the meaning of this tarot card reading in one sentence: Past: ${reading.past_card_meaning} Present: ${reading.present_card_meaning} Future: ${reading.future_card_meaning}`;
+
+    fetch('http://localhost:5555/ask-ai', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ query }),
+    })
+    .then(res => {
+      if (!res.ok) {
+        throw new Error('Failed to fetch AI interpretation');
+      }
+      return res.json();
+    })
+    .then(data => {
+      setAiInterpretation(data.text);
+    })
+    .catch(error => {
+      console.error("Failed to get AI interpretation", error);
+    });
+  };
 
   if (!reading) {
     return <div>Loading...</div>;
@@ -26,7 +55,7 @@ const SavedReading = () => {
         <h1>Your Reading</h1>
       </div>
       <div className="saved-reading-container">
-        <div className="saved-reading-section">
+      <div className="saved-reading-section">
           <h2>Past</h2>
           <ReadingCard
             card={past_card}
@@ -57,6 +86,13 @@ const SavedReading = () => {
           </div>
         </div>
       </div>
+      <button onClick={handleAskAI}>Ask AI</button>
+      {aiInterpretation && (
+        <div className="ai-interpretation">
+          <h2>AI Interpretation:</h2>
+          <p>{aiInterpretation}</p>
+        </div>
+      )}
     </div>
   );
 };
