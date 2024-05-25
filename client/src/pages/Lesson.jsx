@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import LessonStats from '../components/LessonStats';
 import './Lesson.css'
+import {useSound} from 'use-sound'
+import Success from '/sounds/Success.mp3'
+import Failure from '/sounds/Failure.wav'
 
 const Lesson = ({ user }) => {
   const { id } = useParams();
@@ -13,6 +16,8 @@ const Lesson = ({ user }) => {
   const [correctAnswers, setCorrectAnswers] = useState(0);
   const [lessonCompleted, setLessonCompleted] = useState(false);
   const [showContinueButton, setShowContinueButton] = useState(false);
+  const [playSuccess] = useSound(Success)
+  const [playFailure] = useSound(Failure)
 
   useEffect(() => {
     fetch(`http://localhost:5555/lesson-questions/${id}`)
@@ -37,6 +42,9 @@ const Lesson = ({ user }) => {
     setIsAnswerCorrect(isCorrect);
     if (isCorrect) {
       setCorrectAnswers(correctAnswers + 1);
+      playSuccess()
+    } else {
+      playFailure(); 
     }
     setShowContinueButton(true);
   };

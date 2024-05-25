@@ -47,3 +47,7 @@ The original version of the Rider–Waite Tarot is in the public domain in all c
 All data and images of the Rider-Waite Tarot was used under the MIT License from Daria Chemkaeva's open source project found here: https://www.kaggle.com/datasets/lsind18/tarot-json
 
 Background designed by Freepik
+
+Card shuffling.mp3 by SomeoneCool15 -- https://freesound.org/s/423767/ -- License: Creative Commons 0
+
+Correct.mp3 by LittleRainySeasons -- https://freesound.org/s/335908/ -- License: Creative Commons 0

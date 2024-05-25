@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './LessonList.css';
+import { useSound } from 'use-sound';
+import Page from '/sounds/Page.mp3'
 
 export default function LessonList({ user }) {
   const [lessons, setLessons] = useState([]);
+  const [playPage] = useSound(Page)
 
   useEffect(() => {
     fetch(`http://localhost:5555/lessons`)
@@ -20,7 +23,13 @@ export default function LessonList({ user }) {
       .catch(error => {
         console.error(error);
       });
+
   }, [user]);
+
+  useEffect(() => {
+    playPage();
+  }, [playPage]);
+
 
   return (
     <div className="lessons-page">

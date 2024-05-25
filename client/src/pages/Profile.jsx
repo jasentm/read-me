@@ -3,10 +3,13 @@ import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 import './Profile.css'
 import { Button } from '@mui/material';
+import { useSound } from 'use-sound';
+import Page from '/sounds/Page.mp3'
 
 export default function Profile({user}) {
   const [readings, setReadings] = useState([])
   const [completedLessons, setCompletedLessons] = useState([])
+  const [playPage] = useSound(Page)
 
   useEffect(() => {
     fetch(`http://localhost:5555/readings/${user.id}`)
@@ -27,8 +30,13 @@ export default function Profile({user}) {
         
       })
       .catch((error) => console.error('Error fetching completed lessons:', error));
-  }, [user]);
-  
+
+    }, [user]);
+    
+    useEffect(() => {
+      playPage();
+    }, [playPage]);
+
   if (!readings || !completedLessons) {
     return <div>Loading...</div>;
   }

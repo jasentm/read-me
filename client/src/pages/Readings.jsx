@@ -2,6 +2,8 @@ import { Button } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import TarotCard from '../components/TarotCard'; 
+import {useSound} from 'use-sound';
+import Shuffle from '/sounds/Shuffle.mp3'
 
 const shuffledDeck = (cards) => {
   let shuffled = [...cards];
@@ -28,6 +30,7 @@ export default function Readings({ user }) {
   const [shuffledCards, setShuffledCards] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
   const navigate = useNavigate();
+  const [playShuffle] = useSound(Shuffle);
 
   useEffect(() => {
     // Fetch the tarot cards data
@@ -40,6 +43,7 @@ export default function Readings({ user }) {
   const handleShuffleDeck = () => {
     setShuffledCards(shuffledDeck(tarotCards));
     setShowDeck(true);
+    playShuffle();
   };
 
   const handleCardSelect = async (selectedCard) => {
