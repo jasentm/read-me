@@ -19,6 +19,7 @@ const NavBar = ({user, updateUser}) => {
       localStorage.removeItem('userId'); // Clear the userId from local storage
     })
     navigate('/login', {relative: 'path'})
+    .catch(error=>console.error(error))
   }
 
   return (

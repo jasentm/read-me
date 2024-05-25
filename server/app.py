@@ -7,7 +7,6 @@ from flask_login import login_user, logout_user, login_required, current_user
 from sqlalchemy import desc
 import random
 import os
-import requests
 import pathlib
 import textwrap
 
@@ -224,8 +223,8 @@ def ask_ai():
     response = model.generate_content(query)
 
     # Check if the request was successful
-    if response.ok:
-        return make_response(response.json(), 200)
+    if response:
+        return make_response({"text": response.text}, 200)
     else:
         return make_response({'error': 'Failed to fetch AI interpretation'}, 500)
 

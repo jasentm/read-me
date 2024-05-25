@@ -48,6 +48,9 @@ All data and images of the Rider-Waite Tarot was used under the MIT License from
 
 Background designed by Freepik
 
-Card shuffling.mp3 by SomeoneCool15 -- https://freesound.org/s/423767/ -- License: Creative Commons 0
+Sounds:
 
-Correct.mp3 by LittleRainySeasons -- https://freesound.org/s/335908/ -- License: Creative Commons 0
+-Card shuffling.mp3 by SomeoneCool15 -- https://freesound.org/s/423767/ -- License: Creative Commons 0
+-Correct.mp3 by LittleRainySeasons -- https://freesound.org/s/335908/ -- License: Creative Commons 0
+-Failure 01 by rhodesmas -- https://freesound.org/s/342756/ -- License: Attribution 3.0
+-paper and hand by pauliperez1999 -- https://freesound.org/s/428740/ -- License: Attribution 3.0

@@ -34,7 +34,7 @@ export default function LessonList({ user }) {
   return (
     <div className="lessons-page">
       <div className="content">
-        <div className='title'>
+        <div className='lesson-title'>
           <h1>The Lessons</h1>
         </div>
         <div className={`book `} >

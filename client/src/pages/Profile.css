@@ -15,5 +15,5 @@
   
   .lesson-container, .reading-container {
     overflow: auto;
-    max-height: 400px; /* Adjust height as needed */
+    max-height: 350px; /* Adjust height as needed */
   }

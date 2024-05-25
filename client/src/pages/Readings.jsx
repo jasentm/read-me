@@ -97,7 +97,7 @@ export default function Readings({ user }) {
       <div className="content">
         {showDeck ? (
           <>
-            <div className='reading-title' style={{ marginTop: 130 }}>
+            <div className='title' style={{ marginTop: 130 }}>
               <h1>Choose 3 Cards</h1>
             </div>
             <div className='deck-container'>

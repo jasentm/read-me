@@ -1,15 +1,17 @@
-import React from 'react'
-import { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
-import './Profile.css'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import './Profile.css';
 import { Button } from '@mui/material';
 import { useSound } from 'use-sound';
-import Page from '/sounds/Page.mp3'
+import Page from '/sounds/Page.mp3';
+import ChangeUsername from '../components/ChangeUsername';
+import DeleteProfile from '../components/DeleteProfile';
 
-export default function Profile({user}) {
-  const [readings, setReadings] = useState([])
-  const [completedLessons, setCompletedLessons] = useState([])
-  const [playPage] = useSound(Page)
+export default function Profile({ user, updateUser }) {
+  const [readings, setReadings] = useState([]);
+  const [completedLessons, setCompletedLessons] = useState([]);
+  const [playPage] = useSound(Page);
+  const [showProfileOptions, setShowProfileOptions] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5555/readings/${user.id}`)
@@ -37,6 +39,34 @@ export default function Profile({user}) {
       playPage();
     }, [playPage]);
 
+    const handleUsernameChange = (updatedUser) => {
+      // Update the user object with the new username
+      updateUser(updatedUser);
+      // You may also want to update the user object in your state or data store
+    };
+  
+    const handleProfileDelete = () => {
+      fetch('http://localhost:5555/logout')
+      .then((res)=>{
+        if (res.ok){
+          return (res.json())
+        }else {
+          return console.error('Error with logout')
+        }
+      })
+      .then(res => {
+        updateUser(null)
+        localStorage.removeItem('userId'); // Clear the userId from local storage
+      })
+      navigate('/login', {relative: 'path'})
+      .catch(error=>console.error(error))
+    }
+
+    const handleProfileOptionsToggle = () => {
+      setShowProfileOptions(!showProfileOptions);
+      playPage(); // Play the page sound when the button is clicked
+    };
+
   if (!readings || !completedLessons) {
     return <div>Loading...</div>;
   }
@@ -48,6 +78,17 @@ export default function Profile({user}) {
           <h1>{user.username.charAt(0).toUpperCase() + user.username.slice(1)}'s Grimoire</h1>
         </div>
         <div className={`book `} >
+        {showProfileOptions ? (
+            <>
+              <div className="page left">
+                <ChangeUsername user={user} onUsernameChange={handleUsernameChange} />
+              </div>
+              <div className="page right">
+                <DeleteProfile user={user} onProfileDelete={handleProfileDelete} />
+              </div>
+            </>
+          ) : (
+          <>
           <div className="page left">
             <div className='lessons-title'>
               <h2>Your Completed Lessons</h2>
@@ -105,8 +146,21 @@ export default function Profile({user}) {
               }
           </div>
           </div>
+          </>
+           )}
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '70px' }}>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={handleProfileOptionsToggle}
+            sx={{backgroundColor: '#1E5F22', fontFamily: 'cursive'}}
+          >
+            {showProfileOptions ? 'Previous Page' : 'Profile Options'}
+          </Button>
         </div>
       </div>
     </div>
+    
   );
 }

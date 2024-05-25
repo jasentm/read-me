@@ -56,7 +56,7 @@ function App() {
         {/* Render the main application routes only if the user is authenticated */}
         {user ? (
           <>
-            <Route path="/profile/" element={<Profile user={user}/>} />
+            <Route path="/profile/" element={<Profile user={user} updateUser={updateUser}/>} />
             <Route path="/deck" element={<Deck />} />
             <Route path="/" element={<LessonList user={user} />} />
             <Route path="/lesson/:id" element={<Lesson user={user}/>} />

@@ -20,7 +20,7 @@ const SavedReading = () => {
   };
 
   const handleAskAI = () => {
-    const query = `Please synthesize the meaning of this tarot card reading in one sentence: Past: ${reading.past_card_meaning} Present: ${reading.present_card_meaning} Future: ${reading.future_card_meaning}`;
+    const query = `Please synthesize the meaning of this tarot card reading with a maximum of 5 sentences: Past: ${reading.past_card_meaning} Present: ${reading.present_card_meaning} Future: ${reading.future_card_meaning}`;
 
     fetch('http://localhost:5555/ask-ai', {
       method: 'POST',
@@ -51,7 +51,7 @@ const SavedReading = () => {
 
   return (
     <div className="saved-reading-page">
-      <div className="title">
+      <div className="title" style={{paddingTop: '50px'}}>
         <h1>Your Reading</h1>
       </div>
       <div className="saved-reading-container">
@@ -86,13 +86,15 @@ const SavedReading = () => {
           </div>
         </div>
       </div>
-      <button onClick={handleAskAI}>Ask AI</button>
+      <div style={{paddingBottom: '30px'}}>
+        <button onClick={handleAskAI}>Sythensize with AI</button>
       {aiInterpretation && (
-        <div className="ai-interpretation">
-          <h2>AI Interpretation:</h2>
-          <p>{aiInterpretation}</p>
+        <div className="ai-interpretation" style={{paddingBottom: '100px'}}>
+          <h1>AI Interpretation:</h1>
+          <h2>{aiInterpretation}</h2>
         </div>
       )}
+      </div>
     </div>
   );
 };
