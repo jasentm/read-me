@@ -28,10 +28,16 @@ export default function Profile({ user, updateUser }) {
     fetch(`http://localhost:5555/completed/${user.id}`)
       .then((res) => res.json())
       .then((data) => {
+        if (Array.isArray(data)) {
           setCompletedLessons(data);
-        
+        } else {
+          setCompletedLessons([]);  // Set to empty array if error
+        }
       })
-      .catch((error) => console.error('Error fetching completed lessons:', error));
+      .catch((error) => {
+        console.error('Error fetching completed lessons:', error);
+        setCompletedLessons([]);  // Set to empty array if error
+      });
 
     }, [user]);
     
@@ -97,7 +103,9 @@ export default function Profile({ user, updateUser }) {
               className='lesson-button '
               variant="contained" 
               component={Link} to='/'
-              sx={{ mt: -1, mb: 3, backgroundColor: '#1E5F22', fontFamily: 'cursive'}}>
+              sx={{ mt: -1, mb: 3, backgroundColor: '#1E5F22', fontFamily: 'cursive', '&:hover': {
+                color: 'white'
+              },}}>
                 Take a Lesson
               </Button>
             <div className='lesson-container'>
@@ -125,7 +133,10 @@ export default function Profile({ user, updateUser }) {
               className='reading-button '
               variant="contained" 
               component={Link} to='/readings'
-              sx={{ mt: -1, mb: 3, backgroundColor: '#1E5F22', fontFamily: 'cursive'}}>
+              color='primary'
+              sx={{ mt: -1, mb: 3, fontFamily: 'cursive', backgroundColor: '#1E5F22', '&:hover': {
+                color: 'white'}
+                }}>
                 Get a Reading
               </Button>
           <div className='reading-container'>

@@ -1,12 +1,4 @@
-.no-lessons-message {
-    position: relative;
-    top: 100px;
-}
 
-.no-readings-message{
-    position: relative;
-    top: 100px;
-}
 
 .lesson-button, .reading-button {
     position: fixed;

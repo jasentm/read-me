@@ -36,7 +36,7 @@ const DeleteProfile = ({ user, onProfileDelete }) => {
     <div>
       <h2>Delete Profile</h2>
       <p>Are you sure you want to delete your profile?</p>
-      <button onClick={handleConfirmDelete}>Delete Profile</button>
+      <button onClick={handleConfirmDelete} style={{backgroundColor: '#B32626 '}}>Delete Profile</button>
 
       {showConfirmation && (
         <div className="confirmation-popup">
@@ -44,8 +44,8 @@ const DeleteProfile = ({ user, onProfileDelete }) => {
             <h3>Confirm Profile Deletion</h3>
             <p>Are you sure you want to permanently delete your profile?</p>
             <div className="buttons">
-              <button onClick={confirmDelete}>Confirm</button>
-              <button onClick={cancelDelete}>Cancel</button>
+              <button onClick={confirmDelete} style={{margin: 5, backgroundColor: '#B32626 '}}>Confirm</button>
+              <button onClick={cancelDelete} style={{margin: 5, backgroundColor: 'gray'}}>Cancel</button>
             </div>
           </div>
         </div>

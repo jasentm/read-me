@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 const ChangeUsernameSchema = Yup.object().shape({
-  newUsername: Yup.string().required('New username is required'),
+  newUsername: Yup.string(),
 });
 
 const ChangeUsername = ({ user, onUsernameChange }) => {
@@ -38,7 +38,10 @@ const ChangeUsername = ({ user, onUsernameChange }) => {
 
   return (
     <div>
-      <h2>Change Username</h2>
+      <div>
+        <h2>Change Username</h2>
+      </div>
+    
       <Formik
         initialValues={initialValues}
         validationSchema={ChangeUsernameSchema}
@@ -52,9 +55,11 @@ const ChangeUsername = ({ user, onUsernameChange }) => {
               placeholder="Enter new username"
             />
             <ErrorMessage name="newUsername" component="div" className="error" />
+            <div style={{padding: 30}}>
             <button type="submit" disabled={isSubmitting}>
               Change Username
             </button>
+            </div>
           </Form>
         )}
       </Formik>

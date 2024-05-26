@@ -29,6 +29,7 @@ export default function Readings({ user }) {
   const [tarotCards, setTarotCards] = useState([]);
   const [shuffledCards, setShuffledCards] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
+  const [animateShuffle, setAnimateShuffle] = useState(false); // State for animation trigger
   const navigate = useNavigate();
   const [playShuffle] = useSound(Shuffle);
 
@@ -45,6 +46,19 @@ export default function Readings({ user }) {
     setShowDeck(true);
     playShuffle();
   };
+
+  const handleReshuffleDeck = () => {
+    handleShuffleDeck();
+  
+    setAnimateShuffle(true); // Trigger animation
+    setTimeout(() => {
+      setAnimateShuffle(false); // Reset animation after a delay
+      setShuffledCards(shuffledDeck(tarotCards));
+      setShowDeck(true);
+      playShuffle();
+    }, 1000);
+    };
+
 
   const handleCardSelect = async (selectedCard) => {
     if (selectedCards.length < 3 && !selectedCards.includes(selectedCard)) {
@@ -100,7 +114,7 @@ export default function Readings({ user }) {
             <div className='title' style={{marginTop: 130}} >
               <h1>Choose 3 Cards</h1>
             </div>
-            <div className='deck-container'>
+            <div className={`deck-container ${animateShuffle ? 'shuffling' : ''}`}>
               {shuffledCards.map((card, index) => (
                 <TarotCard
                   key={index}
@@ -114,6 +128,9 @@ export default function Readings({ user }) {
                 />
               ))}
             </div>
+            <Button variant="contained" onClick={handleReshuffleDeck} sx={{ mb: 20, backgroundColor: '#1E5F22', fontFamily: 'cursive' }} >
+                Reshuffle
+              </Button>
           </>
         ) : (
           <>
