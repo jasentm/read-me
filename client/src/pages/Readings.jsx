@@ -97,7 +97,7 @@ export default function Readings({ user }) {
       <div className="content">
         {showDeck ? (
           <>
-            <div className='title' style={{ marginTop: 130 }}>
+            <div className='title' style={{marginTop: 130}} >
               <h1>Choose 3 Cards</h1>
             </div>
             <div className='deck-container'>
@@ -117,17 +117,17 @@ export default function Readings({ user }) {
           </>
         ) : (
           <>
-            <div className='title' style={{marginBottom: 50}}>
+            <div className='title' style={{top: 10}}>
               <h1>The Readings</h1>
             </div>
             <div className='description-container'>
-              <h2 className='description'>
+              <h2 className='description' style={{padding: 70}}>
                 A three-card tarot spread unveils profound insights into your life's journey.
                 <br /><br />The first card illuminates the experiences and lessons from the <span style={{ textDecorationLine: 'underline' }}>past</span> that shape your current reality.
                 <br /><br />The second card reflects the energies and influences surrounding you in the <span style={{ textDecorationLine: 'underline' }}>present</span> moment.
                 <br /><br />The third card unveils the potential <span style={{ textDecorationLine: 'underline' }}>futures</span> that lie ahead, offering guidance for the path you are on.
               </h2>
-              <Button variant="contained" onClick={handleShuffleDeck} sx={{ mt: 6, backgroundColor: '#1E5F22', fontFamily: 'cursive' }} style={{top: 40}}>
+              <Button variant="contained" onClick={handleShuffleDeck} sx={{ mt: 6, backgroundColor: '#1E5F22', fontFamily: 'cursive' }} >
                 Shuffle the Deck
               </Button>
             </div>

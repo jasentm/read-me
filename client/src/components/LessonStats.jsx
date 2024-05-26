@@ -10,8 +10,8 @@ const LessonStats = ({ correctAnswers}) => {
   
     return (
       <div>
-        <h2>Lesson Stats</h2>
-        <p>You got {correctAnswers}/10 correct!</p>
+        {correctAnswers >= 7 ? <h1>Congratulations!</h1> : <h1>Looks like you need some more studying...</h1>}
+        <h1>You got {correctAnswers}/10 correct!</h1>
         <button onClick={handleHomeClick}>Home</button>
       </div>
     );
