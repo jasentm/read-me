@@ -2,11 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReadingCard from '../components/ReadingCard'; 
 import '../components/ReadingCard.css'; 
+import AIPopup from '../components/AIPopup';
 
 const SavedReading = () => {
   const { id } = useParams();
   const [reading, setReading] = useState(null);
   const [aiInterpretation, setAiInterpretation] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
     fetchReading(id);
@@ -31,7 +33,7 @@ const SavedReading = () => {
     })
     .then(res => {
       if (!res.ok) {
-        throw new Error('Failed to fetch AI interpretation');
+        console.error('Failed to fetch AI interpretation');
       }
       return res.json();
     })
@@ -86,17 +88,26 @@ const SavedReading = () => {
           </div>
         </div>
       </div>
-      <div style={{paddingBottom: '30px'}}>
-        <button onClick={handleAskAI}>Sythensize with AI</button>
+      <div style={{ paddingBottom: '30px' }}>
+      <button onClick={() => setShowPopup(true)}>Sythensize with AI</button>
+      {showPopup && (
+        <AIPopup
+          onConfirm={() => {
+            handleAskAI();
+            setShowPopup(false);
+          }}
+          onCancel={() => setShowPopup(false)}
+        />
+      )}
       {aiInterpretation && (
-        <div className="ai-interpretation" style={{paddingBottom: '100px'}}>
-          <h1>AI Interpretation:</h1>
+        <div className="ai-interpretation" style={{ paddingBottom: '100px' }}>
+          <h1>Interpretation:</h1>
           <h2>{aiInterpretation}</h2>
         </div>
       )}
-      </div>
     </div>
-  );
+  </div>
+);
 };
 
 export default SavedReading;

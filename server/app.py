@@ -7,15 +7,10 @@ from flask_login import login_user, logout_user, login_required, current_user
 from sqlalchemy import desc
 import random
 import os
-import pathlib
-import textwrap
 
 import google.generativeai as genai
 
-from IPython.display import display
-from IPython.display import Markdown
-
-
+#configuration of Google Gemini AI 
 model = genai.GenerativeModel('gemini-1.5-flash')
 gemini_api_key = os.getenv('GEMINI_API_KEY')
 genai.configure(api_key=gemini_api_key)
@@ -63,13 +58,13 @@ def login():
         return make_response(user.to_dict(only=['id', 'username', 'email'])), 200
     return make_response({'message': 'Invalid username or password'}), 401
 
-@app.route('/tarot-cards')
+@app.route('/tarot-cards') #GET route for rendering all tarot cards
 def get_tarot():
      tarot_cards = [card.to_dict(rules=('-future_readings', '-lesson', '-lesson_id', '-past_readings', '-present_readings')) for card in TarotCard.query.all()]
      return make_response(tarot_cards)
 
 
-@app.route('/tarot-cards/<int:id>')
+@app.route('/tarot-cards/<int:id>') #GET route for individual tarot cards
 def get_individual_card(id):
     card = TarotCard.query.filter(TarotCard.id == id).first()
     if card:
@@ -77,7 +72,7 @@ def get_individual_card(id):
     else:
          return make_response({'error': 'Card does not exist.'}, 404)
     
-class UsersById(Resource):
+class UsersById(Resource): # RESTful routes for rendering, editing, and deleting user data
     def get(self, id):
         user = User.query.filter(User.id == id).first()
         if user:
@@ -113,18 +108,8 @@ class UsersById(Resource):
         
 api.add_resource(UsersById, '/users/<int:id>')
 
-class LessonStatsByUser(Resource):         
-    def get(self, user_id):
-        lessonstats = [lessonstat.to_dict(only=['completed', 'created_at', 'updated_at', 'id', 'lesson.type']) for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id).all()]
-        if lessonstats:
-            return make_response(lessonstats)
-        else:
-            return make_response({'error': 'Statistics not found'}, 404)
-        
-api.add_resource(LessonStatsByUser, '/lesson-statistics/<int:user_id>')
-
-@app.route('/lesson-statistics/<int:user_id>/<int:lesson_id>', methods=['POST'])
-def patch_completed_lesson(user_id, lesson_id):
+@app.route('/lesson-statistics', methods=['POST']) #POST route for creating LessonStatistic after completing lesson
+def post_completed_lesson():
     data = request.json
     try:
         new_lesson_stat = LessonStatistics(
@@ -141,9 +126,7 @@ def patch_completed_lesson(user_id, lesson_id):
     except:
             return make_response({"errors": ["validation errors"]}, 400)
 
-
-
-@app.route('/completed/<int:user_id>')
+@app.route('/completed/<int:user_id>') #GET route for displaying lesson statistics for a user on Profile page
 def get_completed_lessons(user_id):
     completed = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id, LessonStatistics.completed == True).order_by(LessonStatistics.created_at.desc()).all()]
     if completed:
@@ -151,7 +134,7 @@ def get_completed_lessons(user_id):
     else:
         return make_response({'error': 'No lessons complete yet'})
     
-@app.route('/readings/<int:user_id>')
+@app.route('/readings/<int:user_id>') #GET route for displaying completed readings for a user on Profile page
 def get_readings(user_id):
     readings = [reading.to_dict(only=['created_at', 'id']) for reading in Reading.query.filter(Reading.user_id == user_id).order_by(Reading.created_at.desc()).all()]
     if readings:
@@ -159,7 +142,7 @@ def get_readings(user_id):
     else:
         return make_response({"error": "No readings yet"})
     
-class Readings(Resource):
+class Readings(Resource): #RESTful route to create new Reading instance
     def post(self):
         data = request.json
         try:
@@ -187,7 +170,7 @@ class Readings(Resource):
         
 api.add_resource(Readings, '/readings')
 
-@app.route('/saved-readings/<int:id>')
+@app.route('/saved-readings/<int:id>') #GET route to render Reading for a user to view anytime
 def get_saved_reading(id):
     reading = Reading.query.filter(Reading.id == id).first()
     if reading:
@@ -195,7 +178,7 @@ def get_saved_reading(id):
     else:
         return make_response({"error": "No readings yet"})
     
-@app.route('/lessons')
+@app.route('/lessons') #GET route to render lesson titles
 def get_lesson_titles():
     lessons = [lesson.to_dict(only=['id', 'type']) for lesson in Lesson.query.all()]
     if lessons:
@@ -203,17 +186,18 @@ def get_lesson_titles():
     else:
         return make_response({'error': "No lessons found"})
 
-@app.route('/lesson-questions/<int:lesson_id>')
+@app.route('/lesson-questions/<int:lesson_id>') #GET route to randomize and choose 10 questions for each lesson
 def get_lesson_questions(lesson_id):
+    #Get all questions associated with a specific lesson
     all_questions = [question.to_dict() for question in LessonQuestion.query.filter(LessonQuestion.lesson_id == lesson_id).all()]
     if all_questions:
-        random.shuffle(all_questions)
-        questions = all_questions[:10]
-        return make_response(questions)
+        random.shuffle(all_questions) #shuffle the questions
+        questions = all_questions[:10] #get the first 10
+        return make_response(questions) #return the first 10 to be rendered
     else:
         return make_response({'error': 'No questions found'})
 
-@app.route('/ask-ai', methods=['POST'])
+@app.route('/ask-ai', methods=['POST']) #POST route to generate AI response for Reading
 def ask_ai():
     # Retrieve data from the request
     data = request.json

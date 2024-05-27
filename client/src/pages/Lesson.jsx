@@ -55,7 +55,7 @@ const Lesson = ({ user }) => {
     setShowContinueButton(false);
     if (currentQuestionIndex === questions.length - 1) {
       // All questions answered, create new lesson statistics
-      fetch(`http://localhost:5555/lesson-statistics/${user.id}/${id}`, {
+      fetch(`http://localhost:5555/lesson-statistics`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +66,7 @@ const Lesson = ({ user }) => {
           if (res.ok) {
             return res.json();
           } else {
-            console.error("Something went wrong with your GET request.");
+            console.error("Something went wrong with your POST request.");
           }
         })
         .then(data => {

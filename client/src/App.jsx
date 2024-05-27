@@ -15,6 +15,7 @@ function App() {
   const [user, setUser] = useState(null);
   const navigate = useNavigate()
 
+  //authenticate user using local storage (set upon login/signup)
   useEffect(()=> {
     const userId = localStorage.getItem('userId')
     if (userId){

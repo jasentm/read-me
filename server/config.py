@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 init_bcrypt(app)
 
-app.secret_key = b'\xe3\xc4l\x85\xdcG\xb2\xcf0\xed \x07\xfc\xa8\xb91'
+app.secret_key = b'\xe3\xc4l\x85\xdcG\xb2\xcf0\xed \x07\xfc\xa8\xb91' #for password encryption
 
 login_manager = LoginManager()
 login_manager.init_app(app)
@@ -29,7 +29,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///app.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.json.compact = False
 
-# Define metadata, instantiate db
+# instantiate db
 
 migrate = Migrate(app, db)
 db.init_app(app)

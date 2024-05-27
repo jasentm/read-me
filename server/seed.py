@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
-from random import randint, choice as rc
 from faker import Faker
 from app import app
-from models import db, User, TarotCard, Lesson, LessonStatistics, Reading, Fortune, Keyword, LightMeaning, ShadowMeaning, Question, LessonQuestion
+from models import db, TarotCard, Lesson, Fortune, Keyword, LightMeaning, ShadowMeaning, Question, LessonQuestion
 from os.path import join, dirname
 import json
 
 fake = Faker()
 
+# Create all of the lesson instances 
 def seed_lessons():
     lesson_types = ['Introduction', 'Elements', 'Numbers', 'Major Arcana', 'Cups', 'Swords', 'Wands', 'Pentacles']
     for lesson_type in lesson_types:
@@ -16,6 +16,7 @@ def seed_lessons():
         db.session.add(lesson)
     db.session.commit()
 
+# import the file with all tarot data and create TarotCard, Fortune, Keyword, LightMeaning, ShadowMeaning and Question instances
 def create_cards():
     file_path = join(dirname(__file__), '../json/tarot-images.json')
 
@@ -55,6 +56,7 @@ def create_cards():
 
     db.session.commit()
 
+# import and read file with question data and create LessonQuestion instances 
 def seed_questions():
     file_path = join(dirname(__file__), '../json/questions.json')
 
