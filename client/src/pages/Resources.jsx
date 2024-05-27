@@ -5,6 +5,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link'
+import { styled } from '@mui/material/styles';
+
+const HoverCard = styled(Card)(({ theme }) => ({
+    transition: 'transform 0.2s ease-in-out',
+    '&:hover': {
+      transform: 'scale(1.05)',
+      boxShadow: theme.shadows[5],
+    },
+  }));
 
 const ResourceLinks = () => {
   const tarotDecks = [
@@ -75,13 +84,14 @@ const ResourceLinks = () => {
     <h3>Please look further than the Rider-Waite Deck (illustrated by “Pixie” aka Pamela Colman Smith) <br/>to more inclusive decks and purchase from small businesses if possible.</h3>
     <h3>Obviously, this is not a complete list of resources, but just a start</h3>
 
-      <Typography variant="h4" gutterBottom sx={{fontFamily: 'cursive'}}>
+      <Typography variant="h4" gutterBottom sx={{fontFamily: 'cursive', textDecoration: 'underline', marginTop: 5}}>
         Modern Tarot Decks and Guidebooks
       </Typography>
       <Grid container spacing={2}>
         {tarotDecks.map((deck, index) => (
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Link href={deck.link} underline='none'>
+                <HoverCard>
                 <Card>
                 <CardMedia
                     component="img"
@@ -98,18 +108,20 @@ const ResourceLinks = () => {
                     </Typography>
                 </CardContent>
                 </Card>
+                </HoverCard>
             </Link>
           </Grid>
         ))}
       </Grid>
 
-      <Typography variant="h4" gutterBottom sx={{fontFamily: 'cursive', marginTop: 3}}>
+      <Typography variant="h4" gutterBottom sx={{fontFamily: 'cursive', textDecoration: 'underline', marginTop: 5}}>
         Shops and Small Businesses
       </Typography >
       <Grid container spacing={2}>
         {shops.map((shop, index) => (
           <Grid item xs={12} sm={6} md={4} key={index} sx={{marginBottom: 13}}>
             <Link href={shop.link} underline='none'>
+                <HoverCard>
                 <Card>
                 <CardMedia
                     component="img"
@@ -126,6 +138,7 @@ const ResourceLinks = () => {
                     </Typography>
                 </CardContent>
                 </Card>
+                </HoverCard>
             </Link>
           </Grid>
         ))}
