@@ -24,9 +24,9 @@ const NavBar = ({user, updateUser}) => {
 
   return (
     <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
-    <AppBar position="fixed" sx={{ borderRadius: 2, maxWidth: '700px', margin: '0 auto', left: 0, right: 0, backgroundColor:'#F9AB84', color: '#2B1873' }}>
+    <AppBar position="fixed" sx={{ borderRadius: 2, maxWidth: '850px', margin: '0 auto', left: 0, right: 0, backgroundColor:'#F9AB84', color: '#2B1873' }}>
       <Toolbar sx={{ justifyContent: 'center'}}>
-          <Typography sx={{color:'#2B1873', padding: 2, fontFamily: 'cursive', fontSize: 24}}variant="h6" component={NavLink} to="/">
+          <Typography sx={{color:'#2B1873', padding: 2, fontFamily: 'cursive', fontSize: 24}}variant="h6" component={NavLink} to="/about">
             Read Me
           </Typography>
           <Button color="inherit" component={NavLink} to="/profile/">
@@ -40,6 +40,9 @@ const NavBar = ({user, updateUser}) => {
           </Button>
           <Button color="inherit" component={NavLink} to="/readings">
             The Readings
+          </Button>
+          <Button color="inherit" component={NavLink} to="/resources">
+            The Resources
           </Button>
           {user && (
             <Button color='inherit' onClick={handleLogout}>

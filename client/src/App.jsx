@@ -10,6 +10,8 @@ import SavedReading from './pages/SavedReading';
 import NavBar from './components/NavBar';
 import SignUpForm from './components/SignUpForm';
 import LoginForm from './components/LoginForm';
+import About from './pages/About';
+import Resources from './pages/Resources';
 
 function App() {
   const [user, setUser] = useState(null);
@@ -63,6 +65,8 @@ function App() {
             <Route path="/lesson/:id" element={<Lesson user={user}/>} />
             <Route path="/readings" element={<Readings user={user}/>} />
             <Route path="/readings/:id" element={<SavedReading />} />
+            <Route path="/about" element={<About />} />
+            <Route path='/resources' element={<Resources/>} />
           </>
         ) : (
           // Redirect to the login page if the user is not authenticated
