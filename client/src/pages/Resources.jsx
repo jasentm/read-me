@@ -17,6 +17,10 @@ const ResourceLinks = () => {
         creator: '13th Press',
         link: 'https://13thpress.com/collections/decks-books/products/the-marigold-tarot-classic',
     },
+    {name: 'All of Our Stories: The Little Red Tarot Guidebook',
+    creator: 'Little Red Tarot',
+    link: 'https://littleredtarot.com/product/all-of-our-stories-the-little-red-tarot-guidebook/',
+    }
   ];
 
   const shops = [
@@ -43,15 +47,15 @@ const ResourceLinks = () => {
         <div className='resource-title' style={{paddingTop: 50}}>
             <h1>The Resources</h1>
         </div>
-    <h3>Please look past the Rider-Waite Deck (illustrated by “Pixie” aka Pamela Colman Smith) to more inclusive decks and purchase from small businesses if possible.</h3>
+    <h3>Please look further than the Rider-Waite Deck (illustrated by “Pixie” aka Pamela Colman Smith) <br/>to more inclusive decks and purchase from small businesses if possible.</h3>
     <h3>Obviously, this is not a complete list of resources, but just a start</h3>
-      <h2 style={{paddingTop: 10}}>Modern/Inclusive Tarot Decks</h2>
+      <h2 style={{paddingTop: 10}}>Modern/Inclusive Tarot Decks and Guidebooks</h2>
       <div style={{ display: 'flex', flexDirection: 'column' }}>
         {tarotDecks.map((deck, index) => (
           <a
             key={index}
             href={deck.link}
-            style={{ textDecoration: 'none', marginBottom: '0.5rem' }}
+            style={{ textDecoration: 'none', marginBottom: '0.8rem' }}
           >
             {deck.name} by <br/>{deck.creator}
           </a>
@@ -59,7 +63,7 @@ const ResourceLinks = () => {
       </div>
 
       <h2>Shops and Small Businesses</h2>
-      <div style={{ display: 'flex', flexDirection: 'column'}}>
+      <div style={{ display: 'flex', flexDirection: 'column', paddingBottom: 140  }}>
         {shops.map((shop, index) => (
           <a
             key={index}
@@ -69,15 +73,6 @@ const ResourceLinks = () => {
             {shop.name} - <br/>{shop.description}
           </a>
         ))}
-      </div>
-      <h2>Modern/Inclusive Tarot Guidebooks</h2>
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <a
-            href='https://littleredtarot.com/product/all-of-our-stories-the-little-red-tarot-guidebook/'
-            style={{ textDecoration: 'none', marginBottom: '0.5rem', paddingBottom: 140  }}
-          >
-            All of Our Stories: The Little Red Tarot Guidebook
-          </a>
       </div>
     </div>
   );

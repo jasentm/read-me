@@ -41,7 +41,7 @@ export default function Deck() {
       <div className='title'>
         <h1>The Deck</h1>
       </div>
-      <div className='deck-container'>
+      <div className='deck-container' style={{marginBottom: 150}}>
         {tarotCards.map(card => (
           <TarotCard
             key={card.id}
