@@ -10,6 +10,17 @@ Join us in the techno-mystica: Learn how to read tarot cards through fun, intera
 - A user can get a three-card reading and save it to their profile to view later
 
 
+##Instructions to Run
+- A NOTE: To utilize the AI function, you must be running Python 3.9 or later 
+- To install front-end dependencies, run: npm install inside the client folder
+- To install back-end dependencies, run: pipenv install inside the server folder
+- To initialize the database, run: flask db init
+- To migrate the database, run: flask db migrate -m 'initial migrate'
+- To finish setting up the database, run: flask db upgrade head
+- To populate the databases with necessary information: python seed.py
+- To start the server: python app.py
+- To start the front-end, run: npm run dev from the client folder
+
 ## Stretch Goals
 - Add music
 - Add Celtic Cross Spread as a reading a user can get
