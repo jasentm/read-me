@@ -59,9 +59,11 @@ All data and images of the Rider-Waite Tarot was used under the MIT License from
 
 Background designed by Freepik
 
+The emoji graphic favicon is from the open source project Twemoji. The graphics are copyright 2020 Twitter, Inc and other contributors. The graphics are licensed under CC-BY 4.0. 
+
 Sounds:
 
--Card shuffling.mp3 by SomeoneCool15 -- https://freesound.org/s/423767/ -- License: Creative Commons 0
--Correct.mp3 by LittleRainySeasons -- https://freesound.org/s/335908/ -- License: Creative Commons 0
--Failure 01 by rhodesmas -- https://freesound.org/s/342756/ -- License: Attribution 3.0
--paper and hand by pauliperez1999 -- https://freesound.org/s/428740/ -- License: Attribution 3.0
+- Card shuffling.mp3 by SomeoneCool15 -- https://freesound.org/s/423767/ -- License: Creative Commons 0
+- Correct.mp3 by LittleRainySeasons -- https://freesound.org/s/335908/ -- License: Creative Commons 0
+- Failure 01 by rhodesmas -- https://freesound.org/s/342756/ -- License: Attribution 3.0
+- paper and hand by pauliperez1999 -- https://freesound.org/s/428740/ -- License: Attribution 3.0
