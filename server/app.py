@@ -24,16 +24,19 @@ def signup():
     if existing_user:
         return make_response({"error": "Email already exists"}, 400)
 
-    new_user = User(
-        username=data.get('username'),
-        email=data.get('email')
-    )
-    new_user.password_hash = data.get('password')
-    db.session.add(new_user)
-    db.session.commit()
-    login_user(new_user)
+    try:
+        new_user = User(
+            username=data.get('username'),
+            email=data.get('email')
+        )
+        new_user.password_hash = data.get('password')
+        db.session.add(new_user)
+        db.session.commit()
+        login_user(new_user)
 
-    return make_response(new_user.to_dict(only=['id', 'username', 'email']), 201)
+        return make_response(new_user.to_dict(only=['id', 'username', 'email']), 201)
+    except:
+        return make_response({'error': ['validation errors']})
 
 
 @app.route('/logout')

@@ -16,12 +16,25 @@ class User(db.Model, SerializerMixin, UserMixin):
     email = db.Column(db.String, nullable=False)
     username = db.Column(db.String, nullable=False, unique=True)
     _password_hash = db.Column(db.String, nullable=False)
-
-    #TODO look into cascade 
-    reading = db.relationship('Reading', back_populates='user')
-    lesson_statistics = db.relationship('LessonStatistics', back_populates='user')
+ 
+    reading = db.relationship('Reading', back_populates='user', cascade='all, delete-orphan')
+    lesson_statistics = db.relationship('LessonStatistics', back_populates='user', cascade='all, delete-orphan')
     lessons = association_proxy('lessonStatistics', 'lesson')
-    #TODO finish validations
+
+    @validates('email')
+    def validate_email(self, key, email):
+        assert '@' in email, "Provided email address is invalid."
+        return email
+
+    @validates('username')
+    def validate_username(self, key, username):
+        assert len(username) >= 3, "Username must be at least 3 characters long."
+        return username
+
+    @validates('_password_hash')
+    def validate_password(self, key, password):
+        assert len(password) >= 6, "Password must be at least 6 characters long."
+        return password
 
     @hybrid_property
     def password_hash(self):
@@ -61,7 +74,6 @@ class TarotCard(db.Model, SerializerMixin):
     light_meanings = db.relationship('LightMeaning', back_populates='tarot_card')
     shadow_meanings = db.relationship('ShadowMeaning', back_populates='tarot_card')
     questions = db.relationship('Question', back_populates='tarot_card')
-    #TODO finish validations
 
 class Fortune(db.Model, SerializerMixin):
     __tablename__ = 'fortunes'
@@ -72,7 +84,7 @@ class Fortune(db.Model, SerializerMixin):
     fortune = db.Column(db.String)
 
     tarot_card = db.relationship('TarotCard', back_populates='fortunes')
-    #TODO finish validations
+
 
 class Keyword(db.Model, SerializerMixin):
     __tablename__ = 'keywords'
@@ -83,7 +95,7 @@ class Keyword(db.Model, SerializerMixin):
     keyword = db.Column(db.String)
    
     tarot_card = db.relationship('TarotCard', back_populates='keywords')
-    #TODO finish validations
+
 
 class LightMeaning(db.Model, SerializerMixin):
     __tablename__ = 'lightMeanings'
@@ -94,7 +106,7 @@ class LightMeaning(db.Model, SerializerMixin):
     light_meaning = db.Column(db.String)
  
     tarot_card = db.relationship('TarotCard', back_populates='light_meanings')
-    #TODO finish validations
+
 
 class ShadowMeaning(db.Model, SerializerMixin):
     __tablename__ = 'shadowMeanings'
@@ -105,7 +117,7 @@ class ShadowMeaning(db.Model, SerializerMixin):
     shadow_meaning = db.Column(db.String)
     
     tarot_card = db.relationship('TarotCard', back_populates='shadow_meanings')
-    #TODO finish validations
+
 
 class Question(db.Model, SerializerMixin):
     __tablename__ = 'questions'
@@ -116,7 +128,7 @@ class Question(db.Model, SerializerMixin):
     question = db.Column(db.String)
 
     tarot_card = db.relationship('TarotCard', back_populates='questions')
-    #TODO finish validations
+
 class Lesson(db.Model, SerializerMixin):
     __tablename__ = 'lessons'
     serialize_rules = ('-lesson_statistics.lesson', '-lesson_questions.lesson')
@@ -144,7 +156,6 @@ class LessonStatistics(db.Model, SerializerMixin):
 
     user = db.relationship('User', back_populates='lesson_statistics')
     lesson = db.relationship('Lesson', back_populates='lesson_statistics')
-    #TODO finish validations
 
 class LessonQuestion(db.Model, SerializerMixin):
     __tablename__ = 'lessonQuestions'
@@ -183,7 +194,6 @@ class Reading(db.Model, SerializerMixin):
     past_card = db.relationship('TarotCard', back_populates='past_readings', foreign_keys=[past_card_id])
     present_card = db.relationship('TarotCard', back_populates='present_readings', foreign_keys=[present_card_id])
     future_card = db.relationship('TarotCard', back_populates='future_readings', foreign_keys=[future_card_id])
-    #TODO finish validations
 
 
 
