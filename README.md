@@ -10,7 +10,7 @@ Join us in the techno-mystica: Learn how to read tarot cards through fun, intera
 - A user can get a three-card reading and save it to their profile to view later
 
 ## Instructions to Run
-- A NOTE: You must be running Python 3.12 or later to run this application
+- A NOTE: You must be running Python 3.12 or later and pipenv, version 2023.11.15 to run this application
 - In order to utilize the AI feature, you must have a Google Gemini API key saved in a .env file in your root directory
 - To install front-end dependencies, run: npm install inside the client folder
 - To install back-end dependencies, run: pipenv install inside the server folder
