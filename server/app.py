@@ -17,19 +17,24 @@ genai.configure(api_key=gemini_api_key)
 
 # routes for login and user authentication 
 
-@app.route('/users', methods=['POST']) #sign up route
+@app.route('/users', methods=['POST'])
 def signup():
-        data = request.json
-        new_user = User(
-             username=data.get('username'),
-             email=data.get('email')
-         ) #create new user instance 
-        new_user.password_hash = data.get('password')  # Set the password_hash using the setter
-        db.session.add(new_user)
-        db.session.commit()
-        login_user(new_user) 
+    data = request.json
+    existing_user = User.query.filter_by(email=data.get('email')).first()
+    if existing_user:
+        return make_response({"error": "Email already exists"}, 400)
 
-        return make_response(new_user.to_dict(only=['id', 'username', 'email']), 201)
+    new_user = User(
+        username=data.get('username'),
+        email=data.get('email')
+    )
+    new_user.password_hash = data.get('password')
+    db.session.add(new_user)
+    db.session.commit()
+    login_user(new_user)
+
+    return make_response(new_user.to_dict(only=['id', 'username', 'email']), 201)
+
 
 @app.route('/logout')
 @login_required

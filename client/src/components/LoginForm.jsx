@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Avatar from '@mui/material/Avatar';
@@ -11,7 +11,7 @@ import AutoFixHighIcon from '@mui/icons-material/AutoFixHigh';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import './LoginForm.css'
+import './LoginForm.css';
 import { NavLink, useNavigate } from 'react-router-dom';
 
 // Validation schema for the login form
@@ -20,44 +20,45 @@ const LoginSchema = Yup.object().shape({
   password: Yup.string().required('Required'),
 });
 
-const LoginForm = ({updateUser}) => {
-  // Initial values for the form fields
+const LoginForm = ({ updateUser }) => {
+  const [authError, setAuthError] = useState('');
+  
   const initialValues = {
     email: '',
     password: '',
   };
 
-  const navigate = useNavigate()
-  
+  const navigate = useNavigate();
+
   // Function to handle form submission
-  const handleSubmit = (values) => {
-    // Determine the URL based on whether the user is signing up or logging in
+  const handleSubmit = (values, { setSubmitting }) => {
+    setAuthError('');
     const url = 'http://localhost:5555/login';
     fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: values.email.toLowerCase(),  // Convert email to lowercase to ensure case-insensitivity
-          password: values.password
-        }),
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: values.email.toLowerCase(),
+        password: values.password,
+      }),
     })
     .then(response => {
-      if (response.ok){
-        return response.json()
-      }else{
-        console.error('Error') //TODO add in a page refresh and/or a popup that explains that the password/email is
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Incorrect username or password');
       }
     })
     .then(data => {
-        localStorage.setItem('userId', data.id);
-        updateUser(data) // Update user state with response data
-        console.log('Success:', data);
-        navigate('/', { relative: 'path' }); // Navigate to home page on successful login/signup
+      localStorage.setItem('userId', data.id);
+      updateUser(data);
+      navigate('/', { relative: 'path' });
     })
-    .catch((error) => {
-        console.error('Error:', error);
+    .catch(error => {
+      setAuthError(error.message);
+      setSubmitting(false);
     });
   };
 
@@ -71,74 +72,75 @@ const LoginForm = ({updateUser}) => {
 
   return (
     <ThemeProvider theme={theme}>
-    <Container component="main" maxWidth="xs" sx={{backgroundColor: 'white'}}>
-      <CssBaseline />
-      <Box
-        sx={{
-          marginTop: 8,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-        }}
-      >
-        <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-          <AutoFixHighIcon />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
-        </Typography>
-        <Formik
-          initialValues={initialValues}
-          validationSchema={LoginSchema}
-          onSubmit={handleSubmit}
+      <Container component="main" maxWidth="xs" sx={{ backgroundColor: 'white' }}>
+        <CssBaseline />
+        <Box
+          sx={{
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+          }}
         >
-          {({ isSubmitting }) => (
-            <Form>
-              <Box sx={{ mt: 1 }}>
-                <Field
-                  as={TextField}
-                  margin="normal"
-                  required
-                  fullWidth
-                  id="email"
-                  label="Email Address"
-                  name="email"
-                  autoComplete="email"
-                  autoFocus
-                />
-                <ErrorMessage name="email" component="div" className='error'/>
-                <Field
-                  as={TextField}
-                  margin="normal"
-                  required
-                  fullWidth
-                  name="password"
-                  label="Password"
-                  type="password"
-                  id="password"
-                  autoComplete="current-password"
-                />
-                <ErrorMessage name="password" component="div" className='error'/>
-                <Button
-                  type="submit"
-                  fullWidth
-                  variant="contained"
-                  sx={{ mt: 3, mb: 2, backgroundColor: '#1E5F22'}}
-                  disabled={isSubmitting}
-                >
-                  Sign In
-                </Button>
-                <NavLink to='/signup'>
-                <Link variant="body2">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-                </NavLink>
-              </Box>
-            </Form>
-          )}
-        </Formik>
-      </Box>
-    </Container>
+          <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <AutoFixHighIcon />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Sign in
+          </Typography>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={LoginSchema}
+            onSubmit={handleSubmit}
+          >
+            {({ isSubmitting }) => (
+              <Form>
+                <Box sx={{ mt: 1 }}>
+                  <Field
+                    as={TextField}
+                    margin="normal"
+                    required
+                    fullWidth
+                    id="email"
+                    label="Email Address"
+                    name="email"
+                    autoComplete="email"
+                    autoFocus
+                  />
+                  <ErrorMessage name="email" component="div" className="error" />
+                  <Field
+                    as={TextField}
+                    margin="normal"
+                    required
+                    fullWidth
+                    name="password"
+                    label="Password"
+                    type="password"
+                    id="password"
+                    autoComplete="current-password"
+                  />
+                  <ErrorMessage name="password" component="div" className="error" />
+                  {authError && <div className="error">{authError}</div>}
+                  <Button
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ mt: 3, mb: 2, backgroundColor: '#1E5F22' }}
+                    disabled={isSubmitting}
+                  >
+                    Sign In
+                  </Button>
+                  <NavLink to="/signup">
+                    <Link variant="body2">
+                      {"Don't have an account? Sign Up"}
+                    </Link>
+                  </NavLink>
+                </Box>
+              </Form>
+            )}
+          </Formik>
+        </Box>
+      </Container>
     </ThemeProvider>
   );
 };

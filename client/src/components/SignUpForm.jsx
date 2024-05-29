@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import Avatar from '@mui/material/Avatar';
@@ -20,16 +20,19 @@ const SignUpSchema = Yup.object().shape({
   password: Yup.string().required('Required'),
 });
 
-export default function SignUpForm({updateUser}) {
+export default function SignUpForm({ updateUser }) {
+  const [authError, setAuthError] = useState('');
+
   const initialValues = {
     username: '',
     email: '',
     password: '',
   };
 
-  const navigate = useNavigate()
-  const handleSubmit = (values) => {
-    // Determine the URL based on whether the user is signing up or logging in
+  const navigate = useNavigate();
+
+  const handleSubmit = (values, { setSubmitting }) => {
+    setAuthError('');
     const url = 'http://localhost:5555/users';
     fetch(url, {
       method: 'POST',
@@ -38,7 +41,7 @@ export default function SignUpForm({updateUser}) {
       },
       body: JSON.stringify({
         username: values.username,
-        email: values.email.toLowerCase(), // Convert email to lowercase to ensure case-insensitivity
+        email: values.email.toLowerCase(),
         password: values.password,
       }),
     })
@@ -46,18 +49,19 @@ export default function SignUpForm({updateUser}) {
         if (response.ok) {
           return response.json();
         } else {
-          console.error('Error');
+          return response.json().then((data) => {
+            throw new Error(data.error || 'Signup failed');
+          });
         }
       })
       .then((data) => {
-        // Save the userId to local storage
         localStorage.setItem('userId', data.id);
-        updateUser(data)
-        console.log('Success:', data);
-        navigate('/', { relative: 'path' }); // Navigate to home page on successful login/signup
+        updateUser(data);
+        navigate('/', { relative: 'path' });
       })
       .catch((error) => {
-        console.error('Error:', error);
+        setAuthError(error.message);
+        setSubmitting(false);
       });
   };
 
@@ -134,6 +138,7 @@ export default function SignUpForm({updateUser}) {
                     <ErrorMessage name="password" component="div" className="error" />
                   </Grid>
                 </Grid>
+                {authError && <div className="error">{authError}</div>}
                 <Button
                   type="submit"
                   fullWidth
@@ -144,9 +149,9 @@ export default function SignUpForm({updateUser}) {
                   Sign Up
                 </Button>
                 <NavLink to='/login'>
-                <Link variant="body2">
-                  Already have an account? Sign in
-                </Link>
+                  <Link variant="body2">
+                    Already have an account? Sign in
+                  </Link>
                 </NavLink>
               </Form>
             )}

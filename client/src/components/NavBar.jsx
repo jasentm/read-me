@@ -7,12 +7,8 @@ const NavBar = ({user, updateUser}) => {
 
   const handleLogout = () => {
     fetch('http://localhost:5555/logout')
-    .then((res)=>{
-      if (res.ok){
-        return (res.json())
-      }else {
-        return console.error('Error with logout')
-      }
+    .then(res=> {
+      res.json()
     })
     .then(res => {
       updateUser(null)

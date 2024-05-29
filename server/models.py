@@ -14,7 +14,7 @@ class User(db.Model, SerializerMixin, UserMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String, nullable=False)
-    username = db.Column(db.String, nullable=False)
+    username = db.Column(db.String, nullable=False, unique=True)
     _password_hash = db.Column(db.String, nullable=False)
 
     #TODO look into cascade 
@@ -62,8 +62,6 @@ class TarotCard(db.Model, SerializerMixin):
     shadow_meanings = db.relationship('ShadowMeaning', back_populates='tarot_card')
     questions = db.relationship('Question', back_populates='tarot_card')
     #TODO finish validations
-
-    #TODO add serialize rules
 
 class Fortune(db.Model, SerializerMixin):
     __tablename__ = 'fortunes'
