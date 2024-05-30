@@ -38,7 +38,7 @@ const DeleteProfile = ({ user, onProfileDelete }) => {
       <p>Are you sure you want to delete your profile?</p>
       <button onClick={handleConfirmDelete} style={{backgroundColor: '#B32626 '}}>Delete Profile</button>
 
-      {showConfirmation && (
+      {showConfirmation && ( //conditional rendering of confirmation
         <div className="confirmation-popup">
           <div className="popup-content">
             <h3>Confirm Profile Deletion</h3>

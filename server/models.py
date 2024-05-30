@@ -151,7 +151,6 @@ class LessonStatistics(db.Model, SerializerMixin):
     completed = db.Column(db.Boolean, default=False)
     correct_answers = db.Column(db.Integer, default=0)
     created_at = db.Column(db.DateTime, server_default=db.func.now())
-    updated_at = db.Column(db.DateTime, onupdate=db.func.now())
    
 
     user = db.relationship('User', back_populates='lesson_statistics')

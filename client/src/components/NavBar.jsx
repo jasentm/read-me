@@ -11,7 +11,7 @@ const NavBar = ({user, updateUser}) => {
       res.json()
     })
     .then(res => {
-      updateUser(null)
+      updateUser(null) //set user state for entire site
       localStorage.removeItem('userId'); // Clear the userId from local storage
     })
     navigate('/login', {relative: 'path'})

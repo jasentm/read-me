@@ -8,7 +8,7 @@ export default function LessonList({ user }) {
   const [lessons, setLessons] = useState([]);
   const [playPage] = useSound(Page)
 
-  useEffect(() => {
+  useEffect(() => { //fetch lesson titles to display 
     fetch(`http://localhost:5555/lessons`)
       .then(res => {
         if (res.ok) {
@@ -27,7 +27,7 @@ export default function LessonList({ user }) {
   }, [user]);
 
   useEffect(() => {
-    playPage();
+    playPage(); //play sound when page loads 
   }, [playPage]);
 
 
@@ -39,16 +39,16 @@ export default function LessonList({ user }) {
         </div>
         <div className={`book `} >
           <div className="page left">
-            {lessons.slice(0, Math.ceil(lessons.length / 2)).map(lesson => (
+            {lessons.slice(0, Math.ceil(lessons.length / 2)).map(lesson => ( //display half of array on one side of page
               <div className="lesson-card" key={lesson.id}>
                 <Link to={`/lesson/${lesson.id}`}>
-                  <h2>{lesson.type}</h2>
+                  <h2>{lesson.type}</h2> 
                 </Link>
               </div>
             ))}
           </div>
           <div className="page right">
-            {lessons.slice(Math.ceil(lessons.length / 2)).map(lesson => (
+            {lessons.slice(Math.ceil(lessons.length / 2)).map(lesson => ( //display half of array on one side of page
               <div className="lesson-card" key={lesson.id}>
                 <Link to={`/lesson/${lesson.id}`}>
                   <h2>{lesson.type}</h2>

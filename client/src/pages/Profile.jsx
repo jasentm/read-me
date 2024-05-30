@@ -13,7 +13,7 @@ export default function Profile({ user, updateUser }) {
   const [playPage] = useSound(Page);
   const [showProfileOptions, setShowProfileOptions] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => { //fetch readings associated with a user 
     fetch(`http://localhost:5555/readings/${user.id}`)
       .then((res) => res.json())
       .then((data) => {
@@ -25,7 +25,7 @@ export default function Profile({ user, updateUser }) {
       })
       .catch((error) => console.error('Error fetching readings:', error));
 
-    fetch(`http://localhost:5555/completed/${user.id}`)
+    fetch(`http://localhost:5555/completed/${user.id}`) //fetch lesson statistics for a user
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
@@ -52,7 +52,7 @@ export default function Profile({ user, updateUser }) {
     };
   
     const handleProfileDelete = () => {
-      fetch('http://localhost:5555/logout')
+      fetch('http://localhost:5555/logout') //delete user 
       .then((res)=>{
         if (res.ok){
           return (res.json())
@@ -84,7 +84,7 @@ export default function Profile({ user, updateUser }) {
           <h1>{user.username.charAt(0).toUpperCase() + user.username.slice(1)}'s Grimoire</h1>
         </div>
         <div className={`book `} >
-        {showProfileOptions ? (
+        {showProfileOptions ? ( //conditionally render profile options if button is clicked
             <>
               <div className="page left">
                 <ChangeUsername user={user} onUsernameChange={handleUsernameChange} />
@@ -108,10 +108,10 @@ export default function Profile({ user, updateUser }) {
               },}}>
                 Take a Lesson
               </Button>
-            <div className='lesson-container'>
+            <div className='lesson-container'> 
               {completedLessons.length <1 ? (
                 <div className='no-lessons-message'>
-                  <h3>You haven't completed any lessons yet...</h3>
+                  <h3>You haven't completed any lessons yet...</h3> 
                 </div>
               ) :
               <>

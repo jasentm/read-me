@@ -17,7 +17,7 @@ const HoverCard = styled(Card)(({ theme }) => ({
   }));
 
 const ResourceLinks = () => {
-  const tarotDecks = [
+  const tarotDecks = [ //hardcoded links for decks/guidebooks
     {
       name: 'Queer Tarot: An Inclusive Deck & Guidebook',
       creator: 'Ash + Chess',
@@ -55,7 +55,7 @@ const ResourceLinks = () => {
     }
   ];
 
-  const shops = [
+  const shops = [ //hardcoded links to shops
     {
       name: 'Earthtones Metaphysical Shop',
       description: 'Providence Rhode Island\'s only Queer, Black, Woman-owned Metaphysical Shop',
@@ -89,7 +89,7 @@ const ResourceLinks = () => {
         Modern Tarot Decks and Guidebooks
       </Typography>
       <Grid container spacing={2}>
-        {tarotDecks.map((deck, index) => (
+        {tarotDecks.map((deck, index) => ( //iterate over array of objects to render cards for each
           <Grid item xs={12} sm={6} md={4} key={index}>
             <Link href={deck.link} underline='none'>
                 <HoverCard>
@@ -119,7 +119,7 @@ const ResourceLinks = () => {
         Shops and Small Businesses
       </Typography >
       <Grid container spacing={2}>
-        {shops.map((shop, index) => (
+        {shops.map((shop, index) => (  //iterate over array of objects to render cards for each
           <Grid item xs={12} sm={6} md={4} key={index} sx={{marginBottom: 13}}>
             <Link href={shop.link} underline='none'>
                 <HoverCard>

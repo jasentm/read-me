@@ -5,7 +5,7 @@ import TarotCard from '../components/TarotCard';
 import {useSound} from 'use-sound';
 import Shuffle from '/sounds/Shuffle.mp3'
 
-const shuffledDeck = (cards) => {
+const shuffledDeck = (cards) => { //code for shuffling deck - Fisher-Yates shuffle algorithm
   let shuffled = [...cards];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -13,22 +13,22 @@ const shuffledDeck = (cards) => {
   }
   return shuffled.map(card => ({
     ...card,
-    isReversed: Math.random() < 0.5,
+    isReversed: Math.random() < 0.5, //sets 50% chance for a card to be reversed
     isSelected: false
   }));
 };
 
-const getRandomMeaning = (meanings) => {
+const getRandomMeaning = (meanings) => { //code for randomly selecting a meaning associated with a card from an array
   if (meanings.length === 0) return "";
   const randomIndex = Math.floor(Math.random() * meanings.length);
   return meanings[randomIndex].light_meaning || meanings[randomIndex].shadow_meaning;
 };
 
 export default function Readings({ user }) {
-  const [showDeck, setShowDeck] = useState(false);
+  const [showDeck, setShowDeck] = useState(false); //state for conditional rendering of deck
   const [tarotCards, setTarotCards] = useState([]);
   const [shuffledCards, setShuffledCards] = useState([]);
-  const [selectedCards, setSelectedCards] = useState([]);
+  const [selectedCards, setSelectedCards] = useState([]); 
   const [animateShuffle, setAnimateShuffle] = useState(false); // State for animation trigger
   const navigate = useNavigate();
   const [playShuffle] = useSound(Shuffle);
@@ -60,7 +60,7 @@ export default function Readings({ user }) {
     };
 
 
-  const handleCardSelect = async (selectedCard) => {
+  const handleCardSelect = async (selectedCard) => { 
     if (selectedCards.length < 3 && !selectedCards.includes(selectedCard)) {
       setShuffledCards(prevCards =>
         prevCards.map(card =>
@@ -70,7 +70,7 @@ export default function Readings({ user }) {
       const updatedSelectedCards = [...selectedCards, selectedCard];
       setSelectedCards(updatedSelectedCards);
 
-      if (updatedSelectedCards.length === 3) {
+      if (updatedSelectedCards.length === 3) { //gets either a random light meaning or shadow meaning if a card is reversed
         const pastMeaning = getRandomMeaning(updatedSelectedCards[0].isReversed ? updatedSelectedCards[0].shadow_meanings : updatedSelectedCards[0].light_meanings);
         const presentMeaning = getRandomMeaning(updatedSelectedCards[1].isReversed ? updatedSelectedCards[1].shadow_meanings : updatedSelectedCards[1].light_meanings);
         const futureMeaning = getRandomMeaning(updatedSelectedCards[2].isReversed ? updatedSelectedCards[2].shadow_meanings : updatedSelectedCards[2].light_meanings);
@@ -109,7 +109,7 @@ export default function Readings({ user }) {
   return (
     <div className="readings-page">
       <div className="content">
-        {showDeck ? (
+        {showDeck ? ( //conditionally render the deck on click of "Shuffle the Deck" button
           <>
             <div className='title' style={{marginTop: 130}} >
               <h1>Choose 3 Cards</h1>
@@ -120,7 +120,7 @@ export default function Readings({ user }) {
                   key={index}
                   card={{
                     ...card,
-                    image: '/Back.png',
+                    image: '/Back.png', //set the image of each card to the 'back' image
                   }}
                   handleCardClick={() => handleCardSelect(card)}
                   isReversed={card.isReversed}

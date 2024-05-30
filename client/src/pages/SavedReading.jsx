@@ -16,13 +16,13 @@ const SavedReading = () => {
   }, [id]);
 
   const fetchReading = (id) => {
-    fetch(`http://localhost:5555/saved-readings/${id}`)
+    fetch(`http://localhost:5555/saved-readings/${id}`) //GET request to render saved reading data
       .then(res => res.ok ? res.json() : Promise.reject('Something went wrong with your GET request'))
       .then(data => setReading(data))
       .catch(error => console.error("Failed to fetch reading", error));
   };
 
-  const handleAskAI = () => {
+  const handleAskAI = () => { //POST request to generate AI response based on meanings of tarot cards in reading
     const query = `Please synthesize the meaning of this tarot card reading with a maximum of 5 sentences: Past: ${reading.past_card_meaning} Present: ${reading.present_card_meaning} Future: ${reading.future_card_meaning}`;
 
     fetch('http://localhost:5555/ask-ai', {
@@ -46,7 +46,7 @@ const SavedReading = () => {
     })
     .catch(error => {
       console.error("Failed to get AI interpretation", error);
-      setError('The AI model was unable to interpret this reading. It is possible that the response was blocked due to the AI safety ratings.');
+      setError('The AI model was unable to interpret this reading. It is possible that the response was blocked due to the AI safety ratings.'); //error handling if AI response does not come through
       setAiInterpretation(null);
     });
   };
@@ -55,6 +55,7 @@ const SavedReading = () => {
     return <div>Loading...</div>;
   }
 
+  //destructuring reading 
   const { past_card, present_card, future_card, past_card_reversed, present_card_reversed, future_card_reversed, past_card_meaning, present_card_meaning, future_card_meaning } = reading;
 
   return (
@@ -65,7 +66,7 @@ const SavedReading = () => {
       <div className="saved-reading-container">
         <div className="saved-reading-section">
           <h2>Past</h2>
-          <ReadingCard
+          <ReadingCard 
             card={past_card}
             isReversed={past_card_reversed}
           />
@@ -96,8 +97,8 @@ const SavedReading = () => {
       </div>
       <div style={{ paddingBottom: '30px' }}>
         <button onClick={() => setShowPopup(true)}>Synthesize with AI</button>
-        {showPopup && (
-          <AIPopup
+        {showPopup && ( 
+          <AIPopup //popup disclaimer window if a user clicks the Synthesize with AI button
             onConfirm={() => {
               handleAskAI();
               setShowPopup(false);
@@ -111,7 +112,7 @@ const SavedReading = () => {
             <h2>{aiInterpretation}</h2>
           </div>
         )}
-        {error && (
+        {error && ( //error handling if AI response does not generate
           <div className="error-message" style={{ color: 'red', paddingBottom: '100px' }}>
             <h2>{error}</h2>
           </div>

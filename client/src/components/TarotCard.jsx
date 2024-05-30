@@ -8,7 +8,7 @@ const TarotCard = ({ card, handleCardClick, isReversed, isSelected }) => {
 
   return (
     <div 
-      className={`tarot-card ${isReversed ? 'reversed' : ''} ${isSelected ? 'selected' : ''}`} 
+      className={`tarot-card ${isReversed ? 'reversed' : ''} ${isSelected ? 'selected' : ''}`} //changes CSS depending on if a card is reversed or not during a reading
       onClick={onCardClick} 
     >
       <img src={card.image} alt={card.name} />

@@ -14,7 +14,7 @@ const ChangeUsername = ({ user, onUsernameChange }) => {
   
   const handleSubmit = (values, { resetForm }) => {
     fetch(`http://localhost:5555/users/${user.id}`, {
-      method: 'PATCH',
+      method: 'PATCH', //patch request to update username
       headers: {
         'Content-Type': 'application/json',
       },

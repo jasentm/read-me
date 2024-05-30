@@ -10,17 +10,17 @@ const Lesson = ({ user }) => {
   const { id } = useParams();
   const navigate = useNavigate();
   const [questions, setQuestions] = useState([]);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState('');
-  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null);
-  const [correctAnswers, setCorrectAnswers] = useState(0);
-  const [lessonCompleted, setLessonCompleted] = useState(false);
-  const [showContinueButton, setShowContinueButton] = useState(false);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); //state for index of current question
+  const [selectedAnswer, setSelectedAnswer] = useState(''); //state for selected answer 
+  const [isAnswerCorrect, setIsAnswerCorrect] = useState(null); //state for conditional rendering if answer is correct or incorrect
+  const [correctAnswers, setCorrectAnswers] = useState(0); //state to track score for lesson
+  const [lessonCompleted, setLessonCompleted] = useState(false); //state for conditional rendering of lessonstats component
+  const [showContinueButton, setShowContinueButton] = useState(false); //state for conditional rendering of continue button 
   const [playSuccess] = useSound(Success)
   const [playFailure] = useSound(Failure)
 
   useEffect(() => {
-    fetch(`http://localhost:5555/lesson-questions/${id}`)
+    fetch(`http://localhost:5555/lesson-questions/${id}`) //fetch random 10 lesson questions from database
       .then(res => {
         if (res.ok) {
           return res.json();
@@ -37,11 +37,11 @@ const Lesson = ({ user }) => {
   };
 
   const handleCheckAnswer = () => {
-    const currentQuestion = questions[currentQuestionIndex];
+    const currentQuestion = questions[currentQuestionIndex]; //tracking current question
     const isCorrect = selectedAnswer === currentQuestion.correct_answer;
     setIsAnswerCorrect(isCorrect);
     if (isCorrect) {
-      setCorrectAnswers(correctAnswers + 1);
+      setCorrectAnswers(correctAnswers + 1); //tracking current score
       playSuccess()
     } else {
       playFailure(); 
@@ -75,7 +75,7 @@ const Lesson = ({ user }) => {
         })
         .catch(error => console.error(error));
     } else {
-      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setCurrentQuestionIndex(currentQuestionIndex + 1); //tracking current question
     }
   };
 
@@ -87,15 +87,15 @@ const Lesson = ({ user }) => {
     return <div>Loading...</div>;
   }
 
-  const currentQuestion = questions[currentQuestionIndex];
+  const currentQuestion = questions[currentQuestionIndex]; 
 
   const isImageAnswer = answer => {
-    return answer.startsWith('/');
+    return answer.startsWith('/'); 
   };
 
   const renderAnswer = answer => {
     if (isImageAnswer(answer)) {
-      return <button className='image-button' onClick={() => handleAnswerSelect(answer)}><img src={answer} alt={answer} /></button>;
+      return <button className='image-button' onClick={() => handleAnswerSelect(answer)}><img src={answer} alt={answer} /></button>; //changes rendering of answer buttons depending on type 
     } else {
       return <button className='text-button' onClick={() => handleAnswerSelect(answer)}>{answer}</button>;
     }
@@ -104,10 +104,10 @@ const Lesson = ({ user }) => {
   return (
     <div className='lesson-page'>
       <div className='question-title'>
-        <h1>Question {currentQuestionIndex + 1}</h1>
+        <h1>Question {currentQuestionIndex + 1}</h1> 
       </div>
       <div className='question-container'>
-        <h2>{currentQuestion.question}</h2>
+        <h2>{currentQuestion.question}</h2> {/* renders one question at a time */}
       </div>
       <div className='answer-container'>
         <div className='answer1-container'>
@@ -124,7 +124,7 @@ const Lesson = ({ user }) => {
         </div>
       </div>
       <div className='check-continue-button-container'>
-        {showContinueButton ? (
+        {showContinueButton ? ( //conditionally renders Finish or Continue button
           <button onClick={handleContinue}>
             {currentQuestionIndex === questions.length - 1 ? 'Finish' : 'Continue'}
           </button>
@@ -136,7 +136,7 @@ const Lesson = ({ user }) => {
       </div>
       {isAnswerCorrect !== null && (
         <div className='correct-explanation-container'>
-          {isAnswerCorrect ? (
+          {isAnswerCorrect ? ( //conditionally renders correct or incorrect answer
             <h2 className='correct'>Correct!</h2>
           ) : (
             <h2 className='incorrect'>Incorrect. {currentQuestion.explanation}</h2>

@@ -28,7 +28,7 @@ export default function Deck() {
       });
   }, []);
 
-  const filteredCards = tarotCards.filter(card => {
+  const filteredCards = tarotCards.filter(card => { //filter logic for category buttons
     return (category === 0 || card.suit == category)
   })
 
@@ -118,7 +118,7 @@ export default function Deck() {
           />
         ))}
       </div>
-      {selectedCard && (
+      {selectedCard && ( //conditionally renders popup window with details about selected card
         <PopupWindow
           card={selectedCard}
           onClose={handleClosePopup}

@@ -21,9 +21,9 @@ const SignUpSchema = Yup.object().shape({
 });
 
 export default function SignUpForm({ updateUser }) {
-  const [authError, setAuthError] = useState('');
+  const [authError, setAuthError] = useState(''); //state for error handling
 
-  const initialValues = {
+  const initialValues = { 
     username: '',
     email: '',
     password: '',
@@ -31,7 +31,7 @@ export default function SignUpForm({ updateUser }) {
 
   const navigate = useNavigate();
 
-  const handleSubmit = (values, { setSubmitting }) => {
+  const handleSubmit = (values, { setSubmitting }) => { //post request to create new user 
     setAuthError('');
     const url = 'http://localhost:5555/users';
     fetch(url, {
@@ -55,9 +55,9 @@ export default function SignUpForm({ updateUser }) {
         }
       })
       .then((data) => {
-        localStorage.setItem('userId', data.id);
-        updateUser(data);
-        navigate('/', { relative: 'path' });
+        localStorage.setItem('userId', data.id); //set local storage to keep user signed in until they hit logout
+        updateUser(data); //update user state on entire site
+        navigate('/', { relative: 'path' }); //navigate home
       })
       .catch((error) => {
         setAuthError(error.message);
