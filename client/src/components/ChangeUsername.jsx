@@ -11,7 +11,7 @@ const ChangeUsername = ({ user, onUsernameChange }) => {
     newUsername: '',
   };
 
-  //TODO ensure a user can't change their name to one that already exists in the db
+  
   const handleSubmit = (values, { resetForm }) => {
     fetch(`http://localhost:5555/users/${user.id}`, {
       method: 'PATCH',
