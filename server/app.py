@@ -136,7 +136,7 @@ def post_completed_lesson():
 
 @app.route('/completed/<int:user_id>') #GET route for displaying lesson statistics for a user on Profile page
 def get_completed_lessons(user_id):
-    completed = [lessonstat.to_dict() for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id, LessonStatistics.completed == True).order_by(LessonStatistics.created_at.desc()).all()]
+    completed = [lessonstat.to_dict(only=['id', 'lesson.type', 'correct_answers', 'created_at']) for lessonstat in LessonStatistics.query.filter(LessonStatistics.user_id == user_id, LessonStatistics.completed == True).order_by(LessonStatistics.created_at.desc()).all()]
     if completed:
         return make_response(completed)
     else:
@@ -182,7 +182,7 @@ api.add_resource(Readings, '/readings')
 def get_saved_reading(id):
     reading = Reading.query.filter(Reading.id == id).first()
     if reading:
-        return make_response(reading.to_dict())
+        return make_response(reading.to_dict(only=['id', 'user_id', 'past_card_id', 'past_card_reversed', 'present_card_id', 'present_card_reversed', 'future_card_id', 'future_card_reversed', 'past_card_meaning', 'present_card_meaning', 'future_card_meaning', 'created_at', 'past_card.image', 'past_card.name',  'present_card.image', 'present_card.name', 'future_card.image', 'future_card.name']))
     else:
         return make_response({"error": "No readings yet"})
     

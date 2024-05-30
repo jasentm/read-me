@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import ReadingCard from '../components/ReadingCard'; 
-import '../components/ReadingCard.css'; 
+import ReadingCard from '../components/ReadingCard';
+import '../components/ReadingCard.css';
 import AIPopup from '../components/AIPopup';
 
 const SavedReading = () => {
@@ -9,6 +9,7 @@ const SavedReading = () => {
   const [reading, setReading] = useState(null);
   const [aiInterpretation, setAiInterpretation] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetchReading(id);
@@ -33,15 +34,20 @@ const SavedReading = () => {
     })
     .then(res => {
       if (!res.ok) {
-        console.error('Failed to fetch AI interpretation');
+        return res.json().then(err => {
+          throw new Error(err.error || 'Failed to fetch AI interpretation');
+        });
       }
       return res.json();
     })
     .then(data => {
       setAiInterpretation(data.text);
+      setError(null);
     })
     .catch(error => {
       console.error("Failed to get AI interpretation", error);
+      setError('The AI model was unable to interpret this reading. It is possible that the response was blocked due to the AI safety ratings.');
+      setAiInterpretation(null);
     });
   };
 
@@ -57,7 +63,7 @@ const SavedReading = () => {
         <h1>Your Reading</h1>
       </div>
       <div className="saved-reading-container">
-      <div className="saved-reading-section">
+        <div className="saved-reading-section">
           <h2>Past</h2>
           <ReadingCard
             card={past_card}
@@ -89,25 +95,30 @@ const SavedReading = () => {
         </div>
       </div>
       <div style={{ paddingBottom: '30px' }}>
-      <button onClick={() => setShowPopup(true)}>Sythensize with AI</button>
-      {showPopup && (
-        <AIPopup
-          onConfirm={() => {
-            handleAskAI();
-            setShowPopup(false);
-          }}
-          onCancel={() => setShowPopup(false)}
-        />
-      )}
-      {aiInterpretation && (
-        <div className="ai-interpretation" style={{ paddingBottom: '100px' }}>
-          <h1>Interpretation:</h1>
-          <h2>{aiInterpretation}</h2>
-        </div>
-      )}
+        <button onClick={() => setShowPopup(true)}>Synthesize with AI</button>
+        {showPopup && (
+          <AIPopup
+            onConfirm={() => {
+              handleAskAI();
+              setShowPopup(false);
+            }}
+            onCancel={() => setShowPopup(false)}
+          />
+        )}
+        {aiInterpretation && (
+          <div className="ai-interpretation" style={{ paddingBottom: '100px' }}>
+            <h1>Interpretation:</h1>
+            <h2>{aiInterpretation}</h2>
+          </div>
+        )}
+        {error && (
+          <div className="error-message" style={{ color: 'red', paddingBottom: '100px' }}>
+            <h2>{error}</h2>
+          </div>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
 };
 
 export default SavedReading;
